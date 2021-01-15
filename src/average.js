@@ -15,14 +15,15 @@
 const average = (arr) => {
   const media = arr.length;
   let soma = 0;
-  
+
 
   if (typeof (arr) === 'object' && arr.length === 0) return undefined;
 
   for (let i = 0; i < arr.length; i += 1) {
-    if (typeof (arr[i]) !== 'number') return undefined;
 
+    if (typeof (arr[i]) !== 'number') return undefined;
     soma += arr[i];
+
   }
 
   return Math.round(soma / media);
