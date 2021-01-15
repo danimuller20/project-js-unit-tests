@@ -12,23 +12,28 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const isNotEmpty = array => (array.length) ? true : false;
-
-const isNumber = array => {
+const isNotEmpty = (array) => {
   let bool = true;
-  for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) !== 'number') {
-      bool = false;
-    }
+  if (!array.length) {
+    bool = false;
   } return bool;
 }
 
-const average = array => {
+const isNumber = (array) => {
+  let bool = true;
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof (array[index]) !== 'number') {
+      bool = false;
+    }
+  } return bool;
+};
+
+const average = (array) => {
   let sum = 0;
   if (!isNotEmpty(array) || !isNumber(array)) {
     return undefined;
   }
-  for (let index = 0; index < array.length; index +=1) {
+  for (let index = 0; index < array.length; index += 1) {
     sum += array[index];
   }
   return Math.round(sum / array.length);
