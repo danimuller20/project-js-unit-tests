@@ -15,7 +15,7 @@
 const averageCalc = (array) => {
   let avg = 0;
   for (let index = 0; index < array.length; index += 1) {
-    avg += array[index];    
+    avg += array[index];
   }
   avg = Math.trunc(Math.round(avg / array.length));
   return avg;
