@@ -17,13 +17,13 @@ const average = (array) => {
   for (index = 0; index < array.length; index += 1) {
     soma += array[index];
     media = Math.round(soma / array.length);
-  if (array.length === 0) {
-      media = undefined;
+    if (array.length === 0) {
+    media = undefined;
   } else if (typeof array[index] !== 'number') {
-      media = undefined;
+    media = undefined;
+  }
   }
   return media;
-  }
 };
 
 module.exports = average;
