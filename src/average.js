@@ -21,7 +21,7 @@
    }
    for (let i = 0; i < array.length; i += 1) {
      soma += array[i];
-  }
+   }
    media = soma / array.length;
    return Math.ceil(media);
  };
