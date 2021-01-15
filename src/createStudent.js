@@ -16,7 +16,8 @@
 */
 const Studentfeedback = () => {
   return `Eita pessoa boa!`;
-}
+};
+
 const createStudent = (param) => {
   student = {
     name: param,
