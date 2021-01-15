@@ -22,7 +22,7 @@ const checkArray = (array) => {
     }
   }
   return true;
-}
+};
 
 const average = (array) => {
   // add your implementation here
