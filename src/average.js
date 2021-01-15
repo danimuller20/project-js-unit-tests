@@ -21,8 +21,8 @@ const average = (array) => {
     soma += element;
     if (typeof element === 'string') {
       soma = undefined;
-   }
-   return soma;
+    }
+    return soma;
   });
   const media = soma / array.length;
   return Math.round(media);
