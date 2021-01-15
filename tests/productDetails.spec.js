@@ -37,6 +37,6 @@ describe('#productDetails', () => {
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     assert.deepStrictEqual(typeof Object.values(productDetails('Alcool gel', 'Máscara')), 'object');
     assert.notDeepStrictEqual(Object.values(productDetails('Alcool gel', 'Máscara'))[0], Object.values(productDetails('Alcool gel', 'Máscara'))[1]);
-    assert.deepStrictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3), productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3));
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3), productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3));
   });
 });
