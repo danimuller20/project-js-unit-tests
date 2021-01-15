@@ -15,7 +15,6 @@ const average = (array) => {
   let soma = 0;
   if (array.length === 0) {
     soma = undefined;
-    return soma;
   }
   array.forEach((element) => {
     soma += element;
