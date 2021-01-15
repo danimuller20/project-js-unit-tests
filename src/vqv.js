@@ -21,8 +21,8 @@ const vqv = (nome, idade) => {
   const message = `Oi, meu nome é ${nome}!
 Tenho ${idade.toString()} anos,
 trabalho na Trybe e mando muito em programação!
-#VQV!`
-  return message
+#VQV!`;
+  return message;
 };
 
 module.exports = vqv;
