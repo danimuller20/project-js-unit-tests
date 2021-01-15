@@ -18,13 +18,12 @@ const average = (array) => {
   }
   let somatorio = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) !== 'number') {
+    if (typeof (array[index]) !== 'number') {
       return undefined;
-    } else {
-      somatorio += array[index];
     }
+    somatorio += array[index];
   }
-  let media = Math.round(somatorio/array.length);
+  const media = Math.round(somatorio / array.length);
   return media;
 };
 
