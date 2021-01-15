@@ -15,17 +15,17 @@
 const average = (array) => {
   let divisor = 0;
   let contador = 0;
-  if (array.length === 0){
-    return undefined
-  } else {
-    for (let index = 0; index < array.length; index += 1) {
-      if (typeof array[index] !== 'number') {
-       return undefined
-      }
-      contador += array[index];
-    }
-    divisor = array.length
+  if (array.length === 0) {
+    return undefined;
   }
-  return Math.round(contador / divisor)
-};
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
+      return undefined;
+    }
+      contador += array[index];
+  }
+    divisor = array.length;
+    return Math.round(contador / divisor);
+}
+
 module.exports = average;
