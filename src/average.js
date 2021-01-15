@@ -13,14 +13,13 @@
 */
 
 const notValidArray = (arr) => {
-  const notOnlyNumbers = arr.some((item) => typeof(item) !== 'number');
+  const notOnlyNumbers = arr.some(item => typeof (item) !== 'number');
   const emptyArray = arr.length === 0;
   return notOnlyNumbers || emptyArray;
 };
 
 const average = (arr) => {
   const arrNotValid = notValidArray(arr);
-  
   if (arrNotValid) {
     return undefined;
   }
