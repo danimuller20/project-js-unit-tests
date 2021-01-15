@@ -19,16 +19,17 @@ const average = (array) => {
     if (typeof array[i] !== 'number' || array.length === 0) {
       result = undefined;
       return result;
-    } else {
-      result += array[i];
     }
+
+    result += array[i];
   }
 
-  if (array.length !== 0) {
-    result = Math.round(result / array.length);
-  } else {
+  if (array.length === 0) {
     result = undefined;
+    return result;
   }
+
+  result = Math.round(result / array.length);
 
   return result;
 };
