@@ -12,7 +12,12 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const isEmpty = array => (array.length ? true : false);
+const isEmpty = (array) => {
+  let bool = true;
+  if (!array.length) {
+    bool = false;
+  } return bool;
+};
 
 const isNumber = (array) => {
   let bool = true;
