@@ -23,7 +23,6 @@
     }
   ]
 */
-const assert = require('assert');
 
 const productDetails = (firstProduct, secondProduct) => [
   {
@@ -40,13 +39,4 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-// for (let index = 0; index < productDetails().length; index += 1 ) {
-//   assert.strictEqual(typeof productDetails('Alcool', 'Nimesulida')[index], 'object');
-//   assert.notDeepStrictEqual(productDetails('x', 'y')[0],productDetails('x', 'y')[1]);
-//   const valueProductId = Object.values(productDetails()[index])[1];
-//   const lengthId = Object.values(valueProductId)[0].length
-//   console.log(Object.values(valueProductId)[0].slice(-3, lengthId));
-// }
-
-console.log(typeof productDetails('ola', 'ola'));
 module.exports = productDetails;
