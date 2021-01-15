@@ -15,6 +15,7 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = name => ({ name, feedback: () => 'Eita pessoa boa!',});
+const createStudent = name => ({ name, feedback: () => 'Eita pessoa boa!', }); 
+//quando uma arrow function tem só um param podemos tirar os parenteses; quando a função retorna somente um objeto o objeto deve ficar dentro de parenteses;
 
 module.exports = createStudent;
