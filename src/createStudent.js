@@ -23,6 +23,12 @@
     // }
 
 const Studentfeedback = () => 'Eita pessoa boa!';
-const createStudent = (param) => Student = { name: param, feedback: Studentfeedback() };
-
+const createStudent = (param) => {
+  Student = { 
+    name: param, 
+    feedback: Studentfeedback()
+  };
+  return Student;
+}
+console.log(createStudent('Leonardo'));
 module.exports = createStudent;
