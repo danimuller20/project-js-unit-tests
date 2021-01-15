@@ -16,7 +16,7 @@ const average = (numbers) => {
   let answer = 0;
   if (numbers.length === 0) return undefined;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (typeof (numbers[index]) !== 'number') return undefined;
+    if (typeof numbers[index] !== 'number') return undefined;
     answer += numbers[index];
   }
   answer /= numbers.length;
