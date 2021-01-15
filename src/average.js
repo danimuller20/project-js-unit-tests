@@ -12,12 +12,12 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const checkArrayType = (array) => {
-for (let i = 0; i < array.lenght; i += 1){
-  if (typeof array[i] != 'number') {
-    return false
+   for (let i = 0; i < array.lenght; i += 1) {
+  if (typeof array[i] !== 'number') {
+    return false;
   }
 }
-return true;
+  return true;
 };
 
 const checkArrayNumber = (array) => {
@@ -27,16 +27,17 @@ const checkArrayNumber = (array) => {
   return false;
 };
 
-const average = (array) => { if (checkArrayNumber(array)) {
+const average = (array) => { 
+  if (checkArrayNumber(array)) {
   let sum = 0;
   let averageNumbers = 0;
-  for (let index = 0; index < array.length; index += 1) {
+    for (let index = 0; index < array.length; index += 1) {
     sum += array[index];
   }
   averageNumbers = sum / array.length;
   return Math.round(averageNumbers);
 }
-return undefined;
+  return undefined;
 };
 
 module.exports = average;
