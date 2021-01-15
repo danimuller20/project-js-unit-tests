@@ -21,7 +21,7 @@ const average = (arr) => {
     if (typeof (arr[i]) !== 'number') return undefined;
     sum += arr[i];
   }
-  average = Math.round(sum / divisor);
+  avg = Math.round(sum / divisor);
   return avg;
 };
 
