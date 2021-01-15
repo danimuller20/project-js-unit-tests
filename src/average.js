@@ -22,10 +22,10 @@ const average = (array) => {
     if (typeof array[index] !== 'number') {
       return undefined;
     }
-      contador += array[index];
+    contador += array[index];
   }
-    divisor = array.length;
-    return Math.round(contador / divisor);
-}
+  divisor = array.length;
+  return Math.round(contador / divisor);
+};
 
 module.exports = average;
