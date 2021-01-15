@@ -11,7 +11,36 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+// let notas = [10, 8]
 
-const average = () => {};
+const isNotEmpty = array => (array.length ? true : false);
+console.log(isNotEmpty([]));
+const isNumber = array => {
+	let bool = true;
+	for (let index = 0; index < array.length; index += 1) {
+		if (typeof array[index] !== 'number') {
+			bool = false;
+		}
+	}
+	return bool;
+}
+
+console.log(isNumber(['7']));
+const average = array => {
+	let somatoria = 0;
+	if (!isNotEmpty(array) || !isNumber(array)) {
+		return undefined;
+	}
+	for (let index = 0; index < array.length; index += 1) {
+		somatoria += array[index];
+	}
+	return Math.round(somatoria / array.length);
+};
+
+console.log(average([10]));
+
+// console.log(isNotEmpty([]))
 
 module.exports = average;
+
+// console.log(isEmpty([]));
