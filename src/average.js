@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const verifyArray = (arr) => { return arr.length > 0 };
+const verifyArray = (arr) => arr.length > 0;
 const verifyElement = (arr) => {
   let isTrue = true;
   arr.forEach((element) => {
@@ -28,7 +28,7 @@ const average = (arr) => {
     return undefined;
   }
   let sumOfAll = 0;
-  arr.forEach(element => {
+  arr.forEach((element) => {
     sumOfAll += element;
   });
   return Math.round(sumOfAll / arr.length);
