@@ -14,14 +14,14 @@
 // let notas = [10, 8]
 
 const isNotEmpty = (array) => {
-  let bool = true
-  if (!array.length) {
-    bool = false
-  }
-  return bool;
-}
+	let bool = true;
+	if (!array.length) {
+		bool = false;
+	}
+	return bool;
+};
 console.log(isNotEmpty([2]));
-const isNumber = array => {
+const isNumber = (array) => {
 	let bool = true;
 	for (let index = 0; index < array.length; index += 1) {
 		if (typeof array[index] !== 'number') {
@@ -29,10 +29,10 @@ const isNumber = array => {
 		}
 	}
 	return bool;
-}
+};
 
 console.log(isNumber(['7']));
-const average = array => {
+const average = (array) => {
 	let somatoria = 0;
 	if (!isNotEmpty(array) || !isNumber(array)) {
 		return undefined;
