@@ -17,12 +17,12 @@
 
 const createStudent = (name) => {
   const obj = {
-    name: name,
+    name,
     feedback: () => {
-      const phrase = `Eita pessoa boa!`;
+      const phrase = 'Eita pessoa boa!';
       return phrase;
-    }
-  }
+    },
+  };
   return obj;
 };
 
