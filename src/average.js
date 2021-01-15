@@ -11,18 +11,10 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-const validateArrayType = (array) => {
-  for (let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] !== 'number') {
-      return false;
-    }
-  }
-  return true;
-};
+const numbers = require('../src/numbers');
 
 const validateArray = (array) => {
-  if (Array.isArray(array) && array.length > 0 && validateArrayType(array)) {
+  if (Array.isArray(array) && array.length > 0 && numbers(array)) {
     return true;
   }
   return false;
