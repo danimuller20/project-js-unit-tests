@@ -12,7 +12,8 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-// array.every(condição) = verifica em todo o array a condição estabelecida através de function ou arrow function
+// array.every(condição) = verifica em todo o array a condição
+// estabelecida através de function ou arrow function
 
 const average = (arr) => {
   const length = arr.length;
