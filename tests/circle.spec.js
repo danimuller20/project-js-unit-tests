@@ -28,10 +28,5 @@ describe('#circle', () => {
     assert.ok(typeof (circle([])) === 'object'); // Teste se circle retorna um objeto.
     assert.ok(toString(circle(3)) === toString({radius: 3, area: 28.259999999999998, circumference: 18.84})); // Teste se o objeto retornado tem 3 entradas.
     assert.ok(circle() === undefined); // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    
-    
-    // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
 });
