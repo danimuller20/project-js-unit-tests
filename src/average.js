@@ -19,13 +19,13 @@ const average = (array) => {
   let num = 0;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof (array[index]) === 'String') {
+    if (typeof (array[index]) === 'string') {
       return undefined;
     }
     num += array[index];
   }
 
-return Math.round(num / divisor);
+  return Math.round(num / divisor);
 };
 
 module.exports = average;
