@@ -26,6 +26,6 @@ const average = (array) => {
   }
   divisor = array.length;
   return Math.round(contador / divisor);
-};
+}
 
 module.exports = average;
