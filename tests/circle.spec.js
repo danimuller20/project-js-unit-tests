@@ -39,15 +39,3 @@ describe('#circle', () => {
     assert.deepStrictEqual(circle(3), { radius: 3, area: 28.259999999999998, circumference: 18.84 });
   });
 });
-
-// const circle = (radius) => {
-//   const PI = 3.14;
-//   if (!radius) { return undefined; }
-//   return {
-//     radius,
-//     area: PI * radius * radius,
-//     circumference: 2 * PI * radius,
-//   };
-// };
-
-// console.log(circle(3))
