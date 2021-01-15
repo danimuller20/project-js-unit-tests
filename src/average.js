@@ -18,8 +18,8 @@ const average = (array) => {
     soma += array[index];
     media = Math.round(soma / array.length);
     if (array.length === 0) {
-    media = undefined;
-  } else if (typeof array[index] !== 'number') {
+      media = undefined;
+    } else if (typeof array[index] !== 'number') {
     media = undefined;
   }
   }
