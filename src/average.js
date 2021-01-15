@@ -12,6 +12,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const notValidArray = (arr) => {
+  const notOnlyNumbers = arr.some((item) => typeof(item) !== 'number');
+  const emptyArray = arr.length === 0;
+  return notOnlyNumbers || emptyArray;
+};
+
+const average = (arr) => {
+  const arrNotValid = notValidArray(arr);
+  
+  if (arrNotValid) {
+    return undefined;
+  }
+
+  const arrSum = arr.reduce((num1, num2) => num1 + num2);
+  const arrAverage = arrSum / arr.length;
+  const roundedAvg = Math.round(arrAverage);
+  console.log(roundedAvg);
+  return roundedAvg;
+};
 
 module.exports = average;
