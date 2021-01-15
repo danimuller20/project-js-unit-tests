@@ -14,10 +14,11 @@
 
 const average = (arrNumbers) => {
   let arrAverage = 0;
-  for (let index = 0; index < arrNumbers.length; index++) {
-    arrAverage += arrNumbers[index]
+  for (let index = 0; index < arrNumbers.length; index += 1) {
+    arrAverage += arrNumbers[index];
   }
-  arrAverage = arrAverage/(arrNumbers.length);
+  arrAverage /= arrNumbers.length;
+  arrAverage = Math.round(arrAverage);
   return arrAverage;
 };
 
