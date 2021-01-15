@@ -17,10 +17,10 @@ const average = (array) => {
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
       return undefined;
-    } 
+    }
     sum += array[index];
   }
-  let result = sum / array.length;
+  const result = sum / array.length;
   if (isNaN(result)) {
     return undefined;
   }
