@@ -13,13 +13,20 @@
 */
 
 const average = (arr) => {
-  let result = 0;
-  let divisor = arr.length;
-  for (let i = 0; i < divisor; i += 1) result += arr[i];
-  if (arr[i] !== number || arr === '') {
-    return undefined; 
+  const divisor = arr.length;
+  let sum = 0;
+  let average = 0;
+  if (divisor === 0) return undefined;
+  for (let i = 0; i < divisor; i += 1) {
+    if (typeof(arr[i]) !== 'number') return undefined;
+  sum += arr[i];
   }
-  return (result / divisor);
-};
+  average = Math.round(sum / divisor);
+  return average;
+}
+
+const arrayVazio = [];
+console.log(average(arrayVazio));
 
 module.exports = average;
+
