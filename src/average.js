@@ -12,7 +12,10 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {  // add your implementation here
-};
-
+const average = (array) => {  
+//Caso a função receba algum valor não númerico ou um array vazio
+if (array !== 'Number' || array === ''){
+  return('undefined');
+  }
+}
 module.exports = average;
