@@ -33,9 +33,9 @@ const average = (array) => {
   if (!isEmpty(array) || !isNumber(array)) {
     return undefined;
   }
-  for (let index = 0; index < array.length; index+=1) {
-      soma += array[index];
-    }
+  for (let index = 0; index < array.length; index += 1) {
+    soma += array[index];
+  }
   return Math.round(soma / array.length);
 };
 
