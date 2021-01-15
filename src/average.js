@@ -30,6 +30,3 @@ module.exports = average;
     variável acumuladora (accumulator) e uma
     variável que representa o ítem da iteração
   */
-
-  // Somando valores
-  // Calculando a média
