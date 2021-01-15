@@ -15,7 +15,7 @@
 const average = (arr) => {
   if (arr === '' || arr === []) {
     return undefined;
-  } 
+  }
   const sum = arr.reduce((accumulator, item) => accumulator + item);
   const media = sum / arr.length;
   return Math.round(media);
