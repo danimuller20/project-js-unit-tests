@@ -18,10 +18,10 @@ const average = (arr) => {
     for (let i = 0; i < arr.length; i += 1) {
       soma += arr[i];
     }
-    if (typeof (soma) === 'number') return Math.round(soma / arr.length);
+    if (typeof (soma) === 'number') {
+      return Math.round(soma / arr.length);
+    }
   }
 };
-
-console.log(average([0, 0, 0, 0, 0, 0, 1]))
 
 module.exports = average;
