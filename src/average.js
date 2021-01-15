@@ -13,7 +13,7 @@
 */
 
 function isUndefined(array) {
-  let result;
+  let result = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
       result = undefined;
@@ -27,7 +27,7 @@ function isUndefined(array) {
 
 const average = (array) => {
   let result = isUndefined(array);
-  if (result !== undefined) {
+  if (result === 0) {
     let sum = 0;
     for (let index = 0; index < array.length; index += 1) {
       sum += array[index];
@@ -36,5 +36,5 @@ const average = (array) => {
   }
   return result;
 };
-
+average([3, 4, 5]);
 module.exports = average;
