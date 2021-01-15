@@ -17,13 +17,13 @@
 */
 
 const vqv = (param1, param2) => {
-  if (!param1 && !param2){
+  if (!param1 && !param2) {
     return undefined;
   }
-    return `Oi, meu nome é ${param1}!
+  return `Oi, meu nome é ${param1}!
 Tenho ${param2} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
-  };
+};
 
 module.exports = vqv;
