@@ -28,4 +28,5 @@ const average = (param1) => {
 };
 
 
+
 module.exports = average;
