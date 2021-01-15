@@ -27,7 +27,6 @@ const average = (arr) => {
   const arrSum = arr.reduce((num1, num2) => num1 + num2);
   const arrAverage = arrSum / arr.length;
   const roundedAvg = Math.round(arrAverage);
-  console.log(roundedAvg);
   return roundedAvg;
 };
 
