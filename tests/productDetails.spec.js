@@ -45,6 +45,7 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1], 'Tem que colocar dois produtos diferentes.');
     // (Difícil) Teste que os dois productIds terminam com 123.
+    // Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substr
     assert.deepStrictEqual((Object.values(productDetails())[0].details.productId).substr(5), (Object.values(productDetails())[1].details.productId).substr(5));
   });
 });

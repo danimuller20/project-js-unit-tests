@@ -19,6 +19,18 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
+// Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
+
 const calculator = {};
+
+const add = (numb1, numb2) => numb1 + numb2;
+const mult = (numb1, numb2) => numb1 * numb2;
+const div = (numb1, numb2) => Math.trunc(numb1 / numb2);
+const sub = (numb1, numb2) => numb1 - numb2;
+
+calculator.add = add;
+calculator.mult = mult;
+calculator.div = div;
+calculator.sub = sub;
 
 module.exports = calculator;
