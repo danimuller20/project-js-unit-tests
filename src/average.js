@@ -12,27 +12,25 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (arr) => {
+const average = ( arr ) => {
 
-  /* 
+  /*
     Reduce: reduz o array em um único número
-    essa função recebe dois parâmetros, uma 
+    essa função recebe dois parâmetros, uma
     variável acumuladora (accumulator) e uma
     variável que representa o ítem da iteração
   */
-  
+
   // Somando valores
   const sum = arr.reduce((accumulator, item) => accumulator + item);
-  
-  // Calculando a média 
+
+  // Calculando a média
   const media = sum / arr.length;
 
-  return media
+  return media;
 };
 
 average([1, 1]);
 
 
 module.exports = average;
-
-// Média: soma dos números dividido pela quantidade de números 
