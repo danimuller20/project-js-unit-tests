@@ -20,10 +20,9 @@ const average = (arr) => {
   if (typeof (arr) === 'object' && arr.length === 0) return undefined;
 
   for (let i = 0; i < arr.length; i += 1) {
-
     if (typeof (arr[i]) !== 'number') return undefined;
-    soma += arr[i];
 
+    soma += arr[i];
   }
 
   return Math.round(soma / media);
