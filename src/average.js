@@ -13,24 +13,21 @@
 */
 const roundNumber = number => Math.round(number);
 
-
-const average = arrayNumbers => {
+const average = (arrayNumbers) => {
   // add your implementation here
- let sum = 0;
- let media = 0
-if (arrayNumbers.length === 0) {
-  return undefined;
-}
-for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (typeof(arrayNumbers[index]) != 'number') {
-      return undefined;
-    } else {
-      sum += arrayNumbers[index];
-    }
+  let sum = 0;
+  let media = 0;
+  if (arrayNumbers.length === 0) {
+    return undefined;
   }
-media = sum / arrayNumbers.length;
-return roundNumber(media);
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (typeof (arrayNumbers[index]) !== 'number') {
+      return undefined;
+    }
+    sum += arrayNumbers[index];
+  }
+  media = sum / arrayNumbers.length;
+  return roundNumber(media);
 }
-console.log(average([2,3]));
-module.exports = average
+module.exports = average;
 
