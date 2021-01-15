@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const checkArrayType = (array) => {
-   for (let i = 0; i < array.lenght; i += 1) {
+  for (let i = 0; i < array.lenght; i += 1) {
   if (typeof array[i] !== 'number') {
     return false;
   }
