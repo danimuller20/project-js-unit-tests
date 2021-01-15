@@ -15,27 +15,24 @@
 const average = (array) => {
   let result = 0;
 
-  if (array.length === 0) {
-    result = undefined;
-    return result;
-  }
-
-  for (let item of array) {
-    if (typeof(item) !== 'number' || array === []) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number' || array.length === 0) {
       result = undefined;
-      break;
+      return result;
     } else {
-      result += item;
+      result += array[i];
     }
   }
 
-  if (typeof(result) === 'number') {
+  if (array.length !== 0) {
     result = Math.round(result / array.length);
+  } else {
+    result = undefined;
   }
 
   return result;
 };
 
-console.log(average([-11, 2, 5]));
+console.log(average([]));
 
 module.exports = average;
