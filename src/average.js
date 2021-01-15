@@ -13,8 +13,18 @@
 */
 
 const average = (arr) => {
+  const sum = arr.reduce((accumulator, item) => accumulator + item);
+  const media = sum / arr.length;
+  return media;
+};
 
-  /*
+average([1, 1]);
+
+
+module.exports = average;
+
+
+/*
     Reduce: reduz o array em um único número
     essa função recebe dois parâmetros, uma
     variável acumuladora (accumulator) e uma
@@ -22,16 +32,4 @@ const average = (arr) => {
   */
 
   // Somando valores
-  const sum = arr.reduce((accumulator, item) => accumulator + item);
-
   // Calculando a média
-  const media = sum / arr.length;
-
-  return media;
-  
-};
-
-average([1, 1]);
-
-
-module.exports = average;
