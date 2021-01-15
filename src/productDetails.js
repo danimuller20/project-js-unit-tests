@@ -40,3 +40,11 @@ const productDetails = (firstProduct, secondProduct) => [
 ];
 
 module.exports = productDetails;
+
+// const teste = typeof productDetails('agua', 'pao').slice(0,2);
+// console.log(teste);
+
+// const t1 = typeof [{'key':'value'},'string'].slice(1);
+// console.log(t1)
+
+// console.log(typeof '')
