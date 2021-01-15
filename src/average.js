@@ -20,7 +20,6 @@ const average = (array) => {
       result = undefined;
       return result;
     }
-
     result += array[i];
   }
 
