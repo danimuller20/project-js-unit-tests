@@ -60,7 +60,7 @@ Você implementará várias funções para atender aos requisitos propostos e/ou
 
   - Será um dia de projeto;
 
-  - O projeto tem até a seguinte data: `DD/MM/YYYY - 14:00h` para ter entregue a avaliação final.
+  - O projeto tem até a seguinte data: `22/01/2021 - 14:00h` para ter entregue a avaliação final.
 
 ---
 
