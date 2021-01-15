@@ -14,12 +14,11 @@
 
 const average = (numbers) => {
   let sumAll = 0;
-  for (let index = 0; index < numbers.length; index +=1 ) {
-    if (typeof(numbers[index]) === 'string') {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (typeof (numbers[index]) === 'string') {
       return undefined;
-    } else {
-      sumAll += numbers[index];
     }
+    sumAll += numbers[index];
   }
   if (numbers.length === 0) {
     return undefined;
