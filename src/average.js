@@ -14,27 +14,27 @@
 
 const isEmpty = array => (array.length ? true : false);
 
-const isNumber = array => {
+const isNumber = (array) => {
   let bool = true;
-  for ( let index = 0; index < array.length; index += 1) {
-    if (typeof array[index] !== 'number') {
+  for (let index = 0; index<array.length; index += 1) {
+    if(typeof array[index] !== 'number') {
       bool = false;
     }
-  };
+  }
   return bool;
-}
+};
 
 const average = (array) => {
   let soma = 0;
   if (!isEmpty(array) || !isNumber(array)) {
     return undefined;
   }
-    for (let index = 0; index < array.length; index+=1) {
+    for(let index = 0; index<array.length; index+=1) {
       soma += array[index];
-  }
-    return Math.round(soma / array.length);
+    }
+  return Math.round(soma / array.length);
 };
 
-console.log ( average([10, 8, 6]));
+console.log(average([10, 8, 6]));
 
 module.exports = average;
