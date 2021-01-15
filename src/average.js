@@ -31,7 +31,8 @@ const average = (array) => {
     count += value;
   });
   if (undefinedArr(array)) return undefined;
-  return Math.round(count / array.length);
+  count = Math.round(count / array.length);
+  return count;
 };
 
 module.exports = average;
