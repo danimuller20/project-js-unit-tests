@@ -15,14 +15,14 @@
 const validateArrayType = (array) => {
   let validation = true;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) === 'number' && validation !== false) {
+    if (typeof array[index] === 'number' && validation !== false) {
       validation = true;
     } else {
       validation = false;
     }
   }
   return validation;
-}
+};
 
 const validateArray = (array) => {
   if (Array.isArray(array) && array.length > 0 && validateArrayType(array)) {
@@ -34,14 +34,13 @@ const validateArray = (array) => {
 const average = (array) => {
   if (validateArray(array) === false) {
     return undefined;
-  } else {
-    let sum = 0;
-    let average = 0;
-    for (let index = 0; index < array.length; index += 1) {
-      sum += array[index];
-    }
-    average = sum / array.length;
-    return Math.round(average);
   }
+  let sum = 0;
+  let averageNumbers = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    sum += array[index];
+  }
+  averageNumbers = sum / array.length;
+  return Math.round(averageNumbers);
 };
 module.exports = average;
