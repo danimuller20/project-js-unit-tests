@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const verifyArray = (arr) => arr.length > 0;
+const verifyArray = arr => arr.length > 0;
 const verifyElement = (arr) => {
   let isTrue = true;
   arr.forEach((element) => {
