@@ -17,11 +17,13 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome !== null & idade !== null) {
-    return `Oi, meu nome é ${nome}!
-    Tenho ${idade} anos,
-    trabalho na Trybe e mando muito em programação!
-    #VQV!`
+  if (nome  && idade) {
+    let response = 
+    `Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+    return response;
   } else {
     return undefined;
   };
