@@ -28,6 +28,6 @@ const average = (arrayNumbers) => {
   }
   media = sum / arrayNumbers.length;
   return roundNumber(media);
-}
+};
 module.exports = average;
 
