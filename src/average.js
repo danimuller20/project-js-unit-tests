@@ -15,15 +15,15 @@
 const average = (arr) => {
   const divisor = arr.length;
   let sum = 0;
-  let average = 0;
+  let avg = 0;
   if (divisor === 0) return undefined;
   for (let i = 0; i < divisor; i += 1) {
-    if (typeof(arr[i]) !== 'number') return undefined;
-  sum += arr[i];
+    if (typeof (arr[i]) !== 'number') return undefined;
+    sum += arr[i];
   }
   average = Math.round(sum / divisor);
-  return average;
-}
+  return avg;
+};
 
 const arrayVazio = [];
 console.log(average(arrayVazio));
