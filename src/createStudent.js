@@ -18,8 +18,8 @@
 const createStudent = (string) => {
   return {
     name: string,
-    feedback: () => 'Eita pessoa boa!'
-  }
+    feedback: () => 'Eita pessoa boa!',
+  };
 };
 
 module.exports = createStudent;
