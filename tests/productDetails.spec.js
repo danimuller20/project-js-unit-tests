@@ -39,6 +39,10 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     // Teste que os dois objetos são diferentes entre si.
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(typeof productDetails('Alcool Gel', 'Mascara'), );
+    assert.strictEqual(Array.isArray(productDetails('Alcool Gel', 'Mascara')), true);
+    assert.strictEqual(productDetails('Alcool Gel', 'Mascara').length, 2);
+    assert.deepStrictEqual(typeof Object.values(productDetails('Alcool Gel', 'Mascara')), 'object');
+    assert.notDeepStrictEqual(Object.values(productDetails('Alcool Gel', 'Mascara'))[0], Object.values(productDetails('Alcool Gel', 'Mascara'))[1]);
+    assert.deepStrictEqual(Object.values(Object.values(productDetails('Alcool Gel', 'Mascara')[0])[1])[0].slice(-3) && Object.values(Object.values(productDetails('Alcool Gel', 'Mascara')[1])[1])[0].slice(-3) , '123');
   });
 });
