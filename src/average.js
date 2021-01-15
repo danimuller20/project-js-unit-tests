@@ -16,6 +16,7 @@ function verifyArrayIsEmpty(array) {
   if (array.length === 0) {
     return true;
   }
+  return false;
 }
 
 function verifyArrayIndex(array) {
@@ -24,6 +25,7 @@ function verifyArrayIndex(array) {
       return true;
     }
   }
+  return false;
 }
 
 const average = (array) => {
