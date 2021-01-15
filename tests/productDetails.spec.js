@@ -33,12 +33,12 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.strictEqual(Array.isArray(productDetails()), true);
-    assert.strictEqual(productDetails().length == 2);
-    assert.strictEqual(typeof productDetails()[0] && typeof productDetails()[1], 'object');
-    assert.strictEqual(productDetails()[0] !== productDetails()[1]);
-    const produto1 = productDetails()[0];
-    const produto2 = productDetails()[1];
+    assert.strictEqual(Array.isArray(productDetails('a','b')), true);
+    assert.strictEqual(productDetails('a','b').length, 2);
+    assert.strictEqual(typeof productDetails('a','b')[0] && typeof productDetails('a','b')[1], 'object');
+    assert.strictEqual(productDetails('a','b')[0] !== productDetails('a','b')[1]);
+    const produto1 = productDetails('a','b')[0];
+    const produto2 = productDetails('a','b')[1];
     assert.strictEqual(produto1.details.productId.includes('123'), true);
     assert.strictEqual(produto2.details.productId.includes('123'), true);
     // ESCREVA SEUS TESTES ABAIXO:
