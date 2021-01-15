@@ -12,6 +12,8 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+// hora de começar
+
 const average = () => {};
 
 module.exports = average;
