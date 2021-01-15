@@ -37,10 +37,8 @@ describe('#productDetails', () => {
     assert.strictEqual(productDetails('a','b').length, 2);
     assert.strictEqual(typeof productDetails('a','b')[0] && typeof productDetails('a','b')[1], 'object');
     assert.strictEqual(productDetails('a','b')[0] !== productDetails('a','b')[1]);
-    const produto1 = productDetails('a','b')[0];
-    const produto2 = productDetails('a','b')[1];
-    assert.strictEqual(produto1.details.productId.includes('123'), true);
-    assert.strictEqual(produto2.details.productId.includes('123'), true);
+    assert.strictEqual(productDetails('a', 'b')[0].details.productId.slice(-3), '123');
+    assert.strictEqual(productDetails('a', 'b')[1].details.productId.slice(-3), '123');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
