@@ -17,7 +17,7 @@ const average = (param1) => {
   if (param1.length === 0) {
     return undefined;
   }
-  for (let i = 0; i < param1.length; index += 1) {
+  for (let i = 0; i < param1.length; i += 1) {
     if (typeof (param1[i]) !== 'number') {
       return undefined;
     }
