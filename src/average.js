@@ -20,11 +20,10 @@ const average = (myArray) => {
   for (let index = 0; index < myArray.length; index += 1) {
     if (typeof myArray[index] !== 'number') {
       return undefined;
-    } 
+    }
     sum += myArray[index];
   }
-  const average = Math.round(sum / myArray.length);
-  return average;
+  return Math.round(sum / myArray.length);
 };
 
 module.exports = average;
