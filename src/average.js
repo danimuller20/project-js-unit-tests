@@ -13,8 +13,14 @@
 */
 // let notas = [10, 8]
 
-const isNotEmpty = array => (array.length ? true : false);
-console.log(isNotEmpty([]));
+const isNotEmpty = array => {
+  let bool = true
+  if (!array.length) {
+    bool = false
+  }
+  return bool;
+}
+console.log(isNotEmpty([2]));
 const isNumber = array => {
 	let bool = true;
 	for (let index = 0; index < array.length; index += 1) {
