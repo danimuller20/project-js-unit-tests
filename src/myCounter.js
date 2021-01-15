@@ -16,11 +16,11 @@
 */
 
 const myCounter = () => {
-  let myArray = [];
+  const myArray = [];
   for (let counter = 0; counter <= 3; counter += 1) {
     myArray.push(counter);
-    for (let counter = 2; counter <= 3; counter += 1) {
-      myArray.push(counter);
+    for (let counter0 = 2; counter0 <= 3; counter0 += 1) {
+      myArray.push(counter0);
     }
   }
   return myArray;
