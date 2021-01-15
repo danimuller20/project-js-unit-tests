@@ -16,7 +16,7 @@ const average = (numbers) => {
   let sum = 0;
   const size = numbers.length;
   if (!size) return undefined;
-  for (const i in numbers.keys()) {
+  for (const i in Object.keys(numbers)) {
     const number = numbers[i];
     if (typeof number !== 'number') {
       return undefined;
