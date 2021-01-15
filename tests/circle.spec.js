@@ -35,13 +35,13 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
     assert.strictEqual(circle(2).circumference, 2 * 3.14 * 2);
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    const areaCircle = 3.14 * (3 ** 2);
-    const intAreaCircle = Math.trunc(areaCircle);
-    areaCirclePrecision2 = (areaCircle - intAreaCircle).toPrecision(2) + intAreaCircle;
+    const areaCircleR3 = 3.14 * (3 ** 2);
+    const intAreaCircleR3 = Math.trunc(areaCircleR3);
+    areaCirclePrecision2 = (areaCircleR3 - intAreaCircleR3).toPrecision(2) + intAreaCircleR3;
     assert.strictEqual((circle(3).area - Math.trunc(circle(3).area)).toPrecision(2) + Math.trunc(circle(3).area), areaCirclePrecision2);
-    // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.   3.14 * 3 ** 2
-    // const circleRtres = circle(3);
-    // assert.strictEqual(circleRtres)
+    // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    const circleRtres = circle(3);
+    assert.strictEqual(circle(3).circumference, 2 * 3.14 * 3);
   });
 });
 
