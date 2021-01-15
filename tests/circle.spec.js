@@ -1,9 +1,23 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
+const { parse } = require('acorn');
 const assert = require('assert');
 const circle = require('../src/circle');
+const pi = parseFloat(Math.PI).toPrecision(3);
 
+// Parameters
+const type = typeof (circle(1));
+const objLength = Object.keys(circle(1)).length;
+const emptyParameter = circle();
+const circumferenceRadiusTwo = {circumference: circle(2).circumference};
+const areaRadiusThree = {area: circle(3).area};
+const radiusValueThree = circle(3);
+
+// Expected Values
+const expectedCircumference = {circumference: 2 * pi * 2};
+const expectedArea = {area: pi * 3 * 3};
+const expectedObjRadiusThree = {radius: 3, area: pi * 3 * 3, circumference: 2 * pi * 3};
 /*
   Essa função recebe o raio de um círculo e retorna um objeto contendo suas informações (Raio, Área e Circunferência).
   Se não for especificado um raio, a função retorna undefined.
@@ -25,13 +39,18 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
+    assert.strictEqual(type, 'object');
     // Teste se o objeto retornado tem 3 entradas.
+    assert.strictEqual(objLength, 3);
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    assert.strictEqual(emptyParameter, undefined);
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+    assert.deepStrictEqual(circumferenceRadiusTwo, expectedCircumference);
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    assert.deepStrictEqual(areaRadiusThree, expectedArea);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    assert.deepStrictEqual(radiusValueThree, expectedObjRadiusThree);
   });
 });
