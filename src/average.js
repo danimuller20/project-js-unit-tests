@@ -13,7 +13,7 @@
 */
 
 const average = (array) => {
-  if ((array === '') || (typeOf(array) !== 'number')) {
+  if ((array === '') || (typeof array !== 'number')) {
     return undefined;
   }
   const arrayLength = array.length;
