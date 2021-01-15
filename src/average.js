@@ -13,20 +13,25 @@
 */
 
 const average = (arr) => {
-  const sum = arr.reduce((accumulator, item) => accumulator + item);
-  const media = sum / arr.length;
-  return media;
+
+  if(arr === '' || arr === []) {
+    return undefined
+  } else {
+    const sum = arr.reduce((accumulator, item) => accumulator + item);
+    const media = sum / arr.length;
+    return Math.round(media);
+  }
 };
 
-average([1, 1]);
+average([]);
 
 
 module.exports = average;
 
 
 /*
-    Reduce: reduz o array em um único número
-    essa função recebe dois parâmetros, uma
-    variável acumuladora (accumulator) e uma
-    variável que representa o ítem da iteração
-  */
+  Reduce: reduz o array em um único número
+  essa função recebe dois parâmetros, uma
+  variável acumuladora (accumulator) e uma
+  variável que representa o ítem da iteração
+*/
