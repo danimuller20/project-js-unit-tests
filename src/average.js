@@ -16,19 +16,16 @@ const average = (arr) => {
   if (arr.length === 0) {
     return undefined;
   }
-
   let result = 0;
   for (let index = 0; index < arr.length; index += 1) {
-
     if (typeof arr[index] !== 'number') {
       return undefined;
     }
-
     result += arr[index];
   }
   result = Math.round(result / arr.length);
   return result;
-}
+};
 
 const myArray = [5, 8, 13];
 
