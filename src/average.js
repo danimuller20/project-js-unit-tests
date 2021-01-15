@@ -13,7 +13,7 @@
 */
 // let notas = [10, 8]
 
-const isNotEmpty = array => {
+const isNotEmpty = (array) => {
   let bool = true
   if (!array.length) {
     bool = false
