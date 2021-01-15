@@ -17,11 +17,11 @@ const average = (array) => {
   let result = 0;
   let round = 0;
   if (array.length === 0) {
-    return;
+    return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      return;
+      return undefined;
     }
     total += array[index];
   }
