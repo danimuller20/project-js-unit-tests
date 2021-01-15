@@ -15,8 +15,8 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = (name) => {
-  if (!nome) { return undefined;}
+const createStudent = (nome) => {
+  if (!nome) { return undefined; }
   const objeto = {
     name: nome,
     feedback: 'Eita pessoa boa!',
