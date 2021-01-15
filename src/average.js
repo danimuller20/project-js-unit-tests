@@ -11,19 +11,19 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
   */
-function arrayCheck(array){
+function average(array) {
   let soma = 0;
   let media = 0;
-  for (let i = 0; i<array.lenght; i+=1 ){
-    if (array.lenght === 0 || typeof array[i] !== 'number'){
+  for (let i = 0; i<array.length; i += 1) {
+    if (array.lenght === 0 || typeof array[i] !== 'number') {
       return 'undefined';
     }
   }
-  for (let i = 0; i<array.lenght; i+=1 ){
+  for (let i = 0; i<array.length; i += 1) {
     soma += array[i];
   }
-  media = soma/array.lenght;
-  return Math.cail(media);
+  media = soma/array.length;
+  return Math.ceil(media);
 }
 const average = () => {};
 
