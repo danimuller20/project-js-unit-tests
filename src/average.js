@@ -20,8 +20,8 @@ const average = (array) => {
     if (array.length === 0) {
       media = undefined;
     } else if (typeof array[index] !== 'number') {
-    media = undefined;
-  }
+      media = undefined;
+    }
   }
   return media;
 };
