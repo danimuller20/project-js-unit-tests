@@ -13,5 +13,8 @@
 */
 
 const average = () => {};
+let nums = [2,2];
+nums = Math.round ();
+
 
 module.exports = average;
