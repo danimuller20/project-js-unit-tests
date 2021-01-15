@@ -12,8 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // comentario para pull request 
+const average = (arr) => {
+  const newArr = [];
+  let soma = 0;
+  let media = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    soma = soma + arr[i];
+  }
+  return Math.ceil(soma / arr.length);
 };
 
 module.exports = average;
