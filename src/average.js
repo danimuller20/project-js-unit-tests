@@ -14,7 +14,7 @@
 
 const average = (numbers) => {
   if (numbers.length < 2) {
-    return undefined
+    return undefined;
   }
 
   let sum = 0;
