@@ -10,8 +10,40 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
-*/.
+*/
 
-const average = () => {};
+
+const average = (array) => {
+  if (validateAll(array) === 1) {
+    let sum = 0;
+    for (index = 0; index < array.length; index +=1) {
+      sum += array[index];
+    }
+   return Math.round(sum/array.length);
+  } return undefined;
+}
+
+const validateEmpty = (array) => {
+  if (array.length === 0) {
+   return undefined;
+  } return 1;
+}
+
+function validateAll(array) {
+  if (validateEmpty(array) === 1 && validateNumber(array) === 1) {
+  return 1;
+  } return undefined;
+}
+const validateNumber = (array) => {
+  for (index = 0; index < array.length; index +=1) {
+    let posArray = array[index];
+    if (typeof(posArray) !== 'number') {
+      return undefined;
+    }
+  }
+  return 1;
+}
+
+console.log(average([]));
 
 module.exports = average;
