@@ -19,7 +19,7 @@ const validateEmpty = (array) => {
 };
 
 const validateNumber = (array) => {
-  for (index = 0; index < array.length; index +=1) {
+  for (index = 0; index < array.length; index += 1) {
     const posArray = array[index];
     if (typeof (posArray) !== 'number') {
       return undefined;
