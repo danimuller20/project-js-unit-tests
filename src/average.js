@@ -22,9 +22,9 @@ const average = (array) => {
     if (typeof array[index] !== 'number' || array[index] === '') {
       return undefined;
     }
-    somaArray = somaArray + array[index];
+    somaArray += array[index];
     calcMedia = somaArray / array.length;
-  }  
+  }
   return Math.round(calcMedia);
 };
 
