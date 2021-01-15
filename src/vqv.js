@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  if(nome === undefined || idade === undefined) return undefined;
+  if (nome === undefined || idade === undefined) return undefined;
 
   const presentation = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
