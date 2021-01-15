@@ -2,7 +2,7 @@
 
 /*
   Use template literals para escrever uma função que,
-  recebe seu nome e sua idade e retorna o parágrafo descrito abaixo.
+  recebe seu nome e sua idade e retorna o parágrafo descrito abaixo.X
   Caso a função seja chamada sem nenhum parâmetro, o valor undefined deve ser retornado.
 
   Parâmetros:
@@ -16,6 +16,12 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {};
+const vqv = (nome, idade) => nome === '' || idade === '' ? undefined : 
+  `'Oi, meu nome é ${nome}!
+Tenho ${idade} anos, 
+trabalho na Trybe e mando muito em programação!
+#VQV!'`;
+
+  console.log(vqv('Tunico', ''));
 
 module.exports = vqv;
