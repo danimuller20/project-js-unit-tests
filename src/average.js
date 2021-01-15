@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const undefinedArr = array => {
+const undefinedArr = (array) => {
   let retorno = false;
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
@@ -23,11 +23,11 @@ const undefinedArr = array => {
     retorno = true;
   }
   return retorno;
-}
+};
 
 const average = (array) => {
   let count = 0;
-  array.forEach(value => {
+  array.forEach((value) => {
     count += value;
   });
   if (undefinedArr(array)) return undefined;
