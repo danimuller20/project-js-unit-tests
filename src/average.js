@@ -17,7 +17,7 @@ const isNotEmpty = (array) => {
   if (!array.length) {
     bool = false;
   } return bool;
-}
+};
 
 const isNumber = (array) => {
   let bool = true;
