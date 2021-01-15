@@ -19,13 +19,13 @@ const average = (array) => {
   }
   array.forEach((element) => {
     soma += element;
-    if (typeof element === 'string'){
-    soma = undefined;
-    return soma;
-  }
+    if (typeof element === 'string') {
+      soma = undefined;
+   }
+   return soma;
   });
   const media = soma / array.length;
   return Math.round(media);
-}
+};
 
 module.exports = average;
