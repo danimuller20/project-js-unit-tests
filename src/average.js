@@ -13,11 +13,11 @@
 */
 
 const average = (array) => {
-  if ((array === '') || (typeof(array) !== 'number')){
+  if ((array === '') || (typeOf(array) !== 'number')) {
     return undefined;
   }
   const arrayLength = array.length;
-  const sum = 0;
+  let sum = 0;
   for (let i = 0; i < array.length; i += 1) {
     sum += array[i];
   }
