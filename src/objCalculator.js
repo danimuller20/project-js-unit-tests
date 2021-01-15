@@ -21,16 +21,20 @@
 
 const calculator = {
   add: sum = (int1, int2) => {
-    return Math.floor(int1 + int2);
-  } ,
+    const equals = Math.floor(int1 + int2);
+    return equals;
+  },
   mult: multiply = (int1, int2) => {
-    return Math.floor(int1 * int2);
+    const equals = Math.floor(int1 * int2);
+    return equals;
   },
   div: divide = (int1, int2) => {
-    return Math.floor(int1 / int2);
+    const equals = Math.floor(int1 / int2);
+    return equals;
   },
   sub: subtract = (int1, int2) => {
-    return Math.floor(int1 - int2);
+    const equals = Math.floor(int1 - int2);
+    return equals;
   },
 };
 
