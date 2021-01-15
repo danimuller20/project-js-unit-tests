@@ -28,5 +28,4 @@ const average = (array) => {
   return media;
 };
 
-
 module.exports = average;
