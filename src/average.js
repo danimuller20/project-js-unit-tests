@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = ( arr ) => {
+const average = (arr) => {
 
   /*
     Reduce: reduz o array em um único número
@@ -28,6 +28,7 @@ const average = ( arr ) => {
   const media = sum / arr.length;
 
   return media;
+  
 };
 
 average([1, 1]);
