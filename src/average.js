@@ -14,8 +14,8 @@
 const checkArrayType = (array) => {
   for (let i = 0; i < array.lenght; i += 1) {
     if (typeof array[i] !== 'number') {
-    return false;
-  }
+      return false;
+    }
   }
   return true;
 };
@@ -33,7 +33,7 @@ const average = (array) => {
     let averageNumbers = 0;
     for (let index = 0; index < array.length; index += 1) {
       sum += array[index];
-      }
+    }
     averageNumbers = sum / array.length;
     return Math.round(averageNumbers);
   }
