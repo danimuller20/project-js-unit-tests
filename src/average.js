@@ -13,9 +13,24 @@
 */
 
 const average = (array) => {  
-//Caso a função receba algum valor não númerico ou um array vazio
-if (array !== 'Number' || array === ''){
-  return('undefined');
+  //Caso a função receba algum valor não númerico ou um array vazio
+  if (array.length == 0){
+    return undefined;
   }
+  for ( let index = 0; index < array.length; index += 1){
+    if (typeof array[index] !== 'number'){
+      return undefined;
+    }
+  }
+  //A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos
+  let media = 0
+  let soma = 0
+  for (let i = 0; i < array.length; i += 1){
+    soma += array[i]
+  }
+  media = (soma / array.length)
+  
+    return Math.round(media);
 }
+
 module.exports = average;
