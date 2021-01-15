@@ -18,7 +18,7 @@ const average = (arr) => {
     arrAverage = undefined;
   } else {
     let sum = 0;
-    arr.forEach(number => {
+    arr.forEach((number) => {
       sum += number;
       return sum;
     });
