@@ -12,6 +12,21 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+// array.every(condição) = verifica em todo o array a condição estabelecida através de function ou arrow function
+
+const average = (arr) => {
+  const length = arr.length;
+  let calc = 0;
+
+  if ((length < 1) || (arr.every(currentValue => typeof currentValue === 'number') === false)) {
+    return undefined;
+  }
+
+  for (let index = 0; index < length; index += 1) {
+    calc += arr[index];
+  }
+
+  return Math.round(calc / length);
+};
 
 module.exports = average;
