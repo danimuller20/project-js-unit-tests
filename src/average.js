@@ -25,8 +25,8 @@ const average = (array) => {
     }
     sum += array[index];
   }
-  let average = Math.round(sum / arraySize);
-  return average;
+  let result = Math.round(sum / arraySize);
+  return result;
 };
 
 console.log(average([1, 2, 3, 4]));
