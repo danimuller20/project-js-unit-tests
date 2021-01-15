@@ -19,7 +19,7 @@ const average = (arrNumbers) => {
   }
   for (let index = 0; index < arrNumbers.length; index += 1) {
     if (typeof arrNumbers[index] !== 'string') {
-    arrAverage += arrNumbers[index]; 
+      arrAverage += arrNumbers[index];
     } else {
       return undefined;
     }
