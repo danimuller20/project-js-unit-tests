@@ -16,12 +16,12 @@ const average = (arr) => {
   let counter = 0;
   if (arr.length === 0) {
     return undefined;
-  };
+  }
   for (let index = 0; index < arr.length; index += 1) {
-    if(typeof arr[index] !== 'number') {
+    if (typeof arr[index] !== 'number') {
       return undefined;
     }
-    counter = counter + Math.round(arr[index]);
+    counter += Math.round(arr[index]);
   }
   const averageArr = Math.round(counter / arr.length);
   return averageArr;
