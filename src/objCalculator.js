@@ -21,19 +21,19 @@
 
 const calculator = {
   add: sum = (num1, num2) => {
-    let result = Math.floor(num1 + num2);
-    return result
+    const result = Math.floor(num1 + num2);
+    return result;
   },
   mult: multiply = (num1, num2) => {
-    let result = Math.floor(num1 * num2);
+    const result = Math.floor(num1 * num2);
     return result;
   },
   div: division = (num1, num2) => {
-    let result = Math.floor(num1 / num2);
+    const result = Math.floor(num1 / num2);
     return result;
   },
   sub: subtraction = (num1, num2) => {
-    let result = Math.floor(num1 - num2);
+    const result = Math.floor(num1 - num2);
     return result;
   },
 };
