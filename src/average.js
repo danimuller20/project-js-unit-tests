@@ -15,8 +15,8 @@
 const average = (array) => {
   let averageArray = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) === 'number') {
-      averageArray = array.reduce((a, b) => (a + b)) / array.length; 
+    if (typeof (array[index]) === 'number') {
+      averageArray = array.reduce((a, b) => (a + b)) / array.length;
     } else {
       return undefined;
     }
