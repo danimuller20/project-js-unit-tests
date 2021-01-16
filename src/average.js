@@ -14,7 +14,7 @@
 
 const average = (array) => {
   let result = 0;
-  const media;
+  const media = 0;
   if (array.length < 1) {
     return undefined;
   }
