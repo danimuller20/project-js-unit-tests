@@ -16,10 +16,10 @@
 */
 
 const createStudent = (nome) => {
-    return {
+  return {
     name: nome,
-    feedback: feedback = () => 'Eita pessoa boa!'
-  }
+    feedback: feedback = () => 'Eita pessoa boa!',
+  };
 };
 
 console.table(createStudent('Joao'));
