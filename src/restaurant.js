@@ -73,8 +73,8 @@
 
 const createMenu = (objetoQualquer) => {
   const objetoRetornado = {
-  fetchMenu: objetoQualquer,
-  }
+    fetchMenu: objetoQualquer,
+  };
 
   return objetoRetornado;
 };
