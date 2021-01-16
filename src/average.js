@@ -13,22 +13,22 @@
 */
 
 const average = (array) => {
- let result = 0; 
- let media;
+  let result = 0;
+  const media;
   if (array.length < 1) {
     return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'string') {
-    result += array[index];
+      result += array[index];
     } else {
       return undefined;
     }
   }
-      media = array.length;
-     result = result / media;
-      return Math.round(result);
-}; 
-  console.log(average([])); 
+  media = array.length;
+  result /= media;
+  return Math.round(result);
+};
+console.log(average([]));
 
 module.exports = average;
