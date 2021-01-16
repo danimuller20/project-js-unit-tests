@@ -12,24 +12,25 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-function funSum(index, array) {
-  for (let index = 0; index <= array.length; index += 1) {
-    if (array.length === 0 || array.length !== index) {
-      if (typeof array[index] === 'number') {
-        sum += array[index];
-      } else {
-        notError = false;
-        break;
-      }
+function funSum(notError, sum, index, array) {
+  if (array.length === 0 || array.length !== index) {
+    if (typeof array[index] === 'number') {
+      sum += array[index];
+    } else {
+      notError = false;
+      break;
     }
   }
+  return;
 }
 
 const average = (array) => {
   let sum = 0;
   let result;
   let notError = true;
-  funSum(index, array);
+  for (let index = 0; index <= array.length; index += 1) {
+    funSum(notError, sum, index, array);
+  }
   if (notError) {
     result = sum / array.length;
     result = result.toFixed(0);
