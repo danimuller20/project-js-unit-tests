@@ -87,6 +87,7 @@ function checkPrice(table, menu, index, helper) {
   if (Object.keys(menu)[helper] === table.consumption[index]) {
     return Object.values(menu)[helper];
   }
+  return 0;
 }
 
 function findPrice(table, menu) {
