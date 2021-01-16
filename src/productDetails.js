@@ -40,5 +40,3 @@ const productDetails = (firstProduct, secondProduct) => [
 ];
 
 module.exports = productDetails;
-
-console.log(productDetails('alcool', 'mascara')[0].details.productId.lastIndexOf('123'))
