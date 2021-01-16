@@ -34,7 +34,7 @@ const assert = require('assert');
 
 // assert.strictEqual(parseFloat(circle(3).area.toPrecision(4)), 28.26)
 console.log(Object.values(circle(3)));
-
+//
 // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
 // assert.deepStrictEqual(circle(3).radius, 3);
 // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.

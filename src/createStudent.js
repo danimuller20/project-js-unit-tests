@@ -15,6 +15,20 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const createStudent = (nome) => {
+  return {
+    feedback: () => 'Eita pessoa boa!',
+    name: nome,
+  }
+};
 
+//////////////////////////////
+const assert = require('assert');
+assert.strictEqual(typeof(createStudent()), 'object')
+assert.strictEqual(typeof(createStudent('Ivan').feedback), 'function')
+assert.strictEqual(createStudent('Leandrão, o Lobo Solitário').name, 'Leandrão, o Lobo Solitário');
+assert.strictEqual(createStudent('Ivan').feedback(), 'Eita pessoa boa!');
+
+
+//////////////////////////////
 module.exports = createStudent;
