@@ -37,4 +37,3 @@ describe('#average', () => {
     assert.strictEqual(average([-11, -5, 2]), -5);
   });
 });
-
