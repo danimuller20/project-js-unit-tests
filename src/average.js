@@ -36,3 +36,4 @@ const average = (arrayNumbers) => {
 };
 
 module.exports = average;
+ 
