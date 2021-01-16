@@ -27,7 +27,7 @@ const average = (arrayNumbers) => {
     returnValue = 'undefined';
   } else {
     let accumulator = 0;
-    for (let index = 0; index < arrayNumbers.length; index) {
+    for (let index = 0; index < arrayNumbers.length; index += 1) {
       accumulator += arrayNumbers[index];
     }
     returnValue = Math.trunc(accumulator / arrayNumbers.length);
