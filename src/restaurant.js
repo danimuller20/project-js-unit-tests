@@ -85,7 +85,7 @@
 
 const orderMenu = (restaurant, orders) => {
   restaurant.consumption.push(orders);
-}
+};
 
 const toPay = (restaurant) => {
   let total = 0;
@@ -99,9 +99,9 @@ const toPay = (restaurant) => {
     if (Object.keys(drinks).includes(consumption[index])) {
       total += drinks[consumption[index]];
     }
-  };
+  }
   return parseFloat((total * 1.1).toFixed(2));
-}
+};
 
 const createMenu = (menu) => {
   const restaurant = {
