@@ -20,7 +20,6 @@ function funSum(notError, sum, index, array) {
       notError = false;
     }
   }
-  return;
 }
 
 const average = (array) => {
