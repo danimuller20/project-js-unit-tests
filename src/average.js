@@ -23,7 +23,7 @@ const findNan = (array) => {
 
 const average = (arrayNumbers) => {
   let returnValue;
-  if (arrayNumbers.length < 1 || findNan(aVrrayNumbers)) {
+  if (arrayNumbers.length < 1 || findNan(arrayNumbers)) {
     returnValue = 'undefined';
   } else {
     let accumulator = 0;
