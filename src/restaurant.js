@@ -75,26 +75,32 @@ const createMenu = bill => ({
   fetchMenu: bill,
 });
 
-const addConsumption = table => table.consumption = [];
+const addConsumption = (table) => {table.consumption = [];}
 
-const orderFromMenu = table => table.order = function order(request) {
-  table.consumption.push(request);
+const orderFromMenu = (table) => {
+  table.order = function order(request) {
+    table.consumption.push(request);
+  };
 };
+
+function checkPrice(table, menu, index, helper) {
+  if (Object.keys(menu)[helper] === table.consumption[index]) {
+    return Object.values(menu)[helper];
+  }
+}
 
 function findPrice(table, menu) {
   let answer = 0;
   for (let index = 0; index < Object.entries(table.consumption).length; index += 1) {
     for (let helper = 0; helper < Object.entries(menu).length; helper += 1) {
-      if (Object.keys(menu)[helper] === table.consumption[index]) {
-        answer += Object.values(menu)[helper];
-      }
+      answer += checkPrice(table, menu, index, helper);
     }
   }
   return answer;
 }
 
 const priceTag = (table) => {
-  table.pay = function () { 
+  table.pay = function pay() { 
     let answer = 0;
     answer += findPrice(table, table.fetchMenu.food);
     answer += findPrice(table, table.fetchMenu.drink);
