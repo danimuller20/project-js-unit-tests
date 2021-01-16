@@ -18,7 +18,6 @@ function funSum(notError, sum, index, array) {
       sum += array[index];
     } else {
       notError = false;
-      break;
     }
   }
   return;
