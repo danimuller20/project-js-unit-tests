@@ -14,12 +14,11 @@
 
 const average = (array) => {
   for (let index = 0; index < array.length; index += 1) {
-
-    if (array.length === 0 || typeof (array[index]) !== 'number') {
+    if (array.length === 0 || typeof array[index] !== 'number') {
       return undefined;
     }
-    
   }
+  return 'retorno';
 };
 
 module.exports = average;
