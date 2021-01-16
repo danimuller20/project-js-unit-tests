@@ -75,7 +75,7 @@ const createMenu = bill => ({
   fetchMenu: bill,
 });
 
-const addConsumption = (table) => {table.consumption = [];}
+const addConsumption = (table) => { table.consumption = []; };
 
 const orderFromMenu = (table) => {
   table.order = function order(request) {
@@ -101,12 +101,12 @@ function findPrice(table, menu) {
 }
 
 const priceTag = (table) => {
-  table.pay = function pay() { 
+  table.pay = function pay() {
     let answer = 0;
     answer += findPrice(table, table.fetchMenu.food);
     answer += findPrice(table, table.fetchMenu.drink);
     return parseFloat((answer * 1.1).toFixed(2));
-  }
+  };
 };
 
 exports.createMenu = createMenu;
