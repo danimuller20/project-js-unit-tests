@@ -13,6 +13,8 @@
 */
 
 function funSum(notError, sum, index, array) {
+  let notError = notError;
+  let sum = sum;
   if (array.length === 0 || array.length !== index) {
     if (typeof array[index] === 'number') {
       sum += array[index];
