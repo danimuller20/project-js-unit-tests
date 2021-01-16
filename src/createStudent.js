@@ -15,12 +15,7 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = (nome) => {
-  return {
-    feedback: () => 'Eita pessoa boa!',
-    name: nome,
-  }
-};
+const createStudent = (nome) => ({ feedback: () => 'Eita pessoa boa!', name: nome,})
 
 //////////////////////////////
 const assert = require('assert');
