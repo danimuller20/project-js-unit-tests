@@ -13,12 +13,14 @@
 */
 
 function funSum(index, array) {
-  if (array.length === 0 || array.length !== index) {
-    if (typeof array[index] === 'number') {
-      sum += array[index];
-    } else {
-      notError = false;
-      break;
+  for (let index = 0; index <= array.length; index += 1) {
+    if (array.length === 0 || array.length !== index) {
+      if (typeof array[index] === 'number') {
+        sum += array[index];
+      } else {
+        notError = false;
+        break;
+      }
     }
   }
 }
@@ -27,9 +29,7 @@ const average = (array) => {
   let sum = 0;
   let result;
   let notError = true;
-  for (let index = 0; index <= array.length; index += 1) {
-    funSum(index, array);
-  }
+  funSum(index, array);
   if (notError) {
     result = sum / array.length;
     result = result.toFixed(0);
