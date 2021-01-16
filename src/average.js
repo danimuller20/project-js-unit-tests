@@ -22,7 +22,7 @@
      }
      soma += array[i];
    }
-   let media = Math.round(soma / array.length);
+   const media = Math.round(soma / array.length);
    return (media);
  };
  module.exports = average;
