@@ -18,9 +18,9 @@
      if (array.length === 0 || typeof array[i] !== 'number') {
        return (undefined);
      }
-     soma += array[i];     
+     soma += array[i];
    }
    media = Math.ceil(soma / array.length);
    return (media);
  };
-  module.exports = average;
+ module.exports = average;
