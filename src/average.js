@@ -22,14 +22,17 @@ const findNan = (array) => {
 };
 
 const average = (arrayNumbers) => {
-  if (arrayNumbers.length < 1 || findNan(arrayNumbers)) {
-    throw 'undefined';
+  let returnValue;
+  if (arrayNumbers.length < 1 || findNan(aVrrayNumbers)) {
+    returnValue = 'undefined';
+  } else {
+    let accumulator = 0;
+    for (let index = 0; index < arrayNumbers.length; index) {
+      accumulator += arrayNumbers[index];
+    }
+    returnValue = Math.trunc(accumulator / arrayNumbers.length);
   }
-  let accumulator = 0;
-  for (let index = 0; index < arrayNumbers.length; index) {
-    accumulator += arrayNumbers[index];
-  }
-  return Math.trunc(accumulator / arrayNumbers.length);
+  return returnValue;
 };
 
 module.exports = average;
