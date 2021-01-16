@@ -33,12 +33,26 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
+    const result = productDetails();
     // Teste que o retorno da função é um array.
+    // Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+    assert.strictEqual(Array.isArray(result), true);
+    // Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof
+    assert.strictEqual(result instanceof Array, true);
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(result.length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual(result[0] instanceof Object && result[1] instanceof Object, true);
     // Teste que os dois objetos são diferentes entre si.
+    assert.strictEqual(result[0] !== result[1], true);
     // (Difícil) Teste que os dois productIds terminam com 123.
+    // Reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/search
+    const pattern = /123$/,
+    resultId1 = result[0].details.productId,
+    resultId2 = result[0].details.productId,
+    resultId1ContainsPattern = resultId1.search(pattern) !== 0,
+    resultId2ContainsPattern = resultId2.search(pattern) !== 0;
+    assert.strictEqual(resultId1ContainsPattern && resultId2ContainsPattern , true);
   });
 });
