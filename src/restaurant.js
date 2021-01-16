@@ -75,34 +75,32 @@ const createMenu = bill => ({
   fetchMenu: bill,
 });
 
-const addConsumption = table => {
-  table.consumption = [];
-}
+const addConsumption = table => table.consumption = [];
 
-const orderFromMenu = table => {
-  table.order = function (request) {
-    table.consumption.push(request);
-  }
-}
+const orderFromMenu = table => table.order = function order(request) {
+  table.consumption.push(request);
+};
 
-const priceTag = table => {
-  table.pay = function () { 
-    let answer = 0;
-    for (let index = 0; index < Object.entries(table.consumption).length; index += 1) {
-      for (let helper = 0; helper < Object.entries(table.fetchMenu.food).length; helper += 1) {
-        if (Object.keys(table.fetchMenu.food)[helper] === table.consumption[index]) {
-          answer += Object.values(table.fetchMenu.food)[helper];
-        }
-      }
-      for (let counter = 0; counter < Object.entries(table.fetchMenu.drink).length; counter += 1) {
-        if (Object.keys(table.fetchMenu.drink)[counter] === table.consumption[index]) {
-          answer += Object.values(table.fetchMenu.drink)[counter];
-        }
+function findPrice(table, menu) {
+  let answer = 0;
+  for (let index = 0; index < Object.entries(table.consumption).length; index += 1) {
+    for (let helper = 0; helper < Object.entries(menu).length; helper += 1) {
+      if (Object.keys(menu)[helper] === table.consumption[index]) {
+        answer += Object.values(menu)[helper];
       }
     }
+  }
+  return answer;
+}
+
+const priceTag = (table) => {
+  table.pay = function () { 
+    let answer = 0;
+    answer += findPrice(table, table.fetchMenu.food);
+    answer += findPrice(table, table.fetchMenu.drink);
     return parseFloat((answer * 1.1).toFixed(2));
   }
-}
+};
 
 exports.createMenu = createMenu;
 exports.addConsumption = addConsumption;
