@@ -32,7 +32,7 @@ const average = (array) => {
   let averageArray = 0;
   if (array.length === 0) return undefined;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof (array[index]) !== 'number') return undefined;    
+    if (typeof (array[index]) !== 'number') return undefined;
     averageArray = array.reduce((a, b) => (a + b)) / array.length;
   }
   return Math.round(averageArray);
