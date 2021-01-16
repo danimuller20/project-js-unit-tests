@@ -30,7 +30,7 @@ const average = (arrayNumbers) => {
     for (let index = 0; index < arrayNumbers.length; index += 1) {
       accumulator += arrayNumbers[index];
     }
-    returnValue = Math.trunc(accumulator / arrayNumbers.length);
+    returnValue = Math.round(accumulator / arrayNumbers.length);
   }
   return returnValue;
 };
