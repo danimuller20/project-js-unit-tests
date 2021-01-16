@@ -72,51 +72,40 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const newOrder = (restaurant, orderParam) => {
-  restaurant.consumption.push(orderParam)
-}
+  restaurant.consumption.push(orderParam);
+};
 
 const payment = (restaurant) => {
   const consumo = restaurant.consumption;
-  const food = restaurant.fetchMenu.food
-  const foodKey = Object.keys(food)
-  const drink = restaurant.fetchMenu.drink
+  const food = restaurant.fetchMenu.food;
+  const foodKey = Object.keys(food);
+  const drink = restaurant.fetchMenu.drink;
   const drinkKey = Object.keys(drink);
   let conta = 0;
   for (let index = 0; index < consumo.length; index += 1) {
     for (let index2 = 0; index2 < foodKey.length; index2 += 1) {
       if (consumo[index] === foodKey[index2]) {
-        conta += restaurant.fetchMenu.food[`${foodKey[index2]}`]
+        conta += restaurant.fetchMenu.food[`${foodKey[index2]}`];
       }
     }
     for (let index2 = 0; index2 < drinkKey.length; index2 += 1) {
       if (consumo[index] === drinkKey[index2]) {
-        conta += restaurant.fetchMenu.drink[`${drinkKey[index2]}`]
+        conta += restaurant.fetchMenu.drink[`${drinkKey[index2]}`];
       }
     }
   }
   return conta;
-}
+};
 
 const createMenu = (param) => {
   const itemMenu = param;
-  const restaurant = { 
+  const restaurant = {
     fetchMenu: itemMenu,
     consumption: [],
-    order: (orderParam) => newOrder(restaurant, orderParam),
+    order: orderParam => newOrder(restaurant, orderParam),
     pay: () => payment(restaurant),
   };
   return restaurant;
 };
-
-const meuRestaurante = createMenu({
-  food: {'coxinha': 3.90, 'sanduiche': 9.90},
-  drink: {'agua': 3.90, 'cerveja': 6.90}
-});
-
-meuRestaurante.order('agua');
-meuRestaurante.order('coxinha');
-meuRestaurante.order('coxinha');
-
-console.log(meuRestaurante.pay())
 
 module.exports = createMenu;
