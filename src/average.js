@@ -14,16 +14,16 @@
 const findNan = (array) => {
   let returnValue = false;
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) !== 'number') {
-        returnValue = true;
+    if (typeof (array[index]) !== 'number') {
+      returnValue = true;
     }
   }
   return returnValue;
-}
+};
 
 const average = (arrayNumbers) => {
   if (arrayNumbers.length < 1 || findNan(arrayNumbers)) {
-    throw "undefined";
+    throw 'undefined';
   }
   let accumulator = 0;
   for (let index = 0; index < arrayNumbers.length; index) {
