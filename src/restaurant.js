@@ -75,24 +75,34 @@ const newOrder = (restaurant, orderParam) => {
   restaurant.consumption.push(orderParam);
 };
 
+const priceFood = (param, foodKey, restaurant) => {
+  let price = 0;
+  for (let index2 = 0; index2 < foodKey.length; index2 += 1) {
+    if (param === foodKey[index2]) {
+      price += restaurant.fetchMenu.food[`${foodKey[index2]}`];
+    }
+  }
+  return price;
+};
+
+const priceDrink = (param, drinkKey, restaurant) => {
+  let price = 0;
+  for (let index2 = 0; index2 < drinkKey.length; index2 += 1) {
+    if (param === drinkKey[index2]) {
+      price += restaurant.fetchMenu.drink[`${drinkKey[index2]}`];
+    }
+  }
+  return price;
+};
+
 const payment = (restaurant) => {
+  const foodKey = Object.keys(restaurant.fetchMenu.food);
+  const drinkKey = Object.keys(restaurant.fetchMenu.drink);
   const consumo = restaurant.consumption;
-  const food = restaurant.fetchMenu.food;
-  const foodKey = Object.keys(food);
-  const drink = restaurant.fetchMenu.drink;
-  const drinkKey = Object.keys(drink);
   let conta = 0;
   for (let index = 0; index < consumo.length; index += 1) {
-    for (let index2 = 0; index2 < foodKey.length; index2 += 1) {
-      if (consumo[index] === foodKey[index2]) {
-        conta += restaurant.fetchMenu.food[`${foodKey[index2]}`];
-      }
-    }
-    for (let index2 = 0; index2 < drinkKey.length; index2 += 1) {
-      if (consumo[index] === drinkKey[index2]) {
-        conta += restaurant.fetchMenu.drink[`${drinkKey[index2]}`];
-      }
-    }
+    conta += priceFood(consumo[index], foodKey, restaurant);
+    conta += priceDrink(consumo[index], drinkKey, restaurant);
   }
   return conta;
 };
