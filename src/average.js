@@ -25,7 +25,7 @@ const average = (arrayNumbers) => {
   let returnValue;
   if (arrayNumbers.length < 1 || findNan(arrayNumbers)) {
     returnValue = 'undefined';
-  } else { 
+  } else {
     let accumulator = 0;
     for (let index = 0; index < arrayNumbers.length; index) {
       accumulator += arrayNumbers[index];
