@@ -76,4 +76,4 @@ const createMenu = (item) => ({fetchMenu: item});
 module.exports = createMenu;
 
 
-console.log(createMenu({food: {}, drink: {}}).fetchMenu);
+// console.log(createMenu({food: {}, drink: {}}).fetchMenu);

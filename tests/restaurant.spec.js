@@ -72,7 +72,7 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: objetoQualquer
     // ```
-    // assert.deepStrictEqual(Object.keys(createMenu({food: {}, drink: {}}).fetchMenu), { food: {}, drink: {} });
+    assert.deepStrictEqual({food: {}, drink: {}},createMenu({food: {}, drink: {}}).fetchMenu);
     // Agora faça o TESTE 4 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
