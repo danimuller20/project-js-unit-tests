@@ -24,7 +24,7 @@ const calculator = {
     const soma = num1 + num2;
     return Math.trunc(soma);
   },
-  mult:(num1, num2) => {
+  mult: (num1, num2) => {
     const multiplicacao = num1 * num2;
     return Math.round(multiplicacao);
   },
@@ -35,7 +35,6 @@ const calculator = {
   sub: (num1, num2) => {
     const subtracao = num1 - num2;
     return Math.trunc(subtracao);
-  }
+  },
 };
-console.log(calculator.add(1,3))
 module.exports = calculator;
