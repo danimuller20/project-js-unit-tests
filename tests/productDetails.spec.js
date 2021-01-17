@@ -37,6 +37,10 @@ describe('#productDetails', () => {
     assert.strictEqual(Object.keys(productDetails('prod1', 'prod2')).length, 2);
     assert.strictEqual(typeof(productDetails('p1', 'p2')), 'object');
     assert.notStrictEqual(productDetails('p1', 'p2')[0], productDetails('p1', 'p2')[1]);
-    assert.strictEqual(productDetails('p1', 'p2').indexOf('123'), -1);
+    // assert.strictEqual(productDetails('p1', 'p2').indexOf('123'), -1);
+
+    const product1 = productDetails('aaa', 'bbb')[0].details.productId;
+    const product2 = productDetails('aaa', 'bbb')[1].details.productId;
+    assert.strictEqual(/123/g.test(product1 && product2), true);
   });
 });
