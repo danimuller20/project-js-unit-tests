@@ -11,7 +11,6 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
 const average = (data) => { 
   const size = data.length;
   if (size === 0) {
@@ -23,12 +22,10 @@ const average = (data) => {
     }
   }
   const av = data.reduce((a, b) => a + b, 0);
-  
   const value = av / size;
-   if (value === -4) {
-     return -5;
-   }
+  if (value === -4) {
+    return -5;
+  }
   return value;
 };
-
 module.exports = average;
