@@ -80,20 +80,22 @@ const createMenu = (parametro) => {
     }
     menu.order = (item) => {
     menu.consumption.push(item);
-    menu.pagamento =  () =>  {
-      let payable = 0;  
-      for(let index = 0; index < menu.consumption.length; index += 1){
-        if(menu.consumption[index] === 'coxinha') {
-          payable += 2.5;
-        }
-        if(menu.consumption[index] === 'agua') {
-          payable += 1.5;
-        }
-      }
-      return payable;
-    }
+    menu.pagamento = pagamento
   };
   return menu;
 };
+
+const pagamento = () => {
+  let payable = 0;  
+  for(let index = 0; index < menu.consumption.length; index += 1){
+    if(menu.consumption[index] === 'coxinha') {
+      payable += 2.5;
+    }
+    if(menu.consumption[index] === 'agua') {
+      payable += 1.5;
+    }
+  }
+  return payable;
+}
 
 module.exports = createMenu;
