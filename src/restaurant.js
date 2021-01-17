@@ -77,20 +77,22 @@ const checkProductIn = (product, menuEntryObj) => {
 };
 
 const getProductPrice = (product, menu) => {
+  let price = null;
   const menuEntries = Object.entries(menu);
   for (let index = 0; index < menuEntries.length; index += 1) {
     const entryProductsObj = menuEntries[index][1];
     const entryContainsProduct = checkProductIn(product, entryProductsObj);
     if (entryContainsProduct) {
-      return entryProductsObj[product];
+      price = entryProductsObj[product];
     }
   }
+  return price;
 };
 
 const createMenu = menu => ({
   fetchMenu: menu,
   consumption: [],
-  order: function (product) {
+  order(product) {
     this.consumption.push(product);
   },
   pay() {
