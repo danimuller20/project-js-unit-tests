@@ -79,16 +79,15 @@ const pay = () => {
   consumed.forEach((item) => {
     Object.keys(menu.fetchMenu.food).forEach((itemFood) => {
       if (item === itemFood) {
-        valor += Object.values(menu.fetchMenu.food)[0];
+        valor += menu.fetchMenu.food[itemFood];
       }
     });
     Object.keys(menu.fetchMenu.drink).forEach((itemDrink) => {
       if (item === itemDrink) {
-        valor += Object.values(menu.fetchMenu.drink)[0];
+        valor += menu.fetchMenu.drink[itemDrink];
       }
     });
   });
-  console.log(valor);
   return valor;
 };
 
