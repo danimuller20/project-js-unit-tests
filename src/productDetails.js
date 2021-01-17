@@ -39,4 +39,6 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+console.log(productDetails('p1', 'p2').indexOf('123'));
+
 module.exports = productDetails;
