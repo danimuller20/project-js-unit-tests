@@ -75,17 +75,9 @@
     const menu = {
       fetchMenu: object,
       consumption: [],
-      order: function (order) {
-        this.consumption.push(order)
-      },
-    }
+      order: function orderMenu(order) {this.consumption.push(order);},
+    };
     return menu;
   };
 
-  objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
-  objetoRetornado.order("coxinha");
-  console.log(objetoRetornado.consumption)
-
   module.exports = createMenu;
-
-
