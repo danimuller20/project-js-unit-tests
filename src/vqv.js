@@ -24,7 +24,7 @@ trabalho na Trybe e mando muito em programação!
   if (typeof nome === 'string') {
     return teste;
   }
-  return undefined
+  return undefined;
 };
 vqv('Tunico', 29);
 
