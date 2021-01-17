@@ -86,11 +86,11 @@ const payCalculator = (menuObject, consumptionArray) => {
 
 const createMenu = (menu) => {
   const objectMenu = {
-    fetchMenu: menu,
-    consumption: [],
-    order: function (orderIn) { this.consumption.push(orderIn); },
-    pay: function () { return payCalculator(this.fetchMenu, this.consumption); },
-  }
+    'fetchMenu': menu,
+    'consumption': [],
+    'order': function (orderIn) { this.consumption.push(orderIn); },
+    'pay': function () { return payCalculator(this.fetchMenu, this.consumption); },
+  };
   return objectMenu;
 };
 
