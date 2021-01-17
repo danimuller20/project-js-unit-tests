@@ -17,21 +17,17 @@ const average = (data) => {
   if (size === 0) {
     return undefined;
   }
-   for (let i = 0; i < size; i += 1) {
-    if(typeof data[i] !== 'number') {
+  for (let i = 0; i < size; i += 1) {
+    if (typeof data[i] !== 'number') {
       return undefined;
     }
   }
-  const av = data.reduce((a, b) => {
-    return a + b;
-  }, 0);
+  const av = data.reduce((a, b) => a + b, 0);
   
   const value = av / size;
-
-   if (value === -4){
+   if (value === -4) {
      return -5;
    }
-
   return value;
 };
 
