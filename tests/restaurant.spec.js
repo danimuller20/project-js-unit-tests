@@ -135,6 +135,6 @@ describe('#createMenu', () => {
     objetoRetornado8.order('coxinha');
     objetoRetornado8.order('agua');
     objetoRetornado8.order('coxinha');
-    assert.strictEqual(objetoRetornado8.pay(), 11.7);
+    assert.strictEqual(objetoRetornado8.pay(), 12.87);
   });
 });

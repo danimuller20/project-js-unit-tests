@@ -85,7 +85,7 @@ const createMenu = function createMenu(menu) {
           sum += newMenu.fetchMenu.drink[currentValue];
         }
       });
-      return sum;
+      return parseFloat((sum * 1.1).toPrecision(4));
     },
   };
   return newMenu;
