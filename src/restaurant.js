@@ -75,7 +75,7 @@
     const menu = {
       fetchMenu: object,
       consumption: [],
-      order: function orderMenu(order) {this.consumption.push(order);},
+      order: function orderMenu(order) { this.consumption.push(order); },
     };
     return menu;
   };
