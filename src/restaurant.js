@@ -57,7 +57,7 @@ function getPrice(item, menu) {
 const createMenu = objMenu => ({
   fetchMenu: objMenu,
   consumption: [],
-  order(item) { this.consumption.push(item) },
+  order(item) { this.consumption.push(item); },
   pay() {
     let total = 0;
     for (let index = 0; index < this.consumption.length; index += 1) {
