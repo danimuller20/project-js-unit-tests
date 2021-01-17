@@ -44,18 +44,25 @@
 */
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
-const createMenu = (objMenu) => ({
+function getPrice(item, menu) {
+  let price = 0;
+  if (Object.keys(menu.food).includes(item)) {
+    price = menu.food[item];
+  } else if (Object.keys(menu.drinks).includes(item)) {
+    price = menu.drinks[item];
+  }
+  return price;
+}
+
+const createMenu = objMenu => ({
   fetchMenu: objMenu,
   consumption: [],
-  order: function (item) { this.consumption.push(item) },
-  pay: function () {
+  order(item) { this.consumption.push(item) },
+  pay() {
     let total = 0;
-    for (const item of this.consumption) {
-      if (Object.keys(this.fetchMenu.food).includes(item)) {
-        total += this.fetchMenu.food[item];
-      } else if (Object.keys(this.fetchMenu.drinks).includes(item)) {
-        total += this.fetchMenu.drinks[item];
-      }
+    for (let index = 0; index < this.consumption.length; index += 1) {
+      item = this.consumption[index];
+      total += getPrice(item, this.fetchMenu);
     }
     return total;
   },
