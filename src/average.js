@@ -14,7 +14,7 @@
 const average = (data) => { 
 
   const size = data.length;
-  
+
   if (size === 0) {
     return undefined;
   }
