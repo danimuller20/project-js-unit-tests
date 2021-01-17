@@ -81,14 +81,12 @@ const createMenu = object => {
       const drinkValues = Object.values(menu.fetchMenu.drink);
       let sum = 0;
       for (let index = 0; index < menu.consumption.length; index += 1) {
-        if (menu.consumption[index] === Object.keys(menu.fetchMenu.food)[0]) {
-          sum += foodValues[0];
-        } else if (menu.consumption[index] === Object.keys(menu.fetchMenu.food)[1]) {
-          sum += foodValues[1];
-        } else if (menu.consumption[index] === Object.keys(menu.fetchMenu.drink)[0]) {
-          sum += drinkValues[0];
-        } else if (menu.consumption[index] === Object.keys(menu.fetchMenu.drink)[1]) {
-          sum += drinkValues[1];
+        for (let index2 = 0; index2 < foodValues.length; index2 += 1) {
+          if (menu.consumption[index] === Object.keys(menu.fetchMenu.food)[index2]) {
+            sum += foodValues[index2];
+          } else if (menu.consumption[index] === Object.keys(menu.fetchMenu.drink)[index2]) {
+            sum += drinkValues[index2];
+          }
         }
       }
       return parseFloat(sum.toPrecision(3));
