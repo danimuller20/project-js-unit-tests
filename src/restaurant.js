@@ -74,28 +74,28 @@
 const menu = {};
 
 const createMenu = (parametro) => {
-    menu.fetchMenu = parametro;
-    if (!menu.consumption) {
-      menu.consumption = [];
-    }
-    menu.order = (item) => {
-    menu.consumption.push(item);
-    menu.pagamento = pagamento
-  };
+  menu.fetchMenu = parametro;
+  if (!menu.consumption) {
+    menu.consumption = [];
+  }
+  menu.order = (item) => {
+  menu.consumption.push(item);
+  menu.pagamento = pagamento;
+    };
   return menu;
 };
 
 const pagamento = () => {
-  let payable = 0;  
-  for(let index = 0; index < menu.consumption.length; index += 1){
-    if(menu.consumption[index] === 'coxinha') {
-      payable += 2.5;
-    }
-    if(menu.consumption[index] === 'agua') {
-      payable += 1.5;
-    }
+let payable = 0;  
+for (let index = 0; index < menu.consumption.length; index += 1){
+  if (menu.consumption[index] === 'coxinha') {
+    payable += 2.5;
   }
-  return payable;
+  if (menu.consumption[index] === 'agua') {
+   payable += 1.5;
+  }
 }
+return payable;
+};
 
 module.exports = createMenu;
