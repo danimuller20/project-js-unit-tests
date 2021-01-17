@@ -88,11 +88,11 @@ const createMenu = (menu) => {
   const objectMenu = {
     fetchMenu: menu,
     consumption: [],
-    order: function (orderIn) {
+    order(orderIn) {
       this.consumption.push(orderIn);
     },
-    pay: function () {
-      return payCalculator(this.fetchMenu, this.consumption); 
+    pay() {
+      return payCalculator(this.fetchMenu, this.consumption);
     },
   };
   return objectMenu;
