@@ -25,6 +25,5 @@ const myCounter = () => {
   }
   return myArray;
 };
-myCounter()
-console.log(myCounter())
+
 module.exports = myCounter;
