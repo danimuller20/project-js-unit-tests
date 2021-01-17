@@ -102,7 +102,8 @@ const createMenu = menu => ({
       const productPrice = getProductPrice(product, menu);
       bill += productPrice;
     }
-    return bill;
+    bill *= 1.1
+    return parseFloat(bill.toPrecision(4));
   },
 });
 
