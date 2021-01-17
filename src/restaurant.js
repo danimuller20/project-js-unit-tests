@@ -70,7 +70,78 @@
 //------------------------------------------------------------------------------------------
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
+const myObject = {};
 
-const createMenu = () => {};
+const getPrice = (index, object) => {
+  const objectFetchMenu = Object.values(object);
+  const food = Object.keys(objectFetchMenu[0]);
+  const drink = Object.keys(objectFetchMenu[1]);
+  let price = 0;
+
+  if (food.includes(index)) {
+    price = object.food[index];
+  }
+
+  if (drink.includes(index)) {
+    price = object.drink[index];
+  }
+
+  return price;
+};
+
+const arrayOrder = (array, value) => {
+  if (array !== undefined) {
+    array.push(value);
+  }
+
+  return [];
+};
+
+const checkForDuplicates = (array) => {
+  const values = {};
+  let result = false;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (Object.keys(values).indexOf(array[index]) === -1) {
+      values[array[index]] = 0;
+    }
+
+    values[array[index]] += 1;
+  }
+
+  if ((Object.values(values)).filter(currentValue => currentValue > 1).length > 0) {
+    result = true;
+  }
+
+  return result;
+};
+
+const pay = (array) => {
+  let price = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    price += getPrice(array[index], myObject.fetchMenu);
+  }
+
+  return (Math.round((price * 1.1) * 100) / 100).toFixed(2);
+};
+
+const createMenu = (obj) => {
+  myObject.fetchMenu = obj;
+  myObject.consumption = arrayOrder(myObject.consumption, '');
+  myObject.order = (value) => { arrayOrder(myObject.consumption, value); };
+
+  myObject.checkForDuplicates = (array) => {
+    const result = checkForDuplicates(array);
+    return result;
+  };
+
+  myObject.pay = (array) => {
+    const result = pay(array);
+    return result;
+  };
+
+  return myObject;
+};
 
 module.exports = createMenu;
