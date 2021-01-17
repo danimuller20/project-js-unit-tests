@@ -9,30 +9,24 @@
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined; 
+    - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => {
-  let total = 0
-  let result = 0
-  
+const average = array => {
   if (array.length === 0) {
-    result = undefined
-  } else {
-    for (let index = 0; index < array.length; index += 1) {
-      if (typeof(array[index]) !== 'number') {
-        result = undefined
-        break
-      } else {
-        total += array[index]
-      }
-    };
+    return undefined
+  };
 
-    if (result === 0) {
-      result = Math.round(total / array.length) 
-    }
-  }
-  return result
+  let result = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof(array[index]) !== 'number') {
+      return undefined;
+    } else {
+      result += array[index];
+    };
+  };
+  return Math.round(result/array.length);
 }
 
 module.exports = average;
