@@ -11,7 +11,7 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-// logica da linha 24 feita em conjunto
+// logica da linha 17 feita em conjunto
 
 const average = (array) => {
   if (array.length === 0) {
