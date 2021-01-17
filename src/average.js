@@ -14,23 +14,23 @@
 
 const average = (data) => { 
   const size = data.length;
-  if(size === 0) {
+  if (size === 0) {
     return undefined;
   }
-  for(let i = 0; i < size; i++) {
+   for (let i = 0; i < size; i += 1 {
     if(typeof data[i] !== 'number') {
       return undefined;
     }
   }
-  const av = data.reduce((a, b)=> {
+  const av = data.reduce((a, b) => {
     return a + b;
   }, 0);
-  const value = parseInt(av/size);
-   if(value === -4){
+  const value = av / size;
+   if (value === -4){
      return -5;
    }
 
-  return parseInt(av/size);
+  return value
 };
 
 module.exports = average;
