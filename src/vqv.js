@@ -17,9 +17,9 @@
 */
 
 const vqv = (nome, idade) => {
-console.log(`Oi, meu nome é ${nome}!
-tenho ${idade} anos,
-trabalho na Trybe e mando muito em programação!
-#VQV!`);
+  console.log(`Oi, meu nome é ${nome}!
+  tenho ${idade} anos,
+  trabalho na Trybe e mando muito em programação!
+  #VQV!`);
 };
 module.exports = vqv;
