@@ -20,7 +20,7 @@
       name,
       feedback: function () {
         return 'Eita pessoa boa!';
-    },
+      },
     };
   };
   module.exports = createStudent;
