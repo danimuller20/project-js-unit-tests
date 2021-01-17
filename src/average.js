@@ -11,10 +11,8 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-const average = (data) => { 
-
+const average = (data) => {
   const size = data.length;
-
   if (size === 0) {
     return undefined;
   }
