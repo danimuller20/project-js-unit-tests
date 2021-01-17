@@ -15,7 +15,7 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-//a condição if verificará se há os parâmetros nome e idade,
+// a condição if verificará se há os parâmetros nome e idade,
 // caso não exista, retornará undefined
 const vqv = (nome, idade) => {
   if (!nome && !idade) {
