@@ -17,13 +17,13 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome === undefined || idade === undefined) {
+  if (!nome || !idade) {
     return undefined;
   }
   console.log(nome);
-  return `Oi, meu nome é ${nome}!
-Tenho ${idade} anos,
-trabalho na Trybe e mando muito em programação!
+  return `Oi, meu nome é ${nome}!,
+Tenho ${idade} anos,,
+trabalho na Trybe e mando muito em programação!,
 #VQV!`;
 };
 
