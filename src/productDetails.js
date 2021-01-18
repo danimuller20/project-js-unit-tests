@@ -39,4 +39,10 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+const assert = require('assert')
+assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true)
+assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2)
+assert.deepStrictEqual(typeof(productDetails('Alccol gel', 'Máscara')[0] && productDetails('Alccol gel', 'Máscara')[0]), 'object')
+assert.deepStrictEqual(productDetails('Alcool', 'Máscara')[0] !== productDetails('Alcool', 'Máscara')[1], true);
+assert.deepStrictEqual(productDetails('Alcool', 'Máscara')[0].details.productId.slice(-3) && productDetails('Alcool', 'Máscara')[1].details.productId.slice(-3), '123')
 module.exports = productDetails;
