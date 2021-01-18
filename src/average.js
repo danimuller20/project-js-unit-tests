@@ -12,18 +12,17 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = array => {
+const average = (array) => {
   let total = 0;
 
   for (const iterator of array) {
-
-  if (typeof iterator !== 'number' || iterator === '') {
-    return undefined
+    if (typeof iterator !== 'number' || iterator === '') {
+      undefined;
+    }
+    total += iterator;
   }
-    total += iterator
-  }
-  const average = Math.round(total / array.length);
-  return average;
+  const averageTotal = Math.round(total / array.length);
+  return averageTotal;
 };
 
 // console.log(average([2, 2]));
