@@ -17,15 +17,15 @@ const average = (numArray) => {
   if (numArray.length < 1) {
     return undefined;
   }
-  for (let index = 0; index < numArray.length; index +=1) {
+  for (let index = 0; index < numArray.length; index += 1) {
     if (typeof numArray[index] !== 'number') {
       return undefined;
     }
   }
-  for (let index2 = 0; index2 < numArray.length; index2 +=1) {
-    result += numArray[index2]
+  for (let index2 = 0; index2 < numArray.length; index2 += 1) {
+    result += numArray[index2];
   }
-  result = Math.round(result/numArray.length);
+  result = Math.round(result / numArray.length);
   return result;
 };
 
