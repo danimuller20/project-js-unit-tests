@@ -21,6 +21,6 @@ const createStudent = (event) => {
     feedback: () => 'Eita pessoa boa!',
   };
   return estudante;
-}
+};
 
 module.exports = createStudent;
