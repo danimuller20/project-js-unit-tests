@@ -17,12 +17,12 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome === '' && idade === ''){
+  if (nome === false && idade === false){
     return undefined;
   }else {
-    `Oi, meu nome é ${nome}`
-    `Tenho ${idade} anos`
-    `tabalho na Trybe e mando muito em programação
+    `Oi, meu nome é ${nome}
+    Tenho ${idade} anos
+    tabalho na Trybe e mando muito em programação
   #VQV! `
   }
 };
