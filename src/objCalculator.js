@@ -19,10 +19,11 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator =  { add: function  (num1, num2) { return num1 + num2; },
-    mult: function mult (num1, num2) { return num1 * num2 },
-    div: function div (num1, num2) { return Math.trunc(num1 / num2) },
-    sub: function sub (num1, num2) { return num1 - num2},
+const calculator = { 
+  add: function add (num1, num2) { return num1 + num2; },
+  mult: function (num1, num2) { return num1 * num2 },
+  div: function (num1, num2) { return Math.trunc(num1 / num2) },
+  sub: function (num1, num2) { return num1 - num2},
 };
 
 module.exports = calculator;
