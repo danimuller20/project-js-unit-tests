@@ -137,7 +137,7 @@ describe('#createMenu', () => {
       objetoRetornado.order('sashimi');
       objetoRetornado.order('agua');
       objetoRetornado.order('cerveja');
-      assert.strictEqual(objetoRetornado.pay(), 15.00);
+      assert.strictEqual(objetoRetornado.pay(), 16.50);
     }
     verify8();
     // objetoRetornado.order('coxinha');
