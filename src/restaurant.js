@@ -95,7 +95,7 @@ const createMenu = (myMenu) => {
     order: function order(newOrder) { this.consumption.push(newOrder); },
     pay: function pay() {
       let total = 0;
-      this.consumption.forEach( (item) => {
+      this.consumption.forEach((item) => {
         if (Object.keys(this.fetchMenu.food).includes(item)) total += this.fetchMenu.food[item];
         else total += this.fetchMenu.drink[item];
       });
