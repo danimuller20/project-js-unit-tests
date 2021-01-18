@@ -74,7 +74,7 @@
 const createMenu = (myMenu) => ({
   fetchMenu: myMenu,
   consumption: [],
-  order(newOrder) { createMenu.consumption(newOrder) },
+  order: (newOrder) => createMenu({}).consumption.push(newOrder),
 });
 
 module.exports = createMenu;
