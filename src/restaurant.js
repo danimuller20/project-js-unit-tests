@@ -71,28 +71,56 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = object => {
+const createMenu = (object) => {
   const menu = {
     fetchMenu: object,
     consumption: [],
     order: string => menu.consumption.push(string),
     pay: () => {
-      const foodValues = Object.values(menu.fetchMenu.food);
-      const drinkValues = Object.values(menu.fetchMenu.drink);
-      let sum = 0;
-      for (let index = 0; index < menu.consumption.length; index += 1) {
-        for (let index2 = 0; index2 < foodValues.length; index2 += 1) {
-          if (menu.consumption[index] === Object.keys(menu.fetchMenu.food)[index2]) {
-            sum += foodValues[index2];
-          } else if (menu.consumption[index] === Object.keys(menu.fetchMenu.drink)[index2]) {
-            sum += drinkValues[index2];
-          }
-        }
-      }
-      return parseFloat(sum.toPrecision(3));
+      const foodTotal = compareFood();
+      const drinkTotal = compareDrink();
+      return foodTotal + drinkTotal;
     },
   };
   return menu;
 };
+
+const compareFood = () => {
+  const menu = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+  menu.order('coxinha');
+  menu.order('agua');
+  menu.order('sopa');
+  menu.order('coxinha');
+  menu.order('agua');
+  const foodValues = Object.values(menu.fetchMenu.food);
+  let sum = 0;
+  for (let index = 0; index < menu.consumption.length; index += 1) {
+    for (let index2 = 0; index2 < foodValues.length; index2 += 1) {
+      if (menu.consumption[index] === Object.keys(menu.fetchMenu.food)[index2]) {
+        sum += foodValues[index2];
+      }
+    }
+  }
+  return sum;
+};
+
+const compareDrink = () => {
+  const menu = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+  menu.order('coxinha');
+  menu.order('agua');
+  menu.order('sopa');
+  menu.order('coxinha');
+  menu.order('agua');
+  const drinkValues = Object.values(menu.fetchMenu.drink);
+  let sum = 0;
+  for (let index = 0; index < menu.consumption.length; index += 1) {
+    for (let index2 = 0; index2 < drinkValues.length; index2 += 1) {
+      if (menu.consumption[index] === Object.keys(menu.fetchMenu.drink)[index2]) {
+        sum += drinkValues[index2];
+      }
+    }
+  }
+  return sum;
+}
 
 module.exports = createMenu;
