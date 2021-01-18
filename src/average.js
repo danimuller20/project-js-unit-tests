@@ -13,19 +13,18 @@
 */
 
 const average = (array) => {
-  let media;
-  let sun = 0;
-  if (array === [] || array === 0 || array === undefined || array === NaN) {
+  let sum = 0;
+  if (array === undefined || array === '' || array.length === 0) {
     return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) === "string") {
+    if (typeof array[index] === "string") {
       return undefined;
     }
-    sun += array[index];
+    sum += array[index];
   }
-  media = Math.round(parseInt(sun) / parseInt(array.length));
-  return media;
-}
+  const averageResult = Math.round(sum / array.length);
+  return averageResult;
+};
 
 module.exports = average;
