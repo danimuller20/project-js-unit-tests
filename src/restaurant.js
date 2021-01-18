@@ -74,7 +74,7 @@
 const menu = {};
 
 const pagamento = () => {
-  let payable = 0; 
+  let payable = 0;
   for (let index = 0; index < menu.consumption.length; index += 1) {
     if (menu.consumption[index] === 'coxinha') {
       payable += 2.5;
