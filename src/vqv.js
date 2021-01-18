@@ -15,16 +15,16 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-
+//http://openbookproject.net/thinkcs/python/english3e/conditionals.html
 const vqv = (nome, idade) => {
-  if ( not nome  && not idade ){
-    return undefined;
-  }else {
-    `Oi, meu nome é ${nome}
+  if ( nome  && idade ){
+    return   `Oi, meu nome é ${nome}
     Tenho ${idade} anos
     tabalho na Trybe e mando muito em programação
-  #VQV! `
-  }
+  #VQV! ` 
+  }else {    
+  return undefined;  
+}
 };
 
 module.exports = vqv;
