@@ -13,7 +13,6 @@
 */
 
 const average = (array) => {
-  console.log("array.length", array.length === 0);
   if (array.length === 0 || array.some(index => typeof (index) !== 'number')) {
     return undefined;
   }
