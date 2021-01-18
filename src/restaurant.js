@@ -81,7 +81,7 @@ function payment(fetch, comsuption) {
       count += fetch.drink[comsuption[index]];
     }
   }
-  count = count * 1.1;
+  count *= 1.1;
 
   return count;
 }
