@@ -45,14 +45,19 @@
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
 //
+
+// OK
+
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 //
-// Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
+// OK
+
+// Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 //------------------------------------------------------------------------------------------
 
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
@@ -65,12 +70,37 @@
 //
 // const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. Essa função deve ser associada à chave `order` de `restaurant`
 // ```
+
+// Ok
+
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = (objetoPassadoPorParametro) => {
+  const myOrder = {
+    fetchMenu: objetoPassadoPorParametro,
+
+    consumption: [],
+
+    order: function (orderItem) { this.consumption.push(orderItem); },
+
+    pay: function () {
+      let somaDosPrecosDoPedido = 0;
+      for (let index = 0; index < this.consumption.length; index += 1) {
+        if (Object.keys(this.fetchMenu.food).includes(this.consumption[index])) {
+          somaDosPrecosDoPedido += this.fetchMenu.food[this.consumption[index]];
+        } else if (Object.keys(this.fetchMenu.drink).includes(this.consumption[index])) {
+          somaDosPrecosDoPedido += this.fetchMenu.drink[this.consumption[index]];
+        }
+      }
+      return somaDosPrecosDoPedido;
+    },
+  };
+
+  return myOrder;
+};
 
 module.exports = createMenu;
