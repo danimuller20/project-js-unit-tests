@@ -77,20 +77,24 @@ const createMenu = (object) => {
     consumption: [],
     order: function orderMenu(order) { this.consumption.push(order); },
     pay: function payConsumption() {
-      const valuesArray = [];
-      for (let i = 0; i < this.consumption.length; i += 1) {
-        if (Object.keys(this.fetchMenu.food).includes(this.consumption[i])) {
-          valuesArray.push(this.fetchMenu.food[this.consumption[i]]);
-        }
-        if (Object.keys(this.fetchMenu.drink).includes(this.consumption[i])) {
-          valuesArray.push(this.fetchMenu.drink[this.consumption[i]]);
-        }
-      }
-      const sum = (a, b) => a + b;
-      return valuesArray.reduce(sum);
+      return searchInArray(this.fetchMenu, this.consumption);
     },
   };
   return menu;
 };
+
+const searchInArray = (fetchMenu, consumption) => {
+  const valuesArray = [];
+  for (let i = 0; i < consumption.length; i += 1) {
+    if (Object.keys(fetchMenu.food).includes(consumption[i])) {
+      valuesArray.push(fetchMenu.food[consumption[i]]);
+    }
+    if (Object.keys(fetchMenu.drink).includes(consumption[i])) {
+      valuesArray.push(fetchMenu.drink[consumption[i]]);
+    }
+  }
+  const sum = (a, b) => a + b;
+  return valuesArray.reduce(sum);
+}
 
 module.exports = createMenu;
