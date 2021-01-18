@@ -76,12 +76,17 @@ const createMenu = (myMenu) => {
     fetchMenu: myMenu,
     consumption: [],
     order: function order(newOrder) { this.consumption.push(newOrder) },
+    pay: function pay() {
+      let total = 0;
+      for (item of this.consumption) {
+        if (Object.keys(this.fetchMenu.food).includes(item)) total += this.fetchMenu.food[item];
+        if (Object.keys(this.fetchMenu.drink).includes(item)) total += this.fetchMenu.drink[item];
+      }
+      total = total * 1.1;
+      return total;
+    }
   }
   return menu;
 }
 
 module.exports = createMenu;
-
-// const objetoRetornado = createMenu({});
-// objetoRetornado.order('coxinha');
-// console.log(objetoRetornado.consumption);
