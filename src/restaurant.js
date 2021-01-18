@@ -74,13 +74,13 @@
 const menu = {};
 
 const pagamento = () => {
-  let payable = 0;  
-  for (let index = 0; index < menu.consumption.length; index += 1){
+  let payable = 0; 
+  for (let index = 0; index < menu.consumption.length; index += 1) {
     if (menu.consumption[index] === 'coxinha') {
       payable += 2.5;
     }
     if (menu.consumption[index] === 'agua') {
-     payable += 1.5;
+      payable += 1.5;
     }
   }
   return payable;
