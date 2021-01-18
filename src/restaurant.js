@@ -75,6 +75,7 @@ const createMenu = anyObject => ({ fetchMenu: anyObject });
 console.log(createMenu({ comida: 'feijoada', bebida: 'caipirinha' }));
 
 const assert = require('assert');
+
 const object = { food: {}, drink: {} };
 assert.deepStrictEqual(createMenu(object), { fetchMenu: object });
 // assert.deepStrictEqual(Object.keys(createMenu(object).fetchMenu), ['food', 'drink']);
