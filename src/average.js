@@ -13,17 +13,18 @@
 */
 
 const average = () => {
-  for(let index = 0; index > array.length; index+=1)
-    let media = (array.length)/2
+  for (let index = 0; index > array.length; index += 1) {
+    const media = array.length / 2;
 
     if (array != '') {
-      throw('Undefined')
+      throw 'Undefined';
     } else if (array != '3') {
-      throw('Undefined')
+      throw 'Undefined';
     } else {
-       array 
+      array;
     }
-    return media 
+    return media;
+  }
 };
 
 module.exports = average;
