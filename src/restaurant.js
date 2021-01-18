@@ -92,7 +92,7 @@ const createMenu = (objetoPassadoPorParametro) => {
       for (let index = 0; index < this.consumption.length; index += 1) {
         if (Object.keys(this.fetchMenu.food).includes(this.consumption[index])) {
           somaDosPrecosDoPedido += this.fetchMenu.food[this.consumption[index]];
-        } else if (Object.keys(this.fetchMenu.drink).includes(this.consumption[index])) {
+        } else {
           somaDosPrecosDoPedido += this.fetchMenu.drink[this.consumption[index]];
         }
       }
