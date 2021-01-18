@@ -15,20 +15,16 @@
 const average = array => {
   let total = 0;
 
-  for (const i of array) {
+  for (let index = 0; index < array.length; index += 1) {
     if (typeof i !== 'number') {
-      undefined;
+      return undefined;
     }
     if (i.length === 0) {
-      undefined;
+      return undefined;
     }
     total += i;
   }
-  const averageTotal = Math.round(total / array.length);
-  return averageTotal;
+  return Math.round(total / array.length);
 };
 
-// console.log(average([2, 2]));
-// console.log(average([1, 1]));
-// console.log(average([1, '2']));
 module.exports = average;
