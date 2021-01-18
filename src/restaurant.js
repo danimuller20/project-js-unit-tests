@@ -86,7 +86,7 @@ const somaDosPreçosDosPedidos = () => {
     }
   }
   return sum * 1.1;
-}
+};
 
 const createMenu = (param) => {
   menu.fetchMenu = param;
@@ -96,7 +96,7 @@ const createMenu = (param) => {
   };
   menu.pay = somaDosPreçosDosPedidos;
   return menu;
-}
+};
 
 // const myMenu = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 // myMenu.order('coxinha');
