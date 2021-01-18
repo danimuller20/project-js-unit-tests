@@ -85,9 +85,9 @@ const createMenu = (objetoPassadoPorParametro) => {
 
     consumption: [],
 
-    order: function (orderItem) { this.consumption.push(orderItem); },
+    order(orderItem) { this.consumption.push(orderItem); },
 
-    pay: function () {
+    pay() {
       let somaDosPrecosDoPedido = 0;
       for (let index = 0; index < this.consumption.length; index += 1) {
         if (Object.keys(this.fetchMenu.food).includes(this.consumption[index])) {
