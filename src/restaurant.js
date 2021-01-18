@@ -96,7 +96,7 @@ const createMenu = (object) => {
     fetchMenu: object,
     consumption: [],
     order: string => menu.consumption.push(string),
-    pay () {
+    pay() {
       return sumFoodValue(this.consumption, this.fetchMenu.food) + sumDrinkValue(this.consumption, this.fetchMenu.drink);
     },
   };
