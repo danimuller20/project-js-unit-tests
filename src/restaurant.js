@@ -58,7 +58,7 @@
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
 // DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()` define separadamente dela e, depois, a função que será definida em `order`.
 // ```
-// const restaurant = {}
+// const restaurant = createMenu(obj).fetchMenu;
 
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
@@ -71,6 +71,37 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = (obj) => {
+  return { fetchMenu: obj,
+    consumption: [],
+    order: function orderFromMenu(request) {
+      this.consumption.push(request);
+    },
+    pay: function () {
+      let sumOfValues = 0;
+      this.consumption.forEach( (element) => {
+        if (this.fetchMenu.food[element]) {
+          sumOfValues += this.fetchMenu.food[element];
+        }
+        if (this.fetchMenu.drinks[element]) {
+          sumOfValues += this.fetchMenu.drinks[element];
+        }
+      });
+      return sumOfValues;
+    },
+  };
+};
 
+// const myOrders = createMenu({ food: {'coxinha': 3.90}, drinks: {'agua': 2.50} });
+// myOrders.order('coxinha');
+// myOrders.order('agua');
+// createMenu({ food: {'coxinha': 3.90} });
+// createMenu({ food: {'coxinha': 3.90} }).order('coxinha');
+// console.log(createMenu({ food: {'coxinha': 3.90}, drinks: {'agua': 2.50}}));
+// console.log(createMenu({ food: {'coxinha': 3.90} }).consumption);
+
+// console.log(myOrders.consumption)
+// console.log(myOrders.pay());
+// console.log(myOrders);
+// console.log(myOrders.fetchMenu.food['coxinha']);
 module.exports = createMenu;
