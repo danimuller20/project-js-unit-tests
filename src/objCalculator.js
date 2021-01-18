@@ -20,7 +20,7 @@
 */
 
 const calculator = {
-  add: add = (number1, number2) =>  number1 + number2,
+  add: add = (number1, number2) => number1 + number2,
   mult: mult = (number1, number2) => number1 * number2,
   div: div = (number1, number2) => Math.trunc(number1 / number2),
   sub: sub = (number1, number2) => number1 - number2,
