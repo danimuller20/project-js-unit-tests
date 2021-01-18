@@ -20,7 +20,7 @@
 */
 
 const calculator = {
-  add: (num1, num2) => parseInt( num1 + num2, 10),
+  add: (num1, num2) => parseInt(num1 + num2, 10),
   mult: (num1, num2) => parseInt(num1 * num2, 10),
   div: (num1, num2) => parseInt(num1 / num2, 10),
   sub: (num1, num2) => parseInt(num1 - num2, 10),
