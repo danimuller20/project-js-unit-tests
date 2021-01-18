@@ -43,6 +43,6 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.deepStrictEqual(productDetails('Alcool', 'Máscara')[0] !== productDetails('Alcool', 'Máscara')[1], true);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(productDetails('Alcool', 'Máscara')[0].details.productId.slice(-3) && productDetails('Alcool', 'Máscara')[1].details.productId.slice(-3), '123')
+    assert.deepStrictEqual(productDetails('Alcool', 'Máscara')[0].details.productId.slice(-3) && productDetails('Alcool', 'Máscara')[1].details.productId.slice(-3), '123');
   });
 });
