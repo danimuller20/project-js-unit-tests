@@ -12,14 +12,17 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => {
+const average = array => {
   let total = 0;
 
-  for (const iterator of array) {
-    if (typeof iterator !== 'number' || iterator === '') {
+  for (const i of array) {
+    if (typeof i !== 'number') {
       undefined;
     }
-    total += iterator;
+    if (i.length === 0) {
+      undefined;
+    }
+    total += i;
   }
   const averageTotal = Math.round(total / array.length);
   return averageTotal;
