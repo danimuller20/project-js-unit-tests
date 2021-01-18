@@ -82,7 +82,7 @@ const createMenu = (object) => {
 };
 
 const compareFood = () => {
-  const menu = createMenu( { food: {coxinha: 3.9, sopa: 9.9}, drink: {agua: 3.9, cerveja: 6.9} } );
+  const menu = createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } });
   menu.order('coxinha');
   menu.order('agua');
   menu.order('sopa');
@@ -101,7 +101,7 @@ const compareFood = () => {
 };
 
 const compareDrink = () => {
-  const menu = createMenu( { food: {coxinha: 3.9, sopa: 9.9}, drink: {agua: 3.9, cerveja: 6.9} } );
+  const menu = createMenu({ food: { coxinha: 3.9, sopa: 9.9 }, drink: { agua: 3.9, cerveja: 6.9 } });
   menu.order('coxinha');
   menu.order('agua');
   menu.order('sopa');
