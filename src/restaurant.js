@@ -74,12 +74,12 @@
 const sumFoodValue = (consumption, food) => {
   let sum = 0;
   for (let index = 0; index < consumption.length; index += 1) {
-    if(Object.keys(food).includes(consumption[index])) {
+    if (Object.keys(food).includes(consumption[index])) {
       sum += food[consumption[index]];
     }
   }
   return sum;
-}
+};
 
 const sumDrinkValue = (consumption, drink) => {
   let sum = 0;
@@ -89,18 +89,19 @@ const sumDrinkValue = (consumption, drink) => {
     }
   }
   return sum;
-} 
+};
 
 const createMenu = (object) => {
   const menu = {
     fetchMenu: object,
     consumption: [],
     order: string => menu.consumption.push(string),
-    pay: function () {
+    pay () {
       return sumFoodValue(this.consumption, this.fetchMenu.food) + sumDrinkValue(this.consumption, this.fetchMenu.drink);
     },
-  }
+  };
   return menu;
 };
+
 
 module.exports = createMenu;
