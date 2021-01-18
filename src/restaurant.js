@@ -79,14 +79,14 @@ const createMenu = (string) => {
     pay: () => {
       let count = 0;
       const fetch = obj.fetchMenu;
-      for (let item of obj.comsuption) {
-        if (fetch.food.hasOwnProperty(item)) {
-          count += fetch.food[item];
+      for (let index = 0; index < obj.comsuption.length; index += 1) {
+        if (obj.comsuption[index] in fetch.food) {
+          count += fetch.food[obj.comsuption[index]];
         }
       }
-      for (let item of obj.comsuption) {
-        if (fetch.drink.hasOwnProperty(item)) {
-          count += fetch.drink[item];
+      for (let index = 0; index < obj.comsuption.length; index += 1) {
+        if (obj.comsuption[index] in fetch.drink) {
+          count += fetch.drink[obj.comsuption[index]];
         }
       }
       return count;
@@ -94,5 +94,21 @@ const createMenu = (string) => {
   }
   return obj;
 };
-
+/*
+pay: () => {
+  let count = 0;
+  const fetch = obj.fetchMenu;
+  for (let item of obj.comsuption) {
+    if (fetch.food.hasOwnProperty(item)) {
+      count += fetch.food[item];
+    }
+  }
+  for (let item of obj.comsuption) {
+    if (fetch.drink.hasOwnProperty(item)) {
+      count += fetch.drink[item];
+    }
+  }
+  return count;
+}
+*/
 module.exports = createMenu;
