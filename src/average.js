@@ -18,10 +18,12 @@ const average = (array) => {
   let sum = 0;
   const media = Math.round(sum / array.length);
 
+  if (array.length === 0) {
+    return undefined;
+  }
+
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      return undefined;
-    } else if (array.length === 0) {
       return undefined;
     }
     sum += array[index];
