@@ -66,7 +66,7 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
     // ```
-    const objetoRetornado = createMenu({ food: {}, drink: {} });
+    const objetoRetornado = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
     // assert.strictEqual(Object.keys(objetoRetornado.fetchMenu).length === 2 && Object.keys(objetoRetornado.fetchMenu)[0] !== 'food' && Object.keys(objetoRetornado.fetchMenu)[1] !== 'drink', false);
     assert.deepStrictEqual(Object.keys(objetoRetornado.fetchMenu), [ 'food', 'drink' ]);
     // Agora faça o TESTE 3 deste arquivo.
@@ -125,6 +125,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
+    assert.strictEqual(objetoRetornado.pay().toFixed(2).toString(), '29.40');
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
