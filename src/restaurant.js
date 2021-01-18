@@ -73,12 +73,12 @@
 
 const calcPayment = (consumption, drink, food) => {
   let sum = 0;
-  for (let index = 0; index < consumption. length; index += 1) {
+  for (let index = 0; index < consumption.length; index += 1) {
     if (Object.keys(drink).includes(consumption[index])) { sum += drink[consumption[index]]; }
     if (Object.keys(food).includes(consumption[index])) { sum += food[consumption[index]]; }
   }
   return parseFloat((sum * 1.1).toPrecision(4));
-}
+};
 const createMenu = item => ({
   fetchMenu: item,
   consumption: [],
