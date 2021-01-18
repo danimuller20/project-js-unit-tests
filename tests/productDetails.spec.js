@@ -33,14 +33,17 @@ const productDetails = require('../src/productDetails');
 //https://www.devmedia.com.br/javascript-substring-selecionando-parte-de-uma-string/39232
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
+    
     assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara'), 'array'));
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara')[0], 'object'));
-    assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara')[1], 'object'));
-    assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
-    assert.strictEqual((productDetails('Alcool gel', 'Máscara')[0].details.productId.substring(productId.length -3), '123'));
-    assert.strictEqual((productDetails('Alcool gel', 'Máscara')[1].details.productId.substring(productId.length -3), '123'));
-    // ESCREVA SEUS TESTES ABAIXO:
+    
+   // assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
+    //assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara')[0], 'object'));
+    //assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara')[1], 'object'));
+    //assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1], 'erro');
+    //assert.strictEqual((productDetails('Alcool gel', 'Máscara')[0].details.productId.substring(productId.length-3), '123'));
+   // assert.strictEqual((productDetails('Alcool gel', 'Máscara')[1].details.productId.substring(productId.length-3), '123'));
+    assert.fail();
+    // ESCREVA SEUS TESTES ABAIXO:*/
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
     // Teste que os dois itens dentro do array retornado pela função são objetos.
