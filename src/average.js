@@ -23,9 +23,6 @@ const average = (data) => {
   }
   const av = data.reduce((a, b) => a + b, 0);
   const value = av / size;
-  if (value === -4) {
-    return -5;
-  }
-  return value;
+  return Math.round(value);
 };
 module.exports = average;
