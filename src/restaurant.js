@@ -83,10 +83,12 @@ const createMenu = (myMenu) => {
       const drinksPrice = Object.values(menu.fetchMenu.drink);
       let sum = 0;
       for (let index = 0; index < menu.consumption.length; index += 1) {
-        if (food.indexOf(menu.consumption[index]) !== -1) {
-          sum += foodPrice[food.indexOf(menu.consumption[index])];
-        } else if (drinks.indexOf(menu.consumption[index]) !== -1) {
-          sum += drinksPrice[drinks.indexOf(menu.consumption[index])];
+        const orderItem = menu.consumption[index];
+        if (food.indexOf(orderItem) !== -1) {
+          sum += foodPrice[food.indexOf(orderItem)];
+        }
+        if (drinks.indexOf(orderItem) !== -1) {
+          sum += drinksPrice[drinks.indexOf(orderItem)];
         }
       }
       return sum;
