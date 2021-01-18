@@ -77,18 +77,12 @@ const createMenu = (myMenu) => {
     consumption: [],
     order: (orderFromMenu) => { menu.consumption.push(orderFromMenu); },
     pay: () => {
-      const food = Object.keys(menu.fetchMenu.food);
-      const foodPrice = Object.values(menu.fetchMenu.food);
-      const drinks = Object.keys(menu.fetchMenu.drink);
-      const drinksPrice = Object.values(menu.fetchMenu.drink);
       let sum = 0;
       for (let index = 0; index < menu.consumption.length; index += 1) {
-        const orderItem = menu.consumption[index];
-        if (food.indexOf(orderItem) !== -1) {
-          sum += foodPrice[food.indexOf(orderItem)];
-        }
-        if (drinks.indexOf(orderItem) !== -1) {
-          sum += drinksPrice[drinks.indexOf(orderItem)];
+        if (Object.keys(menu.fetchMenu.food).indexOf(menu.consumption[index]) !== -1) {
+          sum += Object.values(menu.fetchMenu.food)[Object.keys(menu.fetchMenu.food).indexOf(menu.consumption[index])];
+        } else if (Object.keys(menu.fetchMenu.drink).indexOf(menu.consumption[index]) !== -1) {
+          sum += Object.values(menu.fetchMenu.drink)[Object.keys(menu.fetchMenu.drink).indexOf(menu.consumption[index])];
         }
       }
       return sum;
