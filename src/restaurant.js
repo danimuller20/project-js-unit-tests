@@ -71,6 +71,26 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
+const sumFoodValue = (consumption, food, foodPrice) =>{
+  let sum = 0;
+  for (let index = 0; index < consumption.length; index += 1) {
+    if (food.indexOf(consumption[index]) !== -1) {
+      sum += foodPrice[food.indexOf(consumption[index])];
+    }
+  }
+  return sum;
+}
+
+const sumDrinksValue = (consumption, drinks, drinksPrice) => {
+  let sum = 0;
+  for (let index = 0; index < consumption.length; index += 1) {
+    if (drinks.indexOf(consumption[index]) !== -1) {
+      sum += drinksPrice[drinks.indexOf(consumption[index])];
+    }
+  }
+  return sum;
+}
+
 const createMenu = (myMenu) => {
   const menu = {
     fetchMenu: myMenu,
@@ -78,16 +98,11 @@ const createMenu = (myMenu) => {
     order: (orderFromMenu) => { menu.consumption.push(orderFromMenu); },
     pay: () => {
       const food = Object.keys(menu.fetchMenu.food);
+      const foodPrice = Object.values(menu.fetchMenu.food);
       const drinks = Object.keys(menu.fetchMenu.drink);
-      let sum = 0;
-      for (let index = 0; index < menu.consumption.length; index += 1) {
-        if (food.indexOf(menu.consumption[index]) !== -1) {
-          sum += Object.values(menu.fetchMenu.food)[food.indexOf(menu.consumption[index])];
-        } else if (drinks.indexOf(menu.consumption[index]) !== -1) {
-          sum += Object.values(menu.fetchMenu.drink)[drinks.indexOf(menu.consumption[index])];
-        }
-      }
-      return sum;
+      const drinksPrice = Object.values(menu.fetchMenu.drink);
+      const consumption = menu.consumption;
+      return sumFoodValue(consumption, food, foodPrice) + sumDrinksValue(consumption, drinks, drinksPrice);
     },
   };
   return menu;
