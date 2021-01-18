@@ -81,11 +81,12 @@ const createMenu = (object) => {
       for (let i = 0; i < this.consumption.length; i += 1) {
         if (Object.keys(this.fetchMenu.food).includes(this.consumption[i])) {
           valuesArray.push(this.fetchMenu.food[this.consumption[i]]);
-        } else if (Object.keys(this.fetchMenu.drink).includes(this.consumption[i])) {
+        }
+        if (Object.keys(this.fetchMenu.drink).includes(this.consumption[i])) {
           valuesArray.push(this.fetchMenu.drink[this.consumption[i]]);
         }
       }
-      let sum = (a,b) => a + b;
+      const sum = (a, b) => a + b;
       return valuesArray.reduce(sum);
     },
   };
