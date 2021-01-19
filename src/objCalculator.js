@@ -22,7 +22,7 @@
 const calculator = {
   add: (a, b) => a + b,
   mult: (a, b) => a * b,
-  div: (a, b) => Math.round(a / b) - 1,
+  div: (a, b) => parseInt(a / b),
   sub: (a, b) => a - b,
 };
 
