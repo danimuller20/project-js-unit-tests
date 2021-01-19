@@ -21,20 +21,20 @@
 
 const calculator = {
   add: (number1, number2) => {
-  let soma = number1 + number2;
-  return Math.floor(soma);
+    const soma = number1 + number2;
+    return Math.floor(soma);
   },
   mult: (number1, number2) => {
-    let multiplicação = number1 * number2;
+    const multiplicação = number1 * number2;
     return Math.floor(multiplicação);
   },
   div: (number1, number2) => {
-    let divisão = number1 / number2;
+    const divisão = number1 / number2;
     return Math.floor(divisão);
   },
   sub: (number1, number2) => {
-    let subtração = number1 - number2;
-    return Math.floor(subtração)
+    const subtração = number1 - number2;
+    return Math.floor(subtração);
   },
 };
 
