@@ -99,6 +99,6 @@ function pay() {
   return parseFloat((consumptionFood + consumptionDrink) + addition).toPrecision(3);
 }
 
-const createMenu = (menu) => ({fetchMenu: function() { return menu; },order: orderFromMenu, consumption: [], pay, });
+const createMenu = (menu) => ({ fetchMenu: function() { return menu; }, order: orderFromMenu, consumption: [], pay, });
 
 module.exports = createMenu;
