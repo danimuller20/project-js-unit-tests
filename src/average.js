@@ -12,8 +12,29 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add your implementation here
+function isOnlyNumbers(array) {
+  if (array.length === 0) {
+    return false;
+  }
+  return !array.some(element => typeof element !== 'number');
+}
+
+const average = (array) => {
+  if (!isOnlyNumbers(array)) {
+    return undefined;
+  }
+
+  let sumOfTotal = 0;
+  array.forEach((element) => {
+    sumOfTotal += element;
+  });
+  const averageNumber = sumOfTotal / array.length;
+  return Math.round(averageNumber);
 };
+
+// let arrayVazio = [];
+// console.log(arrayVazio.length)
+
+console.log(isOnlyNumbers([]));
 
 module.exports = average;
