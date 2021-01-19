@@ -18,7 +18,7 @@
         Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
 */
 
-const circle = (radius) => {
- return radius
-};
-module.exports = circle;
+// const circle = (radius) => {
+//  return radius
+// };
+// module.exports = circle;

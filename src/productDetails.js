@@ -25,4 +25,4 @@
 */
 
 // const productDetails = (firstProduct, secondProduct) =>
-module.exports = productDetails;
+// module.exports = productDetails;

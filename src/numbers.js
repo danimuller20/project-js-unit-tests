@@ -9,7 +9,7 @@
     - numbers([2, 'errado', 5]); // Retorna: false
 */
 
-const numbers = (myArray) => {
-  return myArray
-};
-module.exports = numbers;
+// const numbers = (myArray) => {
+//   return myArray
+// };
+// module.exports = numbers;
