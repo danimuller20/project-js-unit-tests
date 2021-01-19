@@ -20,10 +20,10 @@ const average = (array) => {
       const element = object[key];
       throw new Error(undefined);
     } else {
-    media += element;
+      media += element;
     }
-    return media / array.length;
   };
+  return media / array.length;
 }
 
 module.exports = average;
