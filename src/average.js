@@ -39,10 +39,10 @@ const average = (array) => {
       sum += array[i];
     }
 
-    toBeReturned = sum / array.length;
+    toBeReturned = Math.round(sum / array.length);
   }
 
-  return Math.round(toBeReturned);
+  return toBeReturned;
 };
 
 module.exports = average;
