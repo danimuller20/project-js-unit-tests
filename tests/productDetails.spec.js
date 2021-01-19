@@ -35,24 +35,24 @@ describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(Array.isArray(productDetails('a', 'b')), true);
+    assert.strictEqual(Array.isArray(productDetails('Alcool gel', 'Máscara')), true);
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(productDetails('a', 'b').length, 2);
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     assert.strictEqual(
-      typeof productDetails('a', 'b')[0] === 'object' && typeof productDetails('a', 'b')[1] === 'object', 
+      typeof productDetails('Alcool gel', 'Máscara')[0] === 'object' && typeof productDetails('Alcool gel', 'Máscara')[1] === 'object', 
       true,
       'Both itens of the array should be of the kind object.'
     );
     // Teste que os dois objetos são diferentes entre si.
     assert.strictEqual(
-      JSON.stringify(productDetails('a', 'b')[0]) !== JSON.stringify(productDetails('a', 'b')[1]), 
+      JSON.stringify(productDetails('Alcool gel', 'Máscara')[0]) !== JSON.stringify(productDetails('Alcool gel', 'Máscara')[1]), 
       true,
       'The generated itens should be different among themselves.'
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.strictEqual(
-      productDetails('a', 'b')[0].details.productId.substring(1) === productDetails('a', 'b')[1].details.productId.substring(1), 
+      productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3) === productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3), 
       true,
       'The productIds should end with the same suffix (123).'
     );
