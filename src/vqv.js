@@ -16,7 +16,7 @@
       #VQV!'
 */
 const vqv = (nome, idade) => {
-  let save = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`
+  const save = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
   if (nome === undefined || idade === undefined) {
     return undefined;
   }
