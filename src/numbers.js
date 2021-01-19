@@ -10,7 +10,6 @@
 */
 
 const numbers = (myArray) => {
- 
+  return myArray
 };
-
 module.exports = numbers;

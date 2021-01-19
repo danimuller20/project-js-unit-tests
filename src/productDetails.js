@@ -24,8 +24,5 @@
   ]
 */
 
-const productDetails = (firstProduct, secondProduct) => [
-  
-];
-
+// const productDetails = (firstProduct, secondProduct) =>
 module.exports = productDetails;
