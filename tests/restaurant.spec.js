@@ -64,6 +64,8 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
+    // ```
+    // Agora faça o TESTE 3 deste arquivo.
     const objetoRetornado = createMenu({ food: {}, drink: {} });
     assert.deepStrictEqual(objetoRetornado.fetchMenu,  { food: {}, drink: {} });
 
