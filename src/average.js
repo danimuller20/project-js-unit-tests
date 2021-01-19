@@ -19,12 +19,12 @@ const isValidArray = array => (isArrayOfNumbers(array) && array.length !== 0);
 const average = (array) => {
   if (!isValidArray(array)) return undefined;
 
-  let accumulated_value = 0;
+  let accumulatedValue = 0;
 
   for (let index = 0; index < array.length; index += 1) {
-    accumulated_value += array[index];
+    accumulatedValue += array[index];
   }
-  return Math.round(accumulated_value / array.length);
+  return Math.round(accumulatedValue / array.length);
 };
 
 module.exports = average;
