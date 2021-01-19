@@ -31,7 +31,7 @@ const validateArray = (array) => {
 const average = (array) => {
   validateArray(array);
 
-  let toBeReturned
+  let toBeReturned;
 
   if (validateArray === true) {
     let sum = 0;
@@ -43,7 +43,7 @@ const average = (array) => {
     toBeReturned = sum / array.length;
   }
 
-  return toBeReturned
+  return toBeReturned;
 };
 
 module.exports = average;
