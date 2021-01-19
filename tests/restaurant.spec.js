@@ -52,6 +52,7 @@ const createMenu = require('../src/restaurant');
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     const restaurant = createMenu({ food: {}, drink: {} });
+    const newOrder = 'coxinha';
 // -------------------------------------TEST 01---------------------------------------------- //
     assert.deepStrictEqual(Object.keys(restaurant).includes('fetchMenu'), true);
 // -------------------------------------TEST 02---------------------------------------------- //
@@ -61,7 +62,16 @@ describe('#createMenu', () => {
 // -------------------------------------TEST 04---------------------------------------------- //
     assert.deepStrictEqual(restaurant.consumption, []);
 // -------------------------------------TEST 05---------------------------------------------- //
-    // assert.deepStrictEqual(createMenu({food: {'Pizza': 10.0}, drink: {'Guarana': 3.5}}).fetchMenu, {food: {'Pizza': 10.0}, drink: {'Guarana': 3.5}})
-    // assert.deepStrictEqual(createMenu().consumption, []);
+    assert.strictEqual(restaurant.order(newOrder), 1);
+// -------------------------------------TEST 06---------------------------------------------- //
+    restaurant.order('água');
+    assert.strictEqual(restaurant.order('refrigerante'), 3);
+// -------------------------------------TEST 07---------------------------------------------- //
+    assert.strictEqual(restaurant.order('coxinha'), 4);
+// -------------------------------------TEST 08---------------------------------------------- //
+    const objMenu = createMenu({ food: {'coxinha': 3.1, 'sanduíche': 4.5}, drink: {'agua': 3.0, 'refrigerante': 5.0} });
+    objMenu.order('coxinha');
+    objMenu.order('agua');
+    assert.strictEqual(objMenu.pay(), '6.71');
   });
 });
