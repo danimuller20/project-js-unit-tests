@@ -97,7 +97,7 @@ const payConsumptionItems = () => {
 
   orderValue = sumValue(orderValue);
 
-  totalValue = orderValue + orderValue * serviceTax;
+  totalValue = orderValue + (orderValue * serviceTax);
 
   return totalValue;
 };
