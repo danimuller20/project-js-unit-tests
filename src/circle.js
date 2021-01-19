@@ -28,4 +28,22 @@ const circle = (radius) => {
   };
 };
 
+const validData = () => {
+  let cont = 0;
+  const dataCircle = circle(3)
+  if(dataCircle["radius"] === 3) {
+    cont += 1
+  }
+  if (dataCircle["area"] === 28.26){
+    cont += 1;
+  }
+  if (dataCircle["circumference"] === 18.84){
+    cont += 1
+  }
+  if(cont === 3) {
+    return circle(3)
+  }
+}
+console.log(validData())
+
 module.exports = circle;
