@@ -78,12 +78,13 @@ const orderFromMenu = (request) => {
 };
 
 const sumValue = (orderValue) => {
+  const menu = restaurant.fetchMenu();
   restaurant.consumption.forEach((item) => {
-    if (restaurant.fetchMenu().food[item]) {
-      orderValue += restaurant.fetchMenu().food[item];
+    if (menu.food[item]) {
+      orderValue += menu.food[item];
     }
-    if (restaurant.fetchMenu().drinks[item]) {
-      orderValue += restaurant.fetchMenu().drinks[item];
+    if (menu.drinks[item]) {
+      orderValue += menu.drinks[item];
     }
   });
 
