@@ -123,7 +123,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    const somaDosPreçosDosPedidos = parseFloat(((3.9 + 3.9 + 9.9 + 3.9 + 3.9)*1.1).toFixed(2));
+    const somaDosPreçosDosPedidos = parseFloat(((3.9 + 3.9 + 9.9 + 3.9 + 3.9) * 1.1).toFixed(2));
     assert.strictEqual(objetoRetornado.pay(), somaDosPreçosDosPedidos);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
