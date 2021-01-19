@@ -11,21 +11,19 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-let sum;
-let weightedAverage;
-function complement(array) {
-  for (let index = 0; index < array.lenght; index += 1) {
-    sum += array[index];
-  }
-  weightedAverage = sum / array.lenght;
-}
+
 const average = (array) => {
-  if (array[index] == typeof ('number')) {
-    complement(array);
-  } else {
-    return 'undefined';
+  let sum = 0;
+  if (array.length === 0) {
+    return undefined;
   }
-  return weightedAverage;
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
+      return undefined;
+    };
+    sum += array[index];
+  };
+  return Math.round(sum / array.length);
 };
 
 module.exports = average;
