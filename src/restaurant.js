@@ -77,7 +77,7 @@ function orderFromMenu(order) {
 
 function sum(values, keys, consumption) {
   let totalSum = 0;
-  values.forEach((value, index)=> {
+  values.forEach((value, index) => {
     consumption.forEach((valueConsum) => {
       if (valueConsum === keys[index]) {
         totalSum += value;
@@ -99,18 +99,6 @@ function pay() {
   return parseFloat((consumptionFood + consumptionDrink) + addition).toPrecision(3);
 }
 
-const createMenu = (menu) => {
-  return {
-    fetchMenu: function(){
-      return menu
-    },
-    order: orderFromMenu,
-    consumption: [],
-    pay
-  }
-};
-const myMenu = createMenu({ food: {'coxinha': 3.1, 'sanduíche': 4.5}, drink: {'agua': 3.0, 'refrigerante': 5.0} });
-myMenu.order('coxinha');
-myMenu.order('agua');
-console.log(myMenu.pay());
+const createMenu = (menu) => ({fetchMenu: function() { return menu; },order: orderFromMenu, consumption: [], pay, });
+
 module.exports = createMenu;
