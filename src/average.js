@@ -12,12 +12,11 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const isArrayOfNumbers = (array) => (array.every(((element) => typeof (element) === 'number')))
+const isArrayOfNumbers = array => (array.every(((element) => typeof (element) === 'number')));
 
-const isValidArray = (array) => (isArrayOfNumbers(array) && array.length !== 0);
+const isValidArray = array => (isArrayOfNumbers(array) && array.length !== 0);
 
-const average = (array) => {
-
+const average = array => {
   if (!isValidArray(array)) return undefined;
 
   let average = 0;
@@ -26,6 +25,6 @@ const average = (array) => {
     average += array[index];
   }
   return Math.round(average / array.length);
-}
+};
 
 module.exports = average;
