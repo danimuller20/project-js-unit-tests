@@ -90,7 +90,7 @@ const createMenu = (object) => {
   const newMenu = {
     fetchMenu: object,
     consumption: [],
-    order(newOrder) {this.consumption.push(newOrder);},
+    order(newOrder) { this.consumption.push(newOrder); },
     pay: sumAllOrderValues(this.consumption, object),
   };
   return newMenu;
