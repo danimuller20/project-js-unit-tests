@@ -29,11 +29,10 @@ const validateArray = (array) => {
 };
 
 const average = (array) => {
-  validateArray(array);
-
+  const isValid = validateArray(array);
   let toBeReturned;
 
-  if (validateArray === true) {
+  if (isValid === true) {
     let sum = 0;
 
     for (let i = 0; i < array.length; i += 1) {
@@ -47,3 +46,5 @@ const average = (array) => {
 };
 
 module.exports = average;
+
+console.log(average([3, 4, 5]))
