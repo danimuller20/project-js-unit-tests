@@ -100,7 +100,7 @@ describe('#createMenu', () => {
     // objetoRetornado.order("agua");
     // objetoRetornado.order("sopa");
     // objetoRetornado.order("sashimi");
-    // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
+    // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"];
     // ```
     
     objetoRetornado.order("agua");
