@@ -23,7 +23,7 @@ const calculator = {
   add: (firstNumber, secondNumber) => firstNumber + secondNumber,
   mult: (firstNumber, secondNumber) => firstNumber * secondNumber,
   div: (firstNumber, secondNumber) => Math.trunc(firstNumber / secondNumber),
-  sub: (firstNumber, secondNumber) => firstNumber - secondNumber
+  sub: (firstNumber, secondNumber) => firstNumber - secondNumber,
 };
 
 module.exports = calculator;
