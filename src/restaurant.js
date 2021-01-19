@@ -89,12 +89,4 @@ const createMenu = object => ({
   },
 });
 
-const myMenu = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} })
-const somaDosPreçosDosPedidos = parseFloat(((3.9 + 3.9 + 9.9 + 3.9 + 3.9)*1.1).toFixed(2));
-myMenu.order('coxinha');
-myMenu.order("agua");
-myMenu.order("sopa");
-myMenu.order('coxinha');
-myMenu.order('agua');
-console.log(typeof myMenu.pay(),typeof somaDosPreçosDosPedidos)
 module.exports = createMenu;
