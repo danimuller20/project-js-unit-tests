@@ -16,11 +16,11 @@ const average = (array) => {
   let sum = 0;
   let averageResult = 0;
   if (array.length === 0) {
-    return;
+    return undefined;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (typeof array[index] !== 'number') {
-      return;
+      return undefined;
     }
     sum += array[index];
     averageResult = Math.round(sum / array.length);
