@@ -50,8 +50,10 @@ describe('#productDetails', () => {
       'object'
     );
     // Teste que os dois objetos são diferentes entre si.
-    assert.notStrictEqual(Object.keys(productDetails('Alcool gel', 'Máscara'))[0], Object.keys(productDetails('Alcool gel', 'Máscara'))[1]);
-
+    assert.deepStrictEqual(
+      productDetails('Alcool gel', 'Mascara')[0] !==
+        productDetails('Alcool gel', 'Máscara')[1],
+      true
     );
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.deepStrictEqual(
