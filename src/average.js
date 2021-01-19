@@ -23,7 +23,7 @@ const average = (array) => {
     const elemento = array[key];
     if (typeof elemento !== 'number') {
       return undefined;
-    } 
+    }
     soma += elemento;
   }
   media = soma / array.length;
