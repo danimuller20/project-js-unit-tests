@@ -68,10 +68,10 @@ describe('#createMenu', () => {
     assert.deepStrictEqual(testMenu2.consumption, ['coxinha']);
     // --------------------------------------------------------------------------------------
     const testMenu3 = createMenu(testObject);
-    testMenu3 .order('coxinha');
-    testMenu3 .order('agua');
-    testMenu3 .order('sopa');
-    testMenu3 .order('sashimi');
+    testMenu3.order('coxinha');
+    testMenu3.order('agua');
+    testMenu3.order('sopa');
+    testMenu3.order('sashimi');
     assert.deepStrictEqual(testMenu3.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
     // --------------------------------------------------------------------------------------
     const testMenu4 = createMenu(testObject);
