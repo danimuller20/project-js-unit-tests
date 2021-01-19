@@ -33,14 +33,14 @@ const productDetails = require('../src/productDetails');
 //https://www.devmedia.com.br/javascript-substring-selecionando-parte-de-uma-string/39232
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    
+   
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara'), 'object');
     assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
     assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1], 'erro');
-    assert.strictEqual(Object.values(productDetails('Alcool gel', 'Máscara')[0].details.slice(-3) , '123'));
-  assert.strictEqual(Object.values(productDetails('Alcool gel', 'Máscara')[1].details.includes('123') , '123'));
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.includes(123), true);
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.includes(123), true);
     
    
     // ESCREVA SEUS TESTES ABAIXO:*/
