@@ -96,10 +96,10 @@ function isDrink(object, string) {
 function valuePay(object) {
   let total = 0;
   for (let index = 0; index < object.consumption.length; index += 1) {
-    if(isFood(object, object.consumption[index])) {
+    if (isFood(object, object.consumption[index])) {
       total += object.fetchMenu.food[object.consumption[index]];
     }
-    if(isDrink(object, object.consumption[index])) {
+    if (isDrink(object, object.consumption[index])) {
       total += object.fetchMenu.drink[object.consumption[index]];
     }
   }
