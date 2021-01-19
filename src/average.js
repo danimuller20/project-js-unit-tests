@@ -15,14 +15,15 @@
 const average = (array) => {
   // implementação aqui
   let media = 0;
-  for (key in array) {
-    if (typeof array[key] === number || typeof array[key] === []) {
+  for (const key in object) {
+    if (typeof object[key] === 'number' || typeof object[key] === [ ]) {
+      const element = object[key];
       throw new Error(undefined);
     } else {
-      media += array[key];
+    media += element;
     }
-  }
-  return media / array.length;
-};
+    return media / array.length;
+  };
+}
 
 module.exports = average;
