@@ -40,8 +40,6 @@ const average = (array) => {
 
     return sum / array.length;
   }
-
-  return;
 };
 
 module.exports = average;
