@@ -77,7 +77,7 @@ const createMenu = object => ({
   order(string) { this.consumption.push(string); },
   pay() {
     let totalAmount = 0;
-    for (order in this.consumption) {
+    for (let order = 0 =; order < this.consumption; order += 1 ) {
       if (this.consumption[order] in this.fetchMenu().food) {
         totalAmount += this.fetchMenu().food[this.consumption[order]];
       } else {
