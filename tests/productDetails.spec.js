@@ -34,15 +34,15 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     
-    assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara'), 'array'));
+    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara'), 'object');
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
+    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
+    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
+    assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1], 'erro');
+    assert.strictEqual(Object.values(productDetails('Alcool gel', 'Máscara')[0].details.includes('123') ? 'true': 'false'));
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.values.substring(productId.values.length-3), '123');
     
-   // assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
-    //assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara')[0], 'object'));
-    //assert.strictEqual(typeof(productDetails('Alcool gel', 'Máscara')[1], 'object'));
-    //assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1], 'erro');
-    //assert.strictEqual((productDetails('Alcool gel', 'Máscara')[0].details.productId.substring(productId.length-3), '123'));
-   // assert.strictEqual((productDetails('Alcool gel', 'Máscara')[1].details.productId.substring(productId.length-3), '123'));
-    assert.fail();
+   
     // ESCREVA SEUS TESTES ABAIXO:*/
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
