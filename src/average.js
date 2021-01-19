@@ -14,17 +14,17 @@
 let sum;
 let weightedAverage;
 function complement(array) {
-  for ( let index = 0; index < array.lenght; index += 1) {
-    sum = sum + array[index];
-  };
-  weightedAverage = sum/array.lenght;
+  for (let index = 0; index < array.lenght; index += 1) {
+    sum += array[index];
+  }
+  weightedAverage = sum / array.lenght;
 }
 const average = (array) => {
-  if (array[index] === typeof('number')) {
+  if (array[index] == typeof ('number')) {
     complement(array);
   } else {
     return 'undefined';
-  };
+  }
   return weightedAverage;
 };
 
