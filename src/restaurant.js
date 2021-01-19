@@ -76,7 +76,7 @@ const restaurant = {};
 const createMenu = (event) => {
   restaurant.fetchMenu = event;
   restaurant.consumption = [];
-  restaurant.order = (request) => {restaurant.consumption.push(request)};
+  restaurant.order = (request) => { restaurant.consumption.push(request); };
   return restaurant;
 };
 
