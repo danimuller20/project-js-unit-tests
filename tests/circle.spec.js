@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { type } = require('os');
 const circle = require('../src/circle');
 
 /*
@@ -25,13 +26,23 @@ const circle = require('../src/circle');
 
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
+    assert.strictEqual(typeof(circle(3)), 'object')
+
     // Teste se o objeto retornado tem 3 entradas.
+    assert.strictEqual(Object.keys(circle(3)).length, 3)
+
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    assert.strictEqual(typeof(circle()), 'undefined')
+
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+    assert.strictEqual(circle(2).circumference, 6.28)
+
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    assert.strictEqual((circle(3).area), 28.26)
+
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    assert.deepStrictEqual(circle(3), { radius: 3, area: 28.26, circumference: 18.84 })
   });
 });
