@@ -92,7 +92,7 @@ function valuePay(object) {
 
 const createMenu = (object) => {
   const menu = {
-    fetchMenu: () => object,
+    fetchMenu: object,
     consumption: [],
     order: (string) => {
       menu.consumption.push(string);
