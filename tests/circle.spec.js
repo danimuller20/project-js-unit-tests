@@ -37,7 +37,7 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(), 'undefined');
 
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.strictEqual(circle(2).circumference, 6.28);
+    assert.strictEqual(circle(2).circumference, 12.56);
 
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.strictEqual(circle(3).area, 28.26);
