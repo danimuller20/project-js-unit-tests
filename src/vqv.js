@@ -17,8 +17,8 @@
 */
 
 const vqv = (nome, idade) => {
-  const name = nome;
-  const age = idade;
+  let name = nome;
+  let age = idade;
 
   if (!name && !age) {
     return undefined;
