@@ -39,8 +39,8 @@ describe('#createMenu', () => {
     // assert.fail();
     // TESTE 1: Verifique que, dado um objeto qualquer passado como um parâmetro para a função createMenu(), checa se o retorno da função é um objeto no seguinte formato: { fetchMenu: objetoQualquer }.
     // ```
-    assert.deepStrictEqual(createMenu({}).fetchMenu, {})
     // createMenu(objetoQualquer) // Retorno: { fetchMenu: () => objetoQualquer }  
+    assert.deepStrictEqual(createMenu({}).fetchMenu, {})
     // `fetchMenu` deve ser uma função quer retorna o `objetoQualquer`
     // ```
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
