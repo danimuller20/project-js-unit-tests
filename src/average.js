@@ -21,11 +21,11 @@ const average = (arrayVar) => {
     const element = arrayVar[index];
     if (typeof element === 'number') {
       mediaVar += element / arrayVar.length;
-    }else {
+    } else {
       return undefined;
     }
   }
   return mediaVar;
-}
+};
 
 module.exports = average;
