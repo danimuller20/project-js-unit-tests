@@ -31,11 +31,9 @@ const average = (array) => {
     result = Number(result);
   }
   return result;
-};
+}
 
 module.exports = average;
-
-
 
 
 // function test(array){
