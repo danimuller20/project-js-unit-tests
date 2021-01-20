@@ -22,11 +22,9 @@ Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
 
-  if (typeof(nome === 'undefined') || typeof(idade === 'undefined')) {
-    return
+  if (typeof (nome) !== 'undefined' && typeof (idade) !== 'undefined') {
+    return message;
   }
-
-  return message;
 };
 
 module.exports = vqv;
