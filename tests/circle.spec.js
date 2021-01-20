@@ -28,10 +28,44 @@ describe('#circle', () => {
     assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
+    if (typeof (radius) !== 'object') {
+      return undefined;
+    };
+
     // Teste se o objeto retornado tem 3 entradas.
+    if (circle.keys.length !== 3) {
+      return undefined;
+    };
+
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    if (circle.keys === 0) {
+      return undefined;
+    }
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+    circumference = 2 * PI * radius;
+    area = PI * radius * radius;
+    let obj = {
+      radius,
+      area: PI * radius * radius,
+      circumference: 2 * PI * radius,
+    }
+    return obj;
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+    area = PI * radius * radius;
+    let obj = {
+      radius,
+      area: PI * radius * radius,
+      circumference: 2 * PI * radius,
+    }
+    return obj;
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    circumference = 2 * PI * radius;
+    let obj = {
+      radius,
+      area: PI * radius * radius,
+      circumference: 2 * PI * radius,
+    }
+    return obj;
   });
 });
+
