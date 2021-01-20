@@ -98,9 +98,9 @@ describe('#createMenu', () => {
     // ```
     const menuTeste2 = createMenu({food: {sopa: 2}, drink: {agua: 2}});
     menuTeste2.order('agua')
-    menuTeste2.order('sopa')
+    menuTeste2.order('chopp')
     menuTeste2.order('agua')
-    assert.deepStrictEqual(menuTeste2.consumption, ['agua', 'sopa', 'agua'])
+    assert.deepStrictEqual(menuTeste2.consumption, ['agua', 'chopp', 'agua'])
     // objetoRetornado.order('coxinha');
     // objetoRetornado.order('agua');
     // objetoRetornado.order('coxinha');
