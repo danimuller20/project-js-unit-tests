@@ -23,8 +23,7 @@ const average = (array) => {
     }
     mediaVar += array[index];
   }
-  return Math.round(mediaVar/array.length);
+  return Math.round(mediaVar / array.length);
 };
-arraytest = [1, 2,3,4]
-console.log(average(arraytest));
+
 module.exports = average;
