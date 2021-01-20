@@ -16,39 +16,48 @@ const average = (array) => {
   let sum = 0;
   let result;
   let notError = true;
-  for (let index = 0; index <= array.length; index += 1) {
-    if (array.length === 0 || array.length !== index) {
-      if (typeof array[index] === 'number') {
-        sum += array[index];
-      } else {
-        notError = false;
-      }
+  array.forEach(() => {
+    if (typeof array === 'number') {
+      sum += array;
+    } else {
+      notError = false;
     }
-  }
+  });
   if (notError) {
     result = sum / array.length;
     result = result.toFixed(0);
     result = Number(result);
   }
   return result;
-}
+};
 
 module.exports = average;
+
+// function verify(array) {
+//   let sum = 0;
+//   let notError = true;
+//   if (typeof array === 'number') {
+//     sum += array;
+//   } else {
+//     notError = false;
+//   }
+// }
 
 
 // function test(array){
 //   let sum = 0;
 //   let result;
 //   let notError = true;
-//   for (let index = 0; index <= array.length; index += 1) {
-//     if (array.length === 0 || array.length !== index) {
-//       if (typeof array[index] === 'number') {
-//         sum += array[index];
-//       } else {
-//         notError = false;
-//       }
-//     }
-//   }
+//   // for (let index = 0; index <= array.length; index += 1) {
+//   //   if (array.length === 0 || array.length !== index) {
+//   //     if (typeof array[index] === 'number') {
+//   //       sum += array[index];
+//   //     } else {
+//   //       notError = false;
+//   //     }
+//   //   }
+//   // }
+//   array.forEach(verify);
 //   if (notError) {
 //     result = sum / array.length;
 //     result = result.toFixed(0);
@@ -58,4 +67,4 @@ module.exports = average;
 //   return result;
 // };
 
-// test([7, 14, 21, 28]);
+// test([3, 2, 23]);
