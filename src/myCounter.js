@@ -20,8 +20,8 @@
    for (var i = 0; i <= 3; i += 1) {
      myArray.push(i);
      for (var indice = 2; indice <= 3; indice += 1) {
-      myArray.push(indice);
-    }
+       myArray.push(indice);
+     }
    }
    return myArray;
  };
