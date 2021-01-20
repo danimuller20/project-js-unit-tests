@@ -25,6 +25,8 @@ trabalho na Trybe e mando muito em programação!
   if (typeof (nome) !== 'undefined' && typeof (idade) !== 'undefined') {
     return message;
   }
+
+  return
 };
 
 module.exports = vqv;
