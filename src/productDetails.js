@@ -25,7 +25,7 @@
 */
 
  const productDetails = (firstProduct, secondProduct) =>
-  [
+   [
     {
       name: firstProduct,
       details: {
