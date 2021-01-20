@@ -23,6 +23,9 @@ const average = (array) => {
       notError = false;
     }
   });
+  if (array.length === 0) {
+    notError = false;
+  }
   if (notError) {
     result = sum / array.length;
     result = result.toFixed(0);
