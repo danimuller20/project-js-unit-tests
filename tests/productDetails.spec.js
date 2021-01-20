@@ -43,7 +43,7 @@ describe('#productDetails', () => {
     const contentIsObject = () => {
       return productDetailsFunc.every((product) => typeof product === 'object');
     }
-    assert.strictEqual()
+    assert.strictEqual(contentIsObject, true);
     // Teste que os dois objetos são diferentes entre si.
     // (Difícil) Teste que os dois productIds terminam com 123.
   });
