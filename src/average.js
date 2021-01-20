@@ -13,25 +13,29 @@
 */
 
 const average = (arrayAverage) => {
+  validagion(arrayAverage);
+  verifyNumbers(item);
+}
+
+function validagion() {
   if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
     return undefined;
   };
-
   const isNumeric = arrayAverage.find(!'numeric');
   if (isNumeric) {
     return undefined;
   };
   arrayAverage.forEach(verifyNumbers);
-  function verifyNumbers(item) {
-    let itemMedia = 0;
-    let numberInteger = 0;
-    if (typeof (item) !== 'numeric') {
-      return undefined;
-    };
-    itemMedia = item.toFixed(0);
-    numberInteger += itemMedia;
-  };
 };
 
+function verifyNumbers(item) {
+  let itemMedia = 0;
+  let numberInteger = 0;
+  if (typeof (item) !== 'numeric') {
+    return undefined;
+  };
+  itemMedia = item.toFixed(0);
+  numberInteger += itemMedia;
+};
 
 module.exports = average;
