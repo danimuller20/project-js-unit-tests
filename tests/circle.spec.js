@@ -23,8 +23,26 @@ const circle = require('../src/circle');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 const validData = () => {
-  let contador = 0;
-  if()
+  let cont = 0;
+  let dataCircle = circle(3);
+  dataCircle["area"] = parseFloat((circle(3).area).toPrecision(4))
+  if(dataCircle["radius"] === 3) {
+    cont += 1
+    console.log(cont)
+  }
+  if (dataCircle["area"] === 28.26){
+    cont += 1;
+    console.log(cont)
+  }
+  if (dataCircle["circumference"] === 18.84){
+    cont += 1
+    console.log(cont)
+  }
+  if(cont === 3 ){
+    return true
+  } else {
+    return false
+  }
 }
 
 describe('#circle', () => {
@@ -34,7 +52,7 @@ describe('#circle', () => {
     assert.deepStrictEqual(circle() === true, false) // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.deepStrictEqual(Object.values(circle(2))[2] === 12.56, true) // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
     assert.deepStrictEqual(parseFloat(Object.values(circle(3))[1].toPrecision(4)) === 28.26, true); //// Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.deepStrictEqual(validData(3) === [ 3, 28.26, 18.84 ], true)
+    assert.deepStrictEqual(validData() === true, true)
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
   });
 });
