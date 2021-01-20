@@ -73,28 +73,27 @@
 
 const menu = {};
 
-const createMenu = (inputMenu) => {
-  menu.fetchMenu = inputMenu;
-  menu.consumption = [];
-  menu.order = (newOrder)=> menu.consumption.push(newOrder);
-  menu.pay = pay;
-  return menu;
-};
-
-
 const pay = () => {
   let sumOfPrices = 0;
-  const foodMenu = menu.fetchMenu.food; //retorna um objeto com chave - nome da comida e valor - valor da comida
-  const drinkMenu = menu.fetchMenu.drink; //mesma coisa para bebidas
+  const foodMenu = menu.fetchMenu.food; 
+  const drinkMenu = menu.fetchMenu.drink; 
   menu.consumption.forEach((element) => {
-    if(Object.keys(foodMenu).includes(element)) {
-      sumOfPrices += foodMenu[element]; 
+    if (Object.keys(foodMenu).includes(element)) {
+    sumOfPrices += foodMenu[element]; 
     }
-    if(Object.keys(drinkMenu).includes(element)) {
-      sumOfPrices += drinkMenu[element]; 
+    if (Object.keys(drinkMenu).includes(element)) {
+    sumOfPrices += drinkMenu[element]; 
     }
   });
   return sumOfPrices * 1.1;
+};
+
+const createMenu = (inputMenu) => {
+  menu.fetchMenu = inputMenu;
+  menu.consumption = [];
+  menu.order = newOrder => menu.consumption.push(newOrder);
+  menu.pay = pay;
+  return menu;
 };
 
 module.exports = createMenu;
