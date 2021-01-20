@@ -15,22 +15,17 @@
 const average = (arrayVar) => {
   let mediaVar = 0;
   if (arrayVar.length === 0) {
-    return console.log('não pode estar vazio')
+    return undefined;
   }
-  for (let index = 0; index < arrayVar.length; index++) {
+  for (let index = 0; index < arrayVar.length; index += 1) {
     const element = arrayVar[index];
-    if (element === 'number') {
-      let nums = arrayVar;
-      let total = nums.reduce((total, num) => total + num, 0);
-      mediaVar = Math.round(total/arrayVar.length);
+    if (typeof element === 'number') {
+      mediaVar += element / arrayVar.length;
     }else {
-      console.log('só pode ser usado numeros')
+      return undefined;
     }
   }
-  return mediaVar
+  return mediaVar;
 }
-
-let arraytest = [1, 2, 3];
-average(arraytest);
 
 module.exports = average;
