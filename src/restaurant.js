@@ -75,14 +75,14 @@ const menu = {};
 
 const pay = () => {
   let sumOfPrices = 0;
-  const foodMenu = menu.fetchMenu.food; 
-  const drinkMenu = menu.fetchMenu.drink; 
+  const foodMenu = menu.fetchMenu.food;
+  const drinkMenu = menu.fetchMenu.drink;
   menu.consumption.forEach((element) => {
     if (Object.keys(foodMenu).includes(element)) {
-    sumOfPrices += foodMenu[element]; 
+      sumOfPrices += foodMenu[element];
     }
     if (Object.keys(drinkMenu).includes(element)) {
-    sumOfPrices += drinkMenu[element]; 
+      sumOfPrices += drinkMenu[element];
     }
   });
   return sumOfPrices * 1.1;
@@ -97,5 +97,3 @@ const createMenu = (inputMenu) => {
 };
 
 module.exports = createMenu;
-
-
