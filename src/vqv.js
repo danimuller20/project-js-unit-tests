@@ -26,7 +26,7 @@ trabalho na Trybe e mando muito em programação!
     return message;
   }
 
-  return
+  return undefined;
 };
 
 module.exports = vqv;
