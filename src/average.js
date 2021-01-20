@@ -12,15 +12,15 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (arrayVar) => {
+const average = (array) => {
   let mediaVar = 0;
-  if (arrayVar.length === 0) {
+  if (array.length === 0) {
     return undefined;
   }
-  for (let index = 0; index < arrayVar.length; index += 1) {
-    const element = arrayVar[index];
+  for (let index = 0; index < array.length; index += 1) {
+    const element = array[index];
     if (typeof element === 'number') {
-      mediaVar += element / arrayVar.length;
+      mediaVar += element / array.length;
     } else {
       return undefined;
     }
