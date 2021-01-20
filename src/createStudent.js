@@ -24,5 +24,6 @@ const createStudent = nome => ({ feedback: () => 'Eita pessoa boa!', name: nome 
 // 'Leandrão, o Lobo Solitário');
 // assert.strictEqual(createStudent('Ivan').feedback(), 'Eita pessoa boa!');
 
+console.log(createStudent('ivan').feedback())
 
 module.exports = createStudent;
