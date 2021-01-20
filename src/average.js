@@ -33,38 +33,3 @@ const average = (array) => {
 
 module.exports = average;
 
-// function verify(array) {
-//   let sum = 0;
-//   let notError = true;
-//   if (typeof array === 'number') {
-//     sum += array;
-//   } else {
-//     notError = false;
-//   }
-// }
-
-
-// function test(array){
-//   let sum = 0;
-//   let result;
-//   let notError = true;
-//   // for (let index = 0; index <= array.length; index += 1) {
-//   //   if (array.length === 0 || array.length !== index) {
-//   //     if (typeof array[index] === 'number') {
-//   //       sum += array[index];
-//   //     } else {
-//   //       notError = false;
-//   //     }
-//   //   }
-//   // }
-//   array.forEach(verify);
-//   if (notError) {
-//     result = sum / array.length;
-//     result = result.toFixed(0);
-//     result = Number(result);
-//   }
-//   console.log(result);
-//   return result;
-// };
-
-// test([3, 2, 23]);
