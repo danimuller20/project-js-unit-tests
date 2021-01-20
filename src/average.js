@@ -12,6 +12,31 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (arrayAverage) => {
+
+  if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
+    throw 'undefined';
+  };
+
+  const isNumeric = arrayAverage.find(!'numeric');
+  if (isNumeric) {
+    throw 'undefined';
+  };
+
+  arrayAverage.forEach(verifyNumbers);
+
+  function verifyNumbers(item) {
+    let itemMedia = 0;
+    let numberInteger = 0;
+    if (typeof (item) !== 'numeric') {
+      throw 'undefined';
+    }
+
+    itemMedia = item.toFixed(0);
+    numberInteger += itemMedia;
+  }
+
+};
+
 
 module.exports = average;
