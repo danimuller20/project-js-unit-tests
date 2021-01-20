@@ -12,37 +12,6 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-function funSum(sum, notError, index, array) {
-  if (array.length === 0 || array.length !== index) {
-    if (typeof array[index] === 'number') {
-      sum += array[index];
-    } else {
-      notError = false;
-    }
-  }
-  return sum, notError;
-}
-
-const average = (array) => {
-  let sum = 0;
-  let result;
-  let notError = true;
-  for (let index = 0; index <= array.length; index += 1) {
-    funSum(sum, notError, index, array);
-  }
-  if (notError) {
-    result = sum / array.length;
-    result = result.toFixed(0);
-    result = Number(result);
-  }
-  return result;
-};
-
-module.exports = average;
-
-
-
-
 function test(array){
   let sum = 0;
   let result;
@@ -61,8 +30,34 @@ function test(array){
     result = result.toFixed(0);
     result = Number(result);
   }
-  console.log(result);
   return result;
 };
 
-test([7, 14, 21, 28]);
+module.exports = average;
+
+
+
+
+// function test(array){
+//   let sum = 0;
+//   let result;
+//   let notError = true;
+//   for (let index = 0; index <= array.length; index += 1) {
+//     if (array.length === 0 || array.length !== index) {
+//       if (typeof array[index] === 'number') {
+//         sum += array[index];
+//       } else {
+//         notError = false;
+//       }
+//     }
+//   }
+//   if (notError) {
+//     result = sum / array.length;
+//     result = result.toFixed(0);
+//     result = Number(result);
+//   }
+//   console.log(result);
+//   return result;
+// };
+
+// test([7, 14, 21, 28]);
