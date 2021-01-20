@@ -16,6 +16,27 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {};
+function isArrayNotUndefined (array){
+  return !array.some((element) => {
+    return element === undefined;
+  })
+}
+
+function isParametersValid (parameters) {
+  return parameters.length > 0 && isArrayNotUndefined(parameters)
+}
+
+const vqv = (nome, idade) => {
+  if(!isParametersValid ([nome,idade])){
+    return undefined
+  }
+  
+  const frase = `Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`
+  
+  return frase
+};
+
+
+console.log(vqv())
 
 module.exports = vqv;
