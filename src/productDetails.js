@@ -24,19 +24,18 @@
   ]
 */
 
- const productDetails = (firstProduct, secondProduct) =>
- { [
-   {
-    name: firstProduct,
+ const productDetails = (firstProduct, secondProduct) => { [ {
+     name: firstProduct,
      details: {
-      productId: `${productId}123`,
+       productId: `${productId}123`,
+     },
     },
-   },
   {
       name: secondProduct,
       details: {
         productId: `${productId}123`,
       },
   },
- ]}
+ ]
+};
  module.exports = productDetails;
