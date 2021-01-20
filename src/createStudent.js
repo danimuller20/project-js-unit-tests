@@ -23,10 +23,11 @@
 // });
 
 const createStudent = (entry) => {
-  return {
+  const student = {
     name: entry,
     feedback: () => 'Eita pessoa boa!',
   };
+  return student;
 };
 
 module.exports = createStudent;
