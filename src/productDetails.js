@@ -41,4 +41,4 @@ const productDetails = (firstProduct, secondProduct) => [
 
 module.exports = productDetails;
 
-console.log(Object.entries(productDetails('alcool gel', 'mascara')).length);
+console.log(productDetails('alcool gel', 'mascara'));
