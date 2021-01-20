@@ -24,7 +24,9 @@
   ]
 */
 
- const productDetails = (firstProduct, secondProduct) => { [ {
+ const productDetails = (firstProduct, secondProduct) => 
+  { return [ 
+   {
      name: firstProduct,
      details: {
        productId: `${productId}123`,
