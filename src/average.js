@@ -12,7 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-function test(array){
+const average = (array) => {
   let sum = 0;
   let result;
   let notError = true;
