@@ -17,13 +17,13 @@
 */
 
 const vqv = (nome, idade) => {
-  let message = 
+  const message =
   `    Oi, meu nome é ${nome}! 
 Tenho ${idade} anos, 
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
   if (nome && idade) {
-    return message
+    return message;
   }
   return undefined;
 };
