@@ -63,6 +63,15 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornadoTeste2 = createMenu(objetoQualquer);
     // objetoRetornadoTeste2.fetchMenu() // retorno: { food: {}, drink: {}}
+    // createMenu(objetoQualquer) // Retorno: { fetchMenu: () => objetoQualquer }  
+    // `fetchMenu` deve ser uma função quer retorna o `objetoQualquer`
+    // ```
+    // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
+    // --------------------------------------------------------------------------------------
+    // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`, verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
+    // ```
+    // const objetoRetornado = createMenu(objetoQualquer);
+    // objetoRetornado.fetchMenu() // Retorno: { food: {}, drink: {}}
     // ```
     // Agora faça o TESTE 3 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -70,6 +79,8 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornadoTeste3 = createMenu(objetoQualquer);
     // objetoRetornadoTeste3.fetchMenu() // Retorno: objetoQualquer
+    // const objetoRetornado = createMenu(objetoQualquer);
+    // objetoRetornado.fetchMenu() // Retorno: objetoQualquer
     // ```
     // Agora faça o TESTE 4 deste arquivo.
     // --------------------------------------------------------------------------------------
