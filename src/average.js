@@ -19,7 +19,7 @@ const average = (arr) => {
   const length = arr.length;
   let calc = 0;
 
-  if ((length < 1) || (arr.every(currentValue => typeof currentValue === 'number') === false)) {
+  if ((length < 1) || !(arr.every(currentValue => typeof currentValue === 'number'))) {
     return undefined;
   }
 

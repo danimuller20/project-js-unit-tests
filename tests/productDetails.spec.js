@@ -39,7 +39,7 @@ describe('#productDetails', () => {
     const functionComplete = productDetails('Alcool gel', 'Máscara');
 
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof functionComplete === 'object', true);
+    assert.strictEqual(Array.isArray(functionComplete), true);
 
     // Teste que o array retornado pela função contém dois itens dentro.
     assert.strictEqual(functionComplete.length, 2);
