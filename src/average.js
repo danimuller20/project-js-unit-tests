@@ -16,9 +16,9 @@ const average = (array) => {
   let sum = 0;
   let result;
   let notError = true;
-  array.forEach((array) => {
-    if (typeof array === 'number') {
-      sum += array;
+  array.forEach((number) => {
+    if (typeof number === 'number') {
+      sum += number;
     } else {
       notError = false;
     }
