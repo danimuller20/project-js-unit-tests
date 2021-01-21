@@ -12,11 +12,13 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = 0;
-if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
-  return undefined;
-}
 
 function formatArrayAverege(arrayAverage) {
+
+  if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
+    return undefined;
+  };
+
   for (let i = 0; i < arrayAverage.lenght; i += 1) {
     let itemArray = arrayAverage[i];
     if (typeof (itemArray) !== 'number') {
@@ -29,5 +31,7 @@ function formatArrayAverege(arrayAverage) {
 
   return mediaItem;
 };
+
+formatArrayAverege(arrayAverage);
 
 module.exports = average;
