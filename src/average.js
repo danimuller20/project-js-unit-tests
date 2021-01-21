@@ -12,8 +12,18 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-
+const average = (array) => {
+if (array.length === 0) {
+  return undefined;
+  } else {
+    for (let i = 0; i < array.length; i++) {
+      // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof
+      if (typeof (array[i]) !== 'number'; ) {
+        return undefined;
+      } const numberOfNumbers += array[i];
+      // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+    } return Math.round(numberOfNumbers / array.length); // Average of amounts received;
+  }
 };
 
 module.exports = average;
