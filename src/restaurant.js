@@ -103,8 +103,8 @@ function createMenu(obj) {
     consumption: [],
     order: addOrder,
     pay() { return closeOrder(this.fetchMenu, this.consumption); },
-  }
-};
+  };
+}
 
 
 module.exports = createMenu;
