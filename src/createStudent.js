@@ -24,5 +24,4 @@ const createStudent = (name) => {
   return newStudent;
 };
 
-console.log(createStudent('Michael'))
 module.exports = createStudent;
