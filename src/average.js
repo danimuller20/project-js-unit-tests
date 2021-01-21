@@ -42,7 +42,7 @@ const average = (array) => {
     for (let index = 0; index < array.length; index += 1) {
       soma += array[index];
     }
-    return soma / array.length;
+    return Math.round(soma / array.length);
   }
   return undefined;
 };
