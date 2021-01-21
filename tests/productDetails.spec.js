@@ -39,8 +39,8 @@ describe('#productDetails', () => {
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
     assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[1], 'object');
     assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1], 'erro');
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.includes(123), true);
-    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.includes(123), true);
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[0].details.productId.endsWith(123), true);
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara')[1].details.productId.endsWith(123), true);
     
    
     // ESCREVA SEUS TESTES ABAIXO:*/
