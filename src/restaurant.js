@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 
+const { parse } = require("acorn");
+
 /*
   Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
   - ler o menu cadastrado;
@@ -71,33 +73,36 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const testObject = { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} };
 
-
-const createMenu = (obj) => (objName = { fetchMenu: obj, consumption: [], order: addOrder, pay: closeOrder});
+const createMenu = (obj) => {
+ return {
+    fetchMenu: obj,
+    consumption: [],
+    order: addOrder,
+    pay() {return closeOrder(this.fetchMenu, this.consumption)}
+  }
+};
 
 function addOrder(string) {
   this.consumption.push(string);
 }
 
-function closeOrder() {
+function closeOrder(menu, consumption) {
   let total = 0;
-  const foodKeys = Object.keys(this.fetchMenu.food);
-  const drinkKeys = Object.keys(this.fetchMenu.drink);
-  this.consumption.forEach(item => {
-    const foundFood = foodKeys.find(foodName => {
-      return foodName === item;
-    })
-    const foundDrink = drinkKeys.find((drinkName => {
-      return drinkName === item;
-    }))
-  })
+  consumption.forEach((item) => {
+    if (item in menu.food) {
+      total += menu.food[item];
+    }
+    if (item in menu.drink) {
+      total += menu.drink[item];
+    }
+  });
+  return parseFloat((total * 1.1).toFixed(2));
 }
 
-const test = createMenu(testObject);
-
-test.order('coxinha');
-test.order('agua');
-console.log(test.pay);
+const testObject = { 
+  food: {'coxinha': 3.9, 'sopa': 9.9},
+  drink: {'agua': 3.9, 'cerveja': 6.9}
+};
 
 module.exports = createMenu;
