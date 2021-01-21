@@ -11,18 +11,23 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const average = 0;
 if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
   return undefined;
 }
 
-for (let i = 0; i < arrayAverage.lenght; i += 1) {
-  let itemArray = arrayAverage[i];
-  if (typeof (itemArray) !== 'number')
-    return undefined;
-  let item = 0;
-  let mediaItem += item;
-}
+function formatArrayAverege(arrayAverage) {
+  for (let i = 0; i < arrayAverage.lenght; i += 1) {
+    let itemArray = arrayAverage[i];
+    if (typeof (itemArray) !== 'number') {
+      return undefined;
+    };
+    let item = arrayAverage[i];
+    let mediaItem += item;
+    average = mediaItem / arrayAverage.lenght;
+  };
 
-return mediaItem;
+  return mediaItem;
+};
 
 module.exports = average;
