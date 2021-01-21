@@ -28,5 +28,5 @@ const circle = (radius) => {
   };
 };
 
-// console.log((circle(2).circumference))
+// console.log(circle(3).area.toPrecision(3)) ,circle(3).circumference.toPrecision(3), circle(3).area.toPrecision(3))
 module.exports = circle;
