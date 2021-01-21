@@ -23,13 +23,4 @@ const myObjetc(newName) => {
 
 };
 
-myObjetc(newName);
-
-myObjetc = () => {
-  const myFunction = () => {
-    name: newName,
-      feedback: (function () { `${newName} o Lobo Solitário` }),
-  };
-};
-
 module.exports = createStudent;
