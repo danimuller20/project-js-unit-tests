@@ -16,10 +16,10 @@
 */
 
 const createStudent = (arg) => {
-  const estudante = [
-    name = arg,
-    feedback = () => 'Eita pessoa boa!',
-  ];
+  let estudante = new Object();
+  estudante.name = arg;
+  estudante.feedback = () => 'Eita pessoa boa!';
+
   return estudante;
 };
 
