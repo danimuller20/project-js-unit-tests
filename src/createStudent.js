@@ -16,7 +16,7 @@
 */
 
 const createStudent = (studentName) => {
-const student = {
+  const student = {
   name: studentName,
   feedback: () => 'Eita pessoa boa!',
 };
