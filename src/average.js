@@ -13,21 +13,23 @@
 */
 const average = 0;
 
-function formatArrayAverege(arrayAverage) {
-  if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
+function formatArrayAverege(average) {
+  if ((typeof (average) !== 'function') || (average.lenght < 0)) {
     return undefined;
   }
-  for (let i = 0; i < arrayAverage.lenght; i += 1) {
-    let itemArray = arrayAverage[i]
+  for (let i = 0; i < average.lenght; i += 1) {
+    const itemArray = [];
+    itemArray.push = average[i];
     if (typeof (itemArray) !== 'number') {
       return undefined;
     }
-    const mediaItem = mediaItem + arrayAverage[i];
-    average = mediaItem / arrayAverage.lenght;
-  };
+    const mediaItem = 0;
+    mediaItem = mediaItem + average[i];
+    average = mediaItem / average.lenght;
+  }
   return average;
 };
 
-formatArrayAverege(arrayAverage);
+formatArrayAverege(average);
 
 module.exports = average;
