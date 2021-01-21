@@ -89,11 +89,11 @@ function closeOrder(menu, consumption) {
   });
   return parseFloat((total * 1.1).toFixed(2));
 }
-const createMenu = (obj) => ({
-    fetchMenu: obj,
-    consumption: [],
-    order: addOrder,
-    pay() { return closeOrder(this.fetchMenu, this.consumption) },
-});
+const createMenu = (obj) => {
+  fetchMenu: obj,
+  consumption: [],
+  order: addOrder,
+  pay() { return closeOrder(this.fetchMenu, this.consumption); },
+};
 
 module.exports = createMenu;
