@@ -16,23 +16,20 @@ function verifyNumbers(item) {
   let numberInteger = 0;
   if (typeof (item) !== 'numeric') {
     return undefined;
-  };
+  }
 
   if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
     return undefined;
-  };
+  }
 
   const isNumeric = arrayAverage.find(!'numeric');
   if (isNumeric) {
     return undefined;
-  };
+  }
 
   itemMedia = item.toFixed(0);
   numberInteger += itemMedia;
-  return numberInteger
-};
-
-function validation(arrayAverage) {
+  return numberInteger;
 
   const average = (arrayAverage) => {
     let integerNumber = numberInteger;
@@ -41,7 +38,6 @@ function validation(arrayAverage) {
   };
 
   arrayAverage.forEach(verifyNumbers);
-};
-
+}
 
 module.exports = average;

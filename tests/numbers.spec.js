@@ -27,7 +27,7 @@ describe('#numbers', () => {
         }
       }
       return true;
-    };
+    }
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
     numbers = (myArray) => {
       for (let i = 0; i < myArray.length; i += 1) {
@@ -49,6 +49,6 @@ describe('#numbers', () => {
     // Escreva um teste em que a função recebe [' '] e retorna false
     if (myArray[0] === ' ') {
       return false;
-    };
-  };
+    }
+  }
 };
