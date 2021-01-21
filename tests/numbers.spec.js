@@ -51,4 +51,4 @@ describe('#numbers', () => {
       return false;
     }
   }
-};
+}

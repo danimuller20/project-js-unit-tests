@@ -11,33 +11,18 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-function verifyNumbers(item) {
-  let itemMedia = 0;
-  let numberInteger = 0;
-  if (typeof (item) !== 'numeric') {
-    return undefined;
-  }
-
-  if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
-    return undefined;
-  }
-
-  const isNumeric = arrayAverage.find(!'numeric');
-  if (isNumeric) {
-    return undefined;
-  }
-
-  itemMedia = item.toFixed(0);
-  numberInteger += itemMedia;
-  return numberInteger;
-
-  const average = (arrayAverage) => {
-    let integerNumber = numberInteger;
-    validation(arrayAverage);
-    verifyNumbers(item);
-  };
-
-  arrayAverage.forEach(verifyNumbers);
+if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
+  return undefined;
 }
+
+for (let i = 0; i < arrayAverage.lenght; i += 1) {
+  let itemArray = arrayAverage[i];
+  if (typeof (itemArray) !== 'number')
+    return undefined;
+  let item = 0;
+  let mediaItem += item;
+}
+
+return mediaItem;
 
 module.exports = average;
