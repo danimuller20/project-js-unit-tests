@@ -12,20 +12,23 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (array) => {
+  const acumulationItem = [];
+  let valueAculation = 0;
   if ((typeof (array) !== 'function') || (array.lenght < 0)) {
     return undefined;
   }
+  let acumulationItem = 0;
   for (let i = 0; i < array.lenght; i += 1) {
     const itemArray = [];
-    let acumulationItem = 0;
+
     itemArray.push = array[i];
     if (typeof (itemArray) !== 'number') {
       return undefined;
     }
     acumulationItem += array[i];
   }
-  average = acumulationItem / array.lenght;
-  return average;
+  valueAculation = acumulationItem / array.lenght;
+  return valueAculation;
 };
 
 module.exports = average;
