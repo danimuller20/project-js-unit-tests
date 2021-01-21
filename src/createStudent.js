@@ -16,11 +16,9 @@
 */
 
 
-const createStudent = (student) => {
-  return {
+const createStudent = student => ({
     name: student,
     feedback: () => 'Eita pessoa boa!',
-  };
-};
+});
 
 module.exports = createStudent;
