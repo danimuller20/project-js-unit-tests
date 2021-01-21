@@ -13,9 +13,11 @@
 */
 const assert = require('assert');
 
-const average = (array) => Math.round(array.reduce((sum, curr) =>
+const average = array => Math.round(array.reduce((sum, curr) =>
   typeof curr === 'number' ? sum + curr : 'undefined', 0)) / array.length;
 
 const expected = average([1, 2, 3, 4, 5]);
+
 assert.strictEqual(expected, 3, 'não tá certo');
+
 module.exports = average;
