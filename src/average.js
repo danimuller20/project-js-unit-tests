@@ -18,11 +18,6 @@ function verifyNumbers(item) {
     return undefined;
   };
 
-  itemMedia = item.toFixed(0);
-  numberInteger += itemMedia;
-};
-
-function validation(arrayAverage) {
   if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
     return undefined;
   };
@@ -32,13 +27,20 @@ function validation(arrayAverage) {
     return undefined;
   };
 
+  itemMedia = item.toFixed(0);
+  numberInteger += itemMedia;
+  return numberInteger
+};
+
+function validation(arrayAverage) {
+
   const average = (arrayAverage) => {
+    let integerNumber = numberInteger;
     validation(arrayAverage);
     verifyNumbers(item);
   };
 
   arrayAverage.forEach(verifyNumbers);
-
 };
 
 
