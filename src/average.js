@@ -13,7 +13,7 @@
 */
 
 function isNotEmpty(array) {
-  if (array.length == 0) {
+  if (array.length === 0) {
     return false;
   }
   return true;
@@ -21,7 +21,7 @@ function isNotEmpty(array) {
 
 function isNotString(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) == 'string') {
+    if (typeof (array[index]) === 'string') {
       return false;
     }
   }
@@ -40,16 +40,11 @@ const average = (array) => {
     let soma = 0;
 
     for (let index = 0; index < array.length; index += 1) {
-        soma += array[index];
+      soma += array[index];
     }
-    return soma/array.length;
+    return soma / array.length;
   }
   return;
 }
-
-
-average([2, 2])
-//average([1, 1])
-//average([1, '2'])
 
 module.exports = average;
