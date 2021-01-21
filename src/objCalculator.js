@@ -22,17 +22,17 @@
 // Math.floor()
 
 const calculator = {
-  add: function(a, b) {
-    return Math.floor(a + b)
+  add(a, b) {
+    return Math.floor(a + b);
   },
-  mult: function(a, b) {
-    return Math.floor(a * b)
+  mult(a, b) {
+    return Math.floor(a * b);
   },
-  div: function(a, b) {
-    return Math.floor(a / b)
+  div(a, b) {
+    return Math.floor(a / b);
   },
-  sub: function(a, b) {
-    return Math.floor(a - b)
+  sub(a, b) {
+    return Math.floor(a - b);
   },
 };
 
