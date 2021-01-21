@@ -18,7 +18,7 @@ if (array.length === 0) {
   } else {
     for (let i = 0; i < array.length; i++) {
       // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof
-      if (typeof (array[i]) !== 'number'; ) {
+      if (typeof (array[i]) !== 'number') {
         return undefined;
       } const numberOfNumbers += array[i];
       // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
