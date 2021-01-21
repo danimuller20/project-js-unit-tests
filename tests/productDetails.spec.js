@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { isArray } = require('util');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -34,11 +35,23 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
     // ESCREVA SEUS TESTES ABAIXO:
+    let returnProductDetails = productDetails('Alcool gel', 'Máscara');
+
     // Teste que o retorno da função é um array.
-    assert.strictEqual(productDetails('copo', 'caneca'), [{"details": {"productId": "copo123"}, "name": "copo"}, {"details": {"productId": "caneca123"}, "name": "caneca"}])
+    assert.strictEqual( Array.isArray(returnProductDetails), true);
+
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(returnProductDetails.length, 2);
+
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    // Teste que os dois objetos são diferentes entre si.
-    // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.strictEqual(typeof Object.entries(returnProductDetails)[0], 'object');
+    assert.strictEqual(typeof Object.entries(returnProductDetails)[1], 'object');
+
+    // // Teste que os dois objetos são diferentes entre si.
+    assert.notDeepStrictEqual(returnProductDetails[0], returnProductDetails[1]);
+
+    // // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.ok(returnProductDetails[0].details.productId.match(/[a-z]+1{1}2{1}3{1}/g));
+    assert.ok(returnProductDetails[1].details.productId.match(/[a-z]+1{1}2{1}3{1}/g));
   });
 });
