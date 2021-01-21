@@ -37,6 +37,5 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.strictEqual(circle(3).area.toPrecision(3), '28.3')
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.strictEqual(circle(3).area.toPrecision(3),)
   });
 });
