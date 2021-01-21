@@ -44,7 +44,7 @@ const average = (array) => {
     }
     return soma / array.length;
   }
-  return;
+  return undefined;
 }
 
 module.exports = average;
