@@ -17,17 +17,15 @@ const average = (listaNum) => {
   // add your implementation here
   if (listaNum.length === 0) {
     return undefined;
-  } else {
-    for (let index = 0; index < listaNum.length; index += 1) {
-      if (typeof listaNum[index] !== 'number') {
-        return undefined;
-      } else {
-        soma = soma + listaNum[index];
-      }
-    }
-    const media = Math.round(soma / listaNum.length);
-    return media;
   }
+  for (let index = 0; index < listaNum.length; index += 1) {
+    if (typeof listaNum[index] !== 'number') {
+      return undefined;
+    }
+    soma += listaNum[index];
+  }
+  const media = Math.round(soma / listaNum.length);
+  return media;
 };
 
 average([5, 10, 20]);
