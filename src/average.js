@@ -14,10 +14,9 @@
 const assert = require('assert');
 
 const average = (array) => {
-  return Math.round(array.reduce(((sum, curr) => 
-    typeof curr === 'number' ? sum + curr : 'undefined'), 0) / array.length);
+  return Math.round(array.reduce((sum, curr) =>
+    typeof curr === 'number' ? sum + curr : 'undefined', 0)) / array.length;
 };
-// console.log(average([1, 2, 3, 4, 5]));
 
 const expected = average([1, 2, 3, 4, 5]);
 
