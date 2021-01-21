@@ -16,7 +16,7 @@
 */
 
 const createStudent = (arg) => {
-  let estudante = new Object();
+  const estudante = new {};
   estudante.name = arg;
   estudante.feedback = () => 'Eita pessoa boa!';
 
