@@ -24,8 +24,7 @@ function formatArrayAverege(arrayAverage) {
     if (typeof (itemArray) !== 'number') {
       return undefined;
     };
-    let item = arrayAverage[i];
-    let mediaItem += item;
+    let mediaItem = mediaItem + arrayAverage[i];
     average = mediaItem / arrayAverage.lenght;
   };
 
