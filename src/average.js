@@ -18,12 +18,12 @@ const average = (arrVa) => {
     return undefined;
   }
   for (let i = 0; i < arrVa.length; i += 1) {
-    if (typeof arrVa[i] !== 'number' ){
+    if (typeof arrVa[i] !== 'number') {
       return undefined;
     }
     sum += arrVa[i];
   }
-  return  Math.round(sum / arrVa.length);
+  return Math.round(sum / arrVa.length);
 };
 average([1, 2]);
 // console.log(average([1, 2, 3, 4, 5, 10, 12]));
