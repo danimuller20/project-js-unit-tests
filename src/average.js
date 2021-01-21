@@ -17,9 +17,9 @@ const average = (array) => {
   if (array.length === 0) {
     return undefined;
   }
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof
-    if (typeof array[i] !== "number") {
+    if (typeof array[i] !== 'number') {
       return undefined;
     }
     numberOfNumbers += array[i];
