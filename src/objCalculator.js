@@ -19,6 +19,21 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+// Math.floor()
+
+const calculator = {
+  add: function(a, b) {
+    return Math.floor(a + b)
+  },
+  mult: function(a, b) {
+    return Math.floor(a * b)
+  },
+  div: function(a, b) {
+    return Math.floor(a / b)
+  },
+  sub: function(a, b) {
+    return Math.floor(a - b)
+  },
+};
 
 module.exports = calculator;
