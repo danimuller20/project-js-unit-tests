@@ -13,8 +13,8 @@
 */
 const assert = require('assert');
 
-const average = array => Math.round(array.reduce((sum, curr) =>
-  typeof curr === 'number' ? sum + curr : 'undefined', 0)) / array.length;
+const vereficaNum = (sum, curr) => typeof curr === 'number' ? sum + curr : 'undefined';
+const average = array => Math.round(array.reduce(vereficaNum, 0)) / array.length;
 
 const expected = average([1, 2, 3, 4, 5]);
 
