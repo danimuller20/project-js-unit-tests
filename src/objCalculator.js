@@ -24,5 +24,4 @@ const calculator = {
   div: (a, b) => a / b,
   sub: (a, b) => a - b,
 };
- 
 module.exports = calculator;
