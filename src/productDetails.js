@@ -38,5 +38,5 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
-// console.log(productDetails('CocaCola', 'Mentos'));
+console.log(productDetails('CocaCola', 'Mentos')[0].details.productId.endsWith('123'));
 module.exports = productDetails;
