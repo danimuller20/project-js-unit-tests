@@ -14,21 +14,18 @@
 const average = 0;
 
 function formatArrayAverege(arrayAverage) {
-
   if ((typeof (arrayAverage) !== 'function') || (arrayAverage.lenght < 0)) {
     return undefined;
-  };
-
+  }
   for (let i = 0; i < arrayAverage.lenght; i += 1) {
-    let itemArray = arrayAverage[i];
+    let itemArray = arrayAverage[i]
     if (typeof (itemArray) !== 'number') {
       return undefined;
-    };
-    let mediaItem = mediaItem + arrayAverage[i];
+    }
+    const mediaItem = mediaItem + arrayAverage[i];
     average = mediaItem / arrayAverage.lenght;
   };
-
-  return mediaItem;
+  return average;
 };
 
 formatArrayAverege(arrayAverage);

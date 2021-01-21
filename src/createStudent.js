@@ -15,16 +15,12 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const myFunction = () => {
-  newName.name = newName;
-  feedback() = `${newName} o Lobo Solitário`
-};
-myFunction(newName);
+const myObjetc = {
+  newName.name: newName,
+  feedback(): (() => { `${newName} o Lobo Solitário` }),
 
-const myObjetc = (newName) => {
-  newName.name = newName;
-  feedback() = `${newName} o Lobo Solitário`
 };
+
 
 myObjetc(newName);
 
