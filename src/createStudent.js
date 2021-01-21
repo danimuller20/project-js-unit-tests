@@ -18,11 +18,11 @@
 const createStudent = (nome) => {
   return {
     name: nome,
-    feedback: function frase() {
+    feedback: () => {
       return 'Eita pessoa boa!';
     },
   };
 };
-createStudent('matheus');
+createStudent('pedro');
 
 module.exports = createStudent;
