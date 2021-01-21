@@ -16,7 +16,7 @@ const average = (array) => {
   if (Array.isArray(array) && array.length > 0) {
     let isNotNumber;
     array.forEach((element) => {
-      if (typeof (element) !== 'number'){
+      if (typeof (element) !== 'number') {
         isNotNumber = true;
       }
     });
@@ -31,6 +31,6 @@ const average = (array) => {
     return Math.round(sum / array.length);
   }
   return undefined;
-}
+};
 
 module.exports = average;
