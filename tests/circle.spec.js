@@ -36,10 +36,11 @@ describe('#circle', () => {
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
     //consultei o repositório do Layo para me ajudar na questão da estrutura e utilização do parsefloat
     // https://github.com/tryber/sd-09-project-js-unit-tests/pull/16/commits/d9aa0d798f7915eb0d9a3a9d44901f232ce2ce0e
-    
+
     assert.strictEqual(circle(2).circumference, parseFloat(2 * 3.14 * 2));
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     assert.strictEqual(circle(3).area, parseFloat(3.14 * 3 * 3));
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    assert.deepStrictEqual(circle(3), {radius: 3, area: parseFloat(3.14 * 3 * 3), circumference: parseFloat(3.14 * 2 * 3)});
   });
 });
