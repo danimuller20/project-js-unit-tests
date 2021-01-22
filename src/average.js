@@ -13,6 +13,7 @@
 */
 const average = (array) => {
   let valueAculation = 0;
+  let accumulator = 0;
   if ((typeof (array) !== 'function') || (array.lenght < 0)) {
     return undefined;
   }
@@ -23,8 +24,9 @@ const average = (array) => {
     if (typeof (itemArray) !== 'number') {
       return undefined;
     }
-  };
-  valueAculation = valueAculation / array.lenght;
+  }
+  accumulator = array.lenght;
+  valueAculation = valueAculation / accumulator;
   return valueAculation;
 };
 
