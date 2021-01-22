@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { create } = require('domain');
 const createMenu = require('../src/restaurant');
 
 /*
@@ -51,9 +52,9 @@ const createMenu = require('../src/restaurant');
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
     // TESTE 1: Verifique que, dado um objeto qualquer passado como um parâmetro para a função createMenu(), checa se o retorno da função é um objeto no seguinte formato: { fetchMenu: objetoQualquer }.
     // ```
+    assert.deepStrictEqual(createMenu({ chave: 'valor'}), { fetchMenu: { chave: 'valor'} });
     // createMenu(objetoQualquer) // Retorno: { fetchMenu: () => objetoQualquer }  
     // `fetchMenu` deve ser uma função quer retorna o `objetoQualquer`
     // ```
