@@ -88,16 +88,20 @@ const createMenu = (menuItem) => {
       Object.assign(itens, menuItem.food, menuItem.drink);
       let pay = 0;
       for (const item of menu.consumption) {
-        for (const item2 of Object.entries(itens)) {
-          if (item === item2[0]) {
-            pay += item2[1];
-          }
+        if (Object.keys(itens).includes(item)) {
+          pay += itens[`${item}`];
         }
       }
-      return pay + (pay * 0.10);
+      return pay + (pay * 10 / 100);
     },
   };
   return menu;
 };
+
+const teste8 = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+teste8.order('coxinha');
+teste8.order('agua');
+teste8.order('coxinha');
+teste8.pay();
 
 module.exports = createMenu;
