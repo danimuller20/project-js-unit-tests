@@ -90,11 +90,27 @@ meuRestaurante.order('sopa');
 meuRestaurante.order('sopa');
 meuRestaurante.order('cerveja');
 
-function totalPayable(consumption) {
-  let total = 0
-  return consumption.forEach(item => {
-    item
-  });
+function totalPayable(consumption, fetchMenu) {
+  const { food, drink } = fetchMenu;
+  let total = 0;
+
+  for (item of consumption) {
+    //retorna o valor da food
+    for (const key in food) {
+      console.log(key);
+      if (item === key) {
+        total += food[key];
+      }
+    }
+    // Retorna o valor do drink
+    for (const key in drink) {
+      console.log(key);
+      if (item === key) {
+        total += drink[key];
+      }
+    }
+  }
+  return total;
 }
 
 module.exports = createMenu;
