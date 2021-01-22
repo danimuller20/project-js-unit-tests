@@ -22,7 +22,7 @@
 // const calculator = {};
 
 // module.exports = calculator;
-//MEU CODIGO
+// MEU CODIGO
 
 const calculator = {
   add: (num1, num2) => num1 + num2,
@@ -32,5 +32,3 @@ const calculator = {
 };
 
 module.exports = calculator;
-
-//teste commit
