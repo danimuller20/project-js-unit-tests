@@ -25,7 +25,7 @@ const average = (array) => {
     numberOfNumbers += array[i];
     // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
   }
-  return Math.round(numberOfNumbers * array.length); // Average of amounts received;
+  return Math.round(numberOfNumbers / array.length); // Average of amounts received;
 };
 
 module.exports = average;
