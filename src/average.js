@@ -19,7 +19,7 @@ const average = (valuesArray) => {
 
   if (typeof (mediaArray) !== 'number') return undefined;
 
-  return Math.random(mediaArray / valuesArray.length);
+  return Math.round(mediaArray / valuesArray.length);
 };
 
 module.exports = average;
