@@ -27,17 +27,16 @@
  const productDetails = (firstProduct, secondProduct) =>
    [
      {
-      name: firstProduct,
-      details: {
+       name: firstProduct,
+       details: {
         productId: `${firstProduct}123`,
       },
-    },
-    {
-      name: secondProduct,
-      details: {
+     },
+     {
+       name: secondProduct,
+       details: {
         productId: `${secondProduct}123`,
       },
-    },
-   ];
-   console.log(typeof productDetails('mascara','alcool'))
+     },
+    ];
  module.exports = productDetails;
