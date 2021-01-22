@@ -44,6 +44,5 @@ describe('#productDetails', () => {
     assert.notStrictEqual(productDetails('fst', 'snd')[0], productDetails('fst', 'snd')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
     assert.ok(productDetails().every(item => item.details.productId.slice(-3) === '123'));
-    //assert.strictEqual(productDetails('fst', 'snd')[1].details.productId.slice(-3) === '123');
   });
 });
