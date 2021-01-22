@@ -29,14 +29,14 @@
      {
        name: firstProduct,
        details: {
-          productId: `${firstProduct}123`,
-      },
+         productId: `${firstProduct}123`,
+       },
      },
      {
        name: secondProduct,
        details: {
-          productId: `${secondProduct}123`,
+         productId: `${secondProduct}123`,
        },
-    },
+     },
    ];
  module.exports = productDetails;
