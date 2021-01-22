@@ -39,7 +39,6 @@ describe('#productDetails', () => {
     assert.notStrictEqual(productDetails('feijao', 'arroz')[0], productDetails('feijao', 'arroz')[1]);
     assert.strictEqual((productDetails('feijao', 'arroz')[0].details.productId.endsWith('123') && 
     productDetails('feijao', 'arroz')[1].details.productId.endsWith('123')), true);
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
     // Teste que o array retornado pela função contém dois itens dentro.
