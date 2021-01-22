@@ -145,6 +145,7 @@ describe('#createMenu', () => {
     // ```
     const respReturnn = createMenu(anyObj)
    const total = 2 * respReturnn.fetchMenu.food.coxinha + respReturnn.fetchMenu.drinks.agua
+   respReturnn.consumption = []
    respReturnn.order('coxinha')
    respReturnn.order('agua')
    respReturnn.order('coxinha')
