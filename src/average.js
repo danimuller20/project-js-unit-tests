@@ -15,7 +15,7 @@
 // const vereficaNum = (sum, curr) =>  typeof curr === 'number' ? sum + curr : sum;
 // return Math.round(array.reduce(vereficaNum, 0)) / array.length;
 
-const average = array => {
+const average = (array) => {
   let sum = 0;
   if (!array || array.length === 0) {
     return undefined;
@@ -27,6 +27,6 @@ const average = array => {
     sum += array[index];
   }
   return Math.round(sum / array.length);
-}
+};
 
 module.exports = average;
