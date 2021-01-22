@@ -26,7 +26,7 @@ const average = (array) => {
     }
   }
   accumulator = array.lenght;
-  valueAculation = valueAculation / accumulator;
+  valueAculation /= accumulator;
   return valueAculation;
 };
 
