@@ -74,17 +74,17 @@
 const order = (menu, item) => menu.consumption.push(item);
 
 const createMenu = (menuItem) => {
-  const menu = { 
+  const menu = {
     fetchMenu: () => menuItem,
   };
 
   menu.consumption = [];
 
-  menu.order = function (item) {
+  menu.order = (item) => {
     order(this, item);
-  }
+  };
 
-  menu.pay = function () {
+  menu.pay = () => {
     const itens = {};
     Object.assign(itens, menuItem.food, menuItem.drink);
     let pay = 0;
@@ -93,10 +93,10 @@ const createMenu = (menuItem) => {
         if (item === item2[0]) {
           pay += item2[1];
         }
-      } 
-    }  
-  return pay;
-  }
+      }
+    }
+    return pay;
+  };
 
   return menu;
 };
