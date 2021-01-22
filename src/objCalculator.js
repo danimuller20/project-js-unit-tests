@@ -19,6 +19,16 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (calcAdd1, calcAdd2) => calcAdd1 + calcAdd2,
+  mult: (calcMult1, calcMult2) => calcMult1 * calcMult2,
+  div: (calcDiv1, calcDiv2) => {
+    let div = calcDiv1 / calcDiv2;
+    // https://www.alura.com.br/artigos/formatando-numeros-no-javascript
+    // Math.floor()
+    return Math.floor(div);
+  },
+  sub: (calcSub1, calcSub2) => calcSub1 - calcSub2,
+};
 
 module.exports = calculator;
