@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  if (typeof nome === 'undefined' || typeof idade.length === 0) return undefined;
+  if (typeof nome === 'undefined' || typeof idade === null ) return undefined;
   return `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
