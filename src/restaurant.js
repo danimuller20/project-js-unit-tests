@@ -76,28 +76,27 @@ const order = (menu, item) => menu.consumption.push(item);
 const createMenu = (menuItem) => {
   const menu = {
     fetchMenu: () => menuItem,
-  };
 
-  menu.consumption = [];
+    consumption: [],
 
-  menu.order = (item) => {
-    order(this, item);
-  };
+    order: (item) => {
+      order(menu, item);
+    },
 
-  menu.pay = () => {
-    const itens = {};
-    Object.assign(itens, menuItem.food, menuItem.drink);
-    let pay = 0;
-    for (const item of menu.consumption) {
-      for (const item2 of Object.entries(itens)) {
-        if (item === item2[0]) {
-          pay += item2[1];
+    pay: () => {
+      const itens = {};
+      Object.assign(itens, menuItem.food, menuItem.drink);
+      let pay = 0;
+      for (const item of menu.consumption) {
+        for (const item2 of Object.entries(itens)) {
+          if (item === item2[0]) {
+            pay += item2[1];
+          }
         }
       }
-    }
-    return pay;
+      return pay;
+    },
   };
-
   return menu;
 };
 
