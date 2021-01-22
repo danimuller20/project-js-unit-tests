@@ -97,7 +97,7 @@ let summation = 0;
 //   let drink
 // }
 
-const orderFromMenu = (request) => restaurant.consumption.push(request);
+const orderFromMenu = request => restaurant.consumption.push(request);
 
 function searchFood(food, pedido) {
   for (let index = 0; index < Object.keys(food).length; index += 1) {
