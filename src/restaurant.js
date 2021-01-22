@@ -73,7 +73,7 @@
 
 const createMenu = (obj) => {
   const menu = { fetchMenu: obj };
-  { return menu;
-};
+  return menu;
+}
 
 module.exports = createMenu;
