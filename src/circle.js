@@ -22,10 +22,10 @@
    if (radius === null) {
      return undefined;
    }
- return {
+   return {
    raio: radius,
-   area: Math.PI * Math.pow(radius,2),
-   circunferencia: 2* Math.PI * radius,
- }
+   area: Math.PI * Math ** radius,
+   circunferencia: 2 * Math.PI * radius,
+ };
  };
  module.exports = circle;
