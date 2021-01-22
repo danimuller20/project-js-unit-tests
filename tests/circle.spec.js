@@ -36,9 +36,9 @@ describe('#circle', () => {
     assert.strictEqual(typeof circle(2), 'object');
     assert.strictEqual(Object.keys(circle(5)).length, 3);
     assert.strictEqual(circle(), undefined);
-    assert.strictEqual(parseFloat(circle(2).circumference).toPrecision(4), '12.56');
+    assert.strictEqual(circle(2).circumference, '12.56');
     assert.strictEqual(circle(3).area, '28.26')
-    assert.ok(circle(3), expectedObject, 'O objeto eh diferente.')
+    assert.ok(circle(3), expectedObject)
 
   });
 });
