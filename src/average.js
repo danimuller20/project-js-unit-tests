@@ -12,7 +12,6 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (array) => {
-  const acumulationItem = [];
   let valueAculation = 0;
   if ((typeof (array) !== 'function') || (array.lenght < 0)) {
     return undefined;
@@ -24,8 +23,7 @@ const average = (array) => {
     if (typeof (itemArray) !== 'number') {
       return undefined;
     }
-    valueAculation += array[i]
-  }
+  };
   valueAculation = valueAculation / array.lenght;
   return valueAculation;
 };
