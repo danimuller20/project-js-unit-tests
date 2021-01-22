@@ -85,9 +85,9 @@ const menu = {
       }
     }
     return total;
-  }
+  },
 };
-function createMenu (anyObj){
+function createMenu(anyObj) {
   menu.fetchMenu = anyObj;
   return menu;
 }
