@@ -98,25 +98,7 @@ const restaurant = {};
 
 const orderFromMenu = (request) => {
   return restaurant.consumption.push(request);
-}
-
-let summation = 0;
-const sumOrder = () => {
-  const food = restaurant.fetchMenu.food;
-  const drink = restaurant.fetchMenu.drinks;
-  summation = (searchFoodAndDrink(food, drink, summation));
-  summation += (summation * (10/100));
-  return summation.toPrecision(4);
-}
-
-function searchFoodAndDrink(food, drink) {
-  for (let index = 0; index < restaurant.consumption.length; index += 1) {
-    const pedido = restaurant.consumption[index];
-    searchFood(food, pedido);
-    searchDrink(drink, pedido);
-  }
-  return summation;
-}
+};
 
 function searchFood(food, pedido) {
   for (let index = 0; index < Object.keys(food).length; index += 1) {
@@ -131,7 +113,7 @@ function searchFood(food, pedido) {
 
 function searchDrink(drink, pedido) {
   for (let index = 0; index < Object.keys(drink).length; index += 1) {
-    const chaveDrink= Object.keys(drink)[index];
+    const chaveDrink = Object.keys(drink)[index];
     if (pedido === chaveDrink) {
       // console.log(chaveDrink);
       summation += drink[pedido];
@@ -139,6 +121,24 @@ function searchDrink(drink, pedido) {
   }
   return summation;
 }
+
+function searchFoodAndDrink(food, drink) {
+  for (let index = 0; index < restaurant.consumption.length; index += 1) {
+    const pedido = restaurant.consumption[index];
+    searchFood(food, pedido);
+    searchDrink(drink, pedido);
+  }
+  return summation;
+}
+
+let summation = 0;
+const sumOrder = () => {
+  const food = restaurant.fetchMenu.food;
+  const drink = restaurant.fetchMenu.drinks;
+  summation = (searchFoodAndDrink(food, drink, summation));
+  summation += (summation * (10 / 100));
+  return summation.toPrecision(4);
+};
 
 // segundo modo de implementar a solucao
 // esta segunda solucao eu consultei a logica da colega Ana Luiza Machado
@@ -152,7 +152,7 @@ const createMenu = (object) => {
   };
   restaurant.pay = sumOrder;
   return restaurant;
-}
+};
 
 // const orderRetornado = createMenu({
 //   food: {'coxinha': 3.90, 'sanduiche': 9.90},
@@ -164,4 +164,4 @@ const createMenu = (object) => {
 // orderRetornado.order('coxinha');
 // console.log(sumOrder());
 
-  module.exports = createMenu;
+module.exports = createMenu;
