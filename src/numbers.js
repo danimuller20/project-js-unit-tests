@@ -14,7 +14,7 @@ const numbers = (myArray) => {
     if (typeof myArray[i] !== 'number') {
       return false;
     }
-  }
+  };
   return true;
 };
 

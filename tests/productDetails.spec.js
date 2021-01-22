@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { nextTick } = require('process');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -32,13 +33,33 @@ const productDetails = require('../src/productDetails');
 */
 
 describe('#productDetails', () => {
+
   it('tests the function has the correct behaviour', () => {
     assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
+    if (typeof (productIds) !== 'array') {
+      return undefined;
+    };
+
     // Teste que o array retornado pela função contém dois itens dentro.
+    if (productIds.length !== 2) {
+      return undefined;
+    };
+
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    // Teste que os dois objetos são diferentes entre si.
-    // (Difícil) Teste que os dois productIds terminam com 123.
-  });
-});
+    for (let i = 0; let <= i; i += 1) {
+      if (productIds[i] !== 'objetct') {
+        return undefined;
+      }
+      next;
+
+      // Teste que os dois objetos são diferentes entre si.
+      // (Difícil) Teste que os dois productIds terminam com 123.
+      if (productIds[0] !== productIds[1]) {
+        return undefined;
+      }
+      next;
+    }
+  }
+})
