@@ -16,7 +16,7 @@
       #VQV!'
 */
 const vqv = (nome, idade) => {
-  if (nome.length === 0 || idade.length === 0) {
+  if (nome === null || idade === null) {
     return undefined;
   }
   return `Oi, meu nome é ${nome}!
