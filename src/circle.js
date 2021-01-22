@@ -18,7 +18,14 @@
         Use esse conhecimento para te ajudar a lidar com possíveis problemas que esses testes trarão!
 */
 
-// const circle = (radius) => {
-//  return radius
-// };
-// module.exports = circle;
+ const circle = (radius) => {
+   if (radius === null) {
+     return undefined;
+   }
+ return {
+   raio: radius,
+   area: Math.PI * Math.pow(radius,2),
+   circunferencia: 2* Math.PI * radius,
+ }
+ };
+ module.exports = circle;
