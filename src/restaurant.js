@@ -102,3 +102,5 @@ const createMenu = (param) => {
   menu.pay = somaDosPreçosDosPedidos;
   return menu;
 };
+
+module.exports = createMenu;
