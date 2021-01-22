@@ -10,7 +10,8 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
-*/
+consultei o repositorio: https://github.com/tryber/sd-09-project-js-unit-tests/pull/100 para ajudar a chegar a resolução
+    */
 
 const average = (myArray) => {
   let results = 0;
