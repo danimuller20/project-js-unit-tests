@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { type } = require('os');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -30,9 +31,14 @@ const productDetails = require('../src/productDetails');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
+    assert.strictEqual(Array.isArray(productDetails('feijao', 'arroz')), true);
+    assert.strictEqual(productDetails('feijao', 'arroz').length, 2);
+    assert.strictEqual((typeof productDetails('feijao', 'arroz')[0] && typeof productDetails('feijao', 'arroz')[1]), 'object');
+    assert.notStrictEqual(productDetails('feijao', 'arroz')[0], productDetails('feijao', 'arroz')[1]);
+    assert.strictEqual((productDetails('feijao', 'arroz')[0].details.productId.endsWith('123') && 
+    productDetails('feijao', 'arroz')[1].details.productId.endsWith('123')), true);
     assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
@@ -40,5 +46,6 @@ describe('#productDetails', () => {
     // Teste que os dois itens dentro do array retornado pela função são objetos.
     // Teste que os dois objetos são diferentes entre si.
     // (Difícil) Teste que os dois productIds terminam com 123.
+
   });
 });
