@@ -13,13 +13,13 @@
 */
 
 const average = (valuesArray) => {
-  if( valuesArray.length === 0) return undefined;
+  if (valuesArray.length === 0) return undefined;
 
   const mediaArray = valuesArray.reduce((value, position) => value + position);
 
-  if( typeof(mediaArray) !== 'number') return undefined;
+  if (typeof (mediaArray) !== 'number') return undefined;
 
-  return Math.random(mediaArray / valuesArray.length)
+  return Math.random(mediaArray / valuesArray.length);
 };
 
 module.exports = average;
