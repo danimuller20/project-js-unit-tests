@@ -75,7 +75,7 @@ const order = (menu, item) => menu.consumption.push(item);
 
 const createMenu = (menuItem) => {
   const menu = {
-    fetchMenu: () => menuItem,
+    fetchMenu: menuItem,
 
     consumption: [],
 
@@ -94,7 +94,7 @@ const createMenu = (menuItem) => {
           }
         }
       }
-      return pay;
+      return pay + (pay * 0.10);
     },
   };
   return menu;
