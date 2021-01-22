@@ -73,7 +73,10 @@
 
 const createMenu = (anyObj) => {
   const ordersArr = [];
-  const menu = { fetchMenu: anyObj, order: item => menu.consumption.push(item), consumption: ordersArr,
+  const menu = { 
+    fetchMenu: anyObj, 
+    order: item => menu.consumption.push(item), 
+    consumption: ordersArr,
     pay: () => {
       let total = 0;
       for (let i = 0; i < menu.consumption.length; i += 1) {
@@ -84,8 +87,8 @@ const createMenu = (anyObj) => {
         }
       };
       return total
-  }
-};
+    }
+  };
   return menu;
 }
 
