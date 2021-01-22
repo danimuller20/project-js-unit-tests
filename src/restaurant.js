@@ -87,21 +87,15 @@ const createMenu = (menuItem) => {
       const itens = {};
       Object.assign(itens, menuItem.food, menuItem.drink);
       let pay = 0;
-      for (const item of menu.consumption) {
-        if (Object.keys(itens).includes(item)) {
-          pay += itens[`${item}`];
+      for (let item = 0; item < menu.consumption.length; item += 1) {
+        if (Object.keys(itens).includes(menu.consumption[item])) {
+          pay += itens[`${menu.consumption[item]}`];
         }
       }
-      return pay + (pay * 10 / 100);
+      return pay + ((pay * 10) / 100);
     },
   };
   return menu;
 };
-
-const teste8 = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
-teste8.order('coxinha');
-teste8.order('agua');
-teste8.order('coxinha');
-teste8.pay();
 
 module.exports = createMenu;
