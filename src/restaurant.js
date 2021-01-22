@@ -71,6 +71,81 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+let restaurant = {}
+// const createMenu = (object) => {
+//   return restaurant = {
+//     fetchMenu: () => object,
+//     consumption: [],
+//     order: function (string){
+//       // this.consumption.push(string);
+//       orderFromMenu(string, this);
+//     },
+//     pay: () => {
+//       sumOrder;
+//     }
+//   };
+// };
 
-module.exports = createMenu;
+// const orderFromMenu = (request, object) => {
+//   return object.consumption.push(request);
+// }
+
+// const sumOrder = () => {
+//   let summation = 0;
+//   let food = restaurant;
+//   let drink
+// }
+
+// segundo modo de implementar a solucao
+// esta segunda solucao eu consultei a logica da colega Ana Luiza Machado
+// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+const createMenu = (object) => {
+  restaurant.fetchMenu = object;
+  restaurant.consumption = [];
+  restaurant.order = (string) => {
+    // this.consumption.push(string);
+    orderFromMenu(string);
+  }
+  restaurant.pay = sumOrder;
+  return restaurant;
+}
+
+const orderFromMenu = (request) => {
+  return restaurant.consumption.push(request);
+}
+
+const sumOrder = () => {
+  let summation = 0;
+  let elemento = [];
+  let food = restaurant.fetchMenu.food;
+  let drink = restaurant.fetchMenu.drinks;
+  for (let index = 0; index < restaurant.consumption.length; index++) {
+    const pedido = restaurant.consumption[index];
+    for (let index = 0; index < Object.keys(food).length; index++) {
+      const chaveFood = Object.keys(food)[index];
+      if (pedido === chaveFood) {
+        summation += food[pedido];
+      }
+    }
+    for (let index = 0; index < Object.keys(drink).length; index++) {
+      const chaveDrink= Object.keys(drink)[index];
+      if (pedido === chaveDrink) {
+        summation += drink[pedido];
+      }
+    }
+  }
+  summation += (summation * (10/100))
+  return summation.toPrecision(4);
+}
+
+// const orderRetornado = createMenu({
+//   food: {'coxinha': 3.90, 'sanduiche': 9.90},
+//   drinks: {'agua': 3.90, 'cerveja': 6.90}
+// });
+// orderRetornado.order('sanduiche');
+// orderRetornado.order('agua');
+// orderRetornado.order('coxinha');
+// orderRetornado.order('coxinha');
+// console.log(sumOrder());
+
+  module.exports = createMenu;

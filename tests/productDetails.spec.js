@@ -47,6 +47,9 @@ describe('#productDetails', () => {
     const string = productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3);
     const string1 = productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3);
     assert.strictEqual(string && string1, '123');
+    // const string = productDetails('Alcool gel', 'Máscara')[0].details.productId.endsWith('123');
+    // const string1 = productDetails('Alcool gel', 'Máscara')[1].details.productId.endsWith('123');
+    // assert.ok(string && string1);
     // assert.strictEqual(string1, '123');
   });
 });
