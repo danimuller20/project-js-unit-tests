@@ -77,40 +77,21 @@ const createMenu = (obj) => {
     order(string) {
       this.consumption.push(string);
     },
-  };
-};
+    pay() {
+      let total = 0;
+
+      for (index of consumption) {
+        if (Object.keys(drink) === index) { total += drink[index]; }
+        if (Object.keys(food) === index) { total += food[index]; }
+      }
+      return parseFloat((total * 1.1).toPrecision(4));
+    }
+  }
+}
 
 const meuRestaurante = createMenu({
   food: { coxinha: 3.9, sopa: 9.9 },
   drink: { agua: 3.9, cerveja: 6.9 },
 });
-
-meuRestaurante.order('coxinha');
-meuRestaurante.order('sopa');
-meuRestaurante.order('sopa');
-meuRestaurante.order('cerveja');
-
-function totalPayable(consumption, fetchMenu) {
-  const { food, drink } = fetchMenu;
-  let total = 0;
-
-  for (item of consumption) {
-    //retorna o valor da food
-    for (const key in food) {
-      console.log(key);
-      if (item === key) {
-        total += food[key];
-      }
-    }
-    // Retorna o valor do drink
-    for (const key in drink) {
-      console.log(key);
-      if (item === key) {
-        total += drink[key];
-      }
-    }
-  }
-  return total;
-}
 
 module.exports = createMenu;
