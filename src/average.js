@@ -11,14 +11,22 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-const assert = require('assert');
 
-const vereficaNum = (sum, curr) => { return typeof curr === 'number' ? sum + curr : 'undefined' };
+// const vereficaNum = (sum, curr) =>  typeof curr === 'number' ? sum + curr : sum;
+// return Math.round(array.reduce(vereficaNum, 0)) / array.length;
 
-const average = array => Math.round(array.reduce(vereficaNum, 0)) / array.length;
-
-const expected = average([1, 2, 3, 4, 5]);
-
-assert.strictEqual(expected, 3, 'não tá certo');
+const average = array => {
+  let sum = 0;
+  if (!array || array.length === 0) {
+    return undefined;
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof array[index] !== 'number') {
+      return undefined;
+    }
+    sum += array[index];
+  }
+  return Math.round(sum / array.length);
+}
 
 module.exports = average;
