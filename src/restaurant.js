@@ -74,6 +74,6 @@
 const createMenu = (obj) => {
   const menu = { fetchMenu: obj };
   return menu;
-}
+};
 
 module.exports = createMenu;
