@@ -71,7 +71,7 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-let restaurant = {}
+const restaurant = {};
 // const createMenu = (object) => {
 //   return restaurant = {
 //     fetchMenu: () => object,
@@ -105,7 +105,7 @@ const createMenu = (object) => {
   restaurant.order = (string) => {
     // this.consumption.push(string);
     orderFromMenu(string);
-  }
+  };
   restaurant.pay = sumOrder;
   return restaurant;
 }
@@ -114,28 +114,39 @@ const orderFromMenu = (request) => {
   return restaurant.consumption.push(request);
 }
 
+let summation = 0;
 const sumOrder = () => {
-  let summation = 0;
-  let elemento = [];
   let food = restaurant.fetchMenu.food;
   let drink = restaurant.fetchMenu.drinks;
-  for (let index = 0; index < restaurant.consumption.length; index++) {
+  summation = (searchFood(food, drink, summation));
+  summation += (summation * (10/100))
+  return summation.toPrecision(4);
+}
+
+function searchFood(food, drink) {
+  for (let index = 0; index < restaurant.consumption.length; index += 1) {
     const pedido = restaurant.consumption[index];
-    for (let index = 0; index < Object.keys(food).length; index++) {
+    for (let index = 0; index < Object.keys(food).length; index += 1) {
       const chaveFood = Object.keys(food)[index];
       if (pedido === chaveFood) {
+        // console.log(chaveFood);
         summation += food[pedido];
       }
     }
-    for (let index = 0; index < Object.keys(drink).length; index++) {
-      const chaveDrink= Object.keys(drink)[index];
-      if (pedido === chaveDrink) {
-        summation += drink[pedido];
-      }
+    searchDrink(drink, pedido);
+  }
+  return summation;
+}
+
+function searchDrink(drink, pedido) {
+  for (let index = 0; index < Object.keys(drink).length; index += 1) {
+    const chaveDrink= Object.keys(drink)[index];
+    if (pedido === chaveDrink) {
+      // console.log(chaveDrink);
+      summation += drink[pedido];
     }
   }
-  summation += (summation * (10/100))
-  return summation.toPrecision(4);
+  return summation;
 }
 
 // const orderRetornado = createMenu({
