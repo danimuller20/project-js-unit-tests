@@ -24,5 +24,4 @@ const vqv = (nome, idade) => {
    trabalho na Trybe e mando muito em programação!
    #VQV!'`;
 };
-
 module.exports = vqv;
