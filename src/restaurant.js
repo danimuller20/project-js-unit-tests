@@ -96,44 +96,35 @@ const restaurant = {};
 //   let drink
 // }
 
-// segundo modo de implementar a solucao
-// esta segunda solucao eu consultei a logica da colega Ana Luiza Machado
-// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
-const createMenu = (object) => {
-  restaurant.fetchMenu = object;
-  restaurant.consumption = [];
-  restaurant.order = (string) => {
-    // this.consumption.push(string);
-    orderFromMenu(string);
-  };
-  restaurant.pay = sumOrder;
-  return restaurant;
-}
-
 const orderFromMenu = (request) => {
   return restaurant.consumption.push(request);
 }
 
 let summation = 0;
 const sumOrder = () => {
-  let food = restaurant.fetchMenu.food;
-  let drink = restaurant.fetchMenu.drinks;
-  summation = (searchFood(food, drink, summation));
-  summation += (summation * (10/100))
+  const food = restaurant.fetchMenu.food;
+  const drink = restaurant.fetchMenu.drinks;
+  summation = (searchFoodAndDrink(food, drink, summation));
+  summation += (summation * (10/100));
   return summation.toPrecision(4);
 }
 
-function searchFood(food, drink) {
+function searchFoodAndDrink(food, drink) {
   for (let index = 0; index < restaurant.consumption.length; index += 1) {
     const pedido = restaurant.consumption[index];
-    for (let index = 0; index < Object.keys(food).length; index += 1) {
-      const chaveFood = Object.keys(food)[index];
-      if (pedido === chaveFood) {
-        // console.log(chaveFood);
-        summation += food[pedido];
-      }
-    }
+    searchFood(food, pedido);
     searchDrink(drink, pedido);
+  }
+  return summation;
+}
+
+function searchFood(food, pedido) {
+  for (let index = 0; index < Object.keys(food).length; index += 1) {
+    const chaveFood = Object.keys(food)[index];
+    if (pedido === chaveFood) {
+      // console.log(chaveFood);
+      summation += food[pedido];
+    }
   }
   return summation;
 }
@@ -147,6 +138,20 @@ function searchDrink(drink, pedido) {
     }
   }
   return summation;
+}
+
+// segundo modo de implementar a solucao
+// esta segunda solucao eu consultei a logica da colega Ana Luiza Machado
+// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+const createMenu = (object) => {
+  restaurant.fetchMenu = object;
+  restaurant.consumption = [];
+  restaurant.order = (string) => {
+    // this.consumption.push(string);
+    orderFromMenu(string);
+  };
+  restaurant.pay = sumOrder;
+  return restaurant;
 }
 
 // const orderRetornado = createMenu({
