@@ -23,9 +23,9 @@
      return undefined;
    }
    return {
-   raio: radius,
-   area: Math.PI * Math ** radius,
-   circunferencia: 2 * Math.PI * radius,
- };
+     raio: radius,
+     area: Math.PI * Math * 2 * radius,
+     circunferencia: 2 * Math.PI * radius,
+   };
  };
  module.exports = circle;
