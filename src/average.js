@@ -12,8 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add your implementation here
+const average = (valuesArray) => {
+  if( valuesArray.length === 0) return undefined;
+
+  const mediaArray = valuesArray.reduce((value, position) => value + position);
+
+  if( typeof(mediaArray) !== 'number') return undefined;
+
+  return Math.random(mediaArray / valuesArray.length)
 };
 
 module.exports = average;
