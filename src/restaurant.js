@@ -92,3 +92,13 @@ const somaDosPreçosDosPedidos = () => {
   }
   return sum * 1.1;
 };
+
+const createMenu = (param) => {
+  menu.fetchMenu = param;
+  menu.consumption = [];
+  menu.order = (request) => {
+    menu.consumption.push(request);
+  };
+  menu.pay = somaDosPreçosDosPedidos;
+  return menu;
+};
