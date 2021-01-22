@@ -18,8 +18,9 @@ const average = (myArray) => {
     return undefined;
   }
   for (let index = 0; index < myArray.length; index += 1) {
-    if (typeof myArray[index] === 'string')
+    if (typeof myArray[index] === 'string') {
       return undefined;
+    }
   }
   for (let i = 0; i < myArray.length; i += 1) {
     results += myArray[i];
