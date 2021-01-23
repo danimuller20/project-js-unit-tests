@@ -11,9 +11,6 @@ const sumMenu = () => {
   total += (total * 0.10);
   return total.toFixed(2);
 };
-
-
-
 const createMenu = (objeto) => {
   myMenu = {
     fetchMenu: objeto,
