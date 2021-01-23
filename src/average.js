@@ -25,9 +25,7 @@ const average = (myArray) => {
       }
       sum += elemento;
     }
-    //acumula o array para retornar o valor
     myAverage = soma / myArray.length;
     return Math.round(myAverage);
   };
-
 module.exports = average;

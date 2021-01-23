@@ -115,10 +115,11 @@ const sumOrder = () => {
   return summation.toPrecision(4);
 };
 
-// segundo modo de implementar a solucao copiei do PeryclesReis
-// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
-// cujo o comentário reporta a 
-// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+/* segundo modo de implementar a solucao copiei do PeryclesReis
+https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+cujo o comentário reporta a 
+https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+ */
 const createMenu = (object) => {
   restaurant.fetchMenu = object;
   restaurant.consumption = [];
