@@ -22,28 +22,10 @@
 const numbers = require('./numbers');
 
 const calculator = {
-  /*   add: numbers,
-    mult: numbers,
-    div: numbers,
-    sub: numbers,
-  };
-  let numberAdd01 = 0;
-  let numberAdd02 = 0;
-  let numberMult01 = 0;
-  let numberMult02 = 0;
-  let numberDiv01 = 0;
-  let numberDiv02 = 0;
-  let numberSub01 = 0;
-  let numberSub02 = 0;
-  
-  const calculator.add = (numberAdd01, numberAdd02) => numberAdd01 += numberAdd02;
-  const calculator.mult = (numberMult01, numberMult02) => numberMult01 *= numberMult02;
-  const calculator.sub = (numberSub01, numberSub02) => numberSub01 -= numberSub02;
-  const calculator.div = (numberDiv01, numberDiv02) => {
-    if (numberMult02 === 0) {
-      return undefined
-    }
-    return numberDiv01 /= numberDiv02; */
-}
+  add: (numOne, numThue) => numOne + numThue,
+  mult: (numOne, numThue) => numOne * numThue,
+  div: (numOne, numThue) => numOne / numThue,
+  sub: (numOne, numThue) => numOne - numThue,
+};
 
 module.exports = calculator;

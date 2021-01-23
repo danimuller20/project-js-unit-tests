@@ -72,5 +72,61 @@
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const createMenu = () => {};
+const restaurant = {};
+let summation = 0;
+
+
+const orderFromMenu = request => restaurant.consumption.push(request);
+
+function searchFood(food, pedido) {
+  for (let index = 0; index < Object.keys(food).length; index += 1) {
+    const chaveFood = Object.keys(food)[index];
+    if (pedido === chaveFood) {
+      summation += food[pedido];
+    }
+  }
+  return summation;
+}
+
+function searchDrink(drink, pedido) {
+  for (let index = 0; index < Object.keys(drink).length; index += 1) {
+    const chaveDrink = Object.keys(drink)[index];
+    if (pedido === chaveDrink) {
+      summation += drink[pedido];
+    }
+  }
+  return summation;
+}
+
+function searchFoodAndDrink(food, drink) {
+  for (let index = 0; index < restaurant.consumption.length; index += 1) {
+    const pedido = restaurant.consumption[index];
+    searchFood(food, pedido);
+    searchDrink(drink, pedido);
+  }
+  return summation;
+}
+
+const sumOrder = () => {
+  const food = restaurant.fetchMenu.food;
+  const drink = restaurant.fetchMenu.drinks;
+  summation = (searchFoodAndDrink(food, drink, summation));
+  summation += (summation * (10 / 100));
+  return summation.toPrecision(4);
+};
+
+// segundo modo de implementar a solucao copiei do PeryclesReis
+// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+// cujo o comentário reporta a 
+// https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
+const createMenu = (object) => {
+  restaurant.fetchMenu = object;
+  restaurant.consumption = [];
+  restaurant.order = (string) => {
+    orderFromMenu(string);
+  };
+  restaurant.pay = sumOrder;
+  return restaurant;
+};
 
 module.exports = createMenu;

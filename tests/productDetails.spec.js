@@ -35,31 +35,20 @@ const productDetails = require('../src/productDetails');
 describe('#productDetails', () => {
 
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
+    // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    if (typeof (productIds) !== 'array') {
-      return undefined;
-    };
-
+    assert.ok(Array.isArray(productDetails()));
     // Teste que o array retornado pela função contém dois itens dentro.
-    if (productIds.length !== 2) {
-      return undefined;
-    };
-
+    assert.strictEqual(productDetails('Alcool gel', 'Máscara').length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
-    for (let i = 0; let <= i; i += 1) {
-      if (productIds[i] !== 'objetct') {
-        return undefined;
-      }
-      next;
-
+    assert.strictEqual(typeof productDetails('Alcool gel', 'Máscara')[0], 'object');
       // Teste que os dois objetos são diferentes entre si.
       // (Difícil) Teste que os dois productIds terminam com 123.
-      if (productIds[0] !== productIds[1]) {
-        return undefined;
-      }
-      next;
+      const string = productDetails('Alcool gel', 'Máscara')[0].details.productId.slice(-3);
+      const string1 = productDetails('Alcool gel', 'Máscara')[1].details.productId.slice(-3);
+      assert.strictEqual(string && string1, '123');
     }
   }
-})
+}
+);
