@@ -117,7 +117,7 @@ const sumOrder = () => {
 
 /* segundo modo de implementar a solucao copiei do PeryclesReis
 https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
-cujo o comentário reporta a 
+cujo o comentário reporta a Ana Luiza
 https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
  */
 const createMenu = (object) => {
