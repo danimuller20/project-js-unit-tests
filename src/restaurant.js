@@ -120,7 +120,7 @@ https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0
 cujo o comentário reporta a Ana Luiza
 https://github.com/tryber/sd-09-project-js-unit-tests/pull/100/commits/b79937dd0651ed134df167e6d253f1b38db0fcc7
  */
-const createMenu = (object) => {
+/* const createMenu = (object) => {
   restaurant.fetchMenu = object;
   restaurant.consumption = [];
   restaurant.order = (string) => {
@@ -128,6 +128,6 @@ const createMenu = (object) => {
   };
   restaurant.pay = sumOrder;
   return restaurant;
-};
+}; */
 
 module.exports = createMenu;
