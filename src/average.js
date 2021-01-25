@@ -20,10 +20,9 @@ const average = (array) => {
   for (let i = 0; i < array.length; i += 1) {
     if (typeof array[i] !== 'number') {
       return undefined;
-    } else {
-      soma += array[i];
-      return soma;
-    }
+    } 
+    soma += array[i];
+    return soma;
   }
   const round = Math.round(soma / array.length);
   return round;
