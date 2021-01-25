@@ -16,12 +16,10 @@
 */
 
 const createStudent = (name) => {
-  let arrayReturn = {}
+  const arrayReturn = {};
   arrayReturn.name = name;
-  arrayReturn.feedback = () => {
-    return 'Eita pessoa boa!'
-  }
-  return arrayReturn
+  arrayReturn.feedback = () => 'Eita pessoa boa!';
+  return arrayReturn;
 };
 
 module.exports = createStudent;
