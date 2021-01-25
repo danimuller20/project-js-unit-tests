@@ -26,5 +26,5 @@ const average = (array) => {
   const round = Math.round(soma / array.length);
   return round;
 };
-console.log(average([3,4,5]))
+
 module.exports = average;
