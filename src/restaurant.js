@@ -46,7 +46,6 @@
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
 //
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
-//const createMenu = (menuObject) => ({'fetchMenu' : menuObject}); ver. Passo 1
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
@@ -65,34 +64,30 @@
 // const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. Essa função deve ser associada à chave `order` de `restaurant`
 const restaurant = {};
 const createMenu = (menuObject) => {
-  restaurant['fetchMenu'] = menuObject;
-  restaurant['consumption'] = [];
-  restaurant['order'] = (request) => restaurant.consumption.push(request);
-  restaurant['pay'] = () => {
+  restaurant.fetchMenu = menuObject;
+  restaurant.consumption = [];
+  restaurant.order = request => restaurant.consumption.push(request);
+  restaurant.pay = () => {
     let bill = 0;
     const { food, drinks } = menuObject;
     const foodsArray = food ? Object.entries(food) : [];
     const drinksArray = drinks ? Object.entries(drinks) : [];
     (restaurant.consumption).forEach((product) => {
-      let foodPrice = 0; 
-      foodsArray.forEach(foodArray => {
+      foodsArray.forEach((foodArray) => {
         if (foodArray[0] === product) {
-          foodPrice = foodArray[1];
+          bill += foodArray[1];
         }
       });
-      let drinkPrice = 0;
-      drinksArray.forEach(drinkArray => {
+      drinksArray.forEach((drinkArray) => {
         if (drinkArray[0] === product) {
-          drinkPrice = drinkArray[1];
+          bill += drinkArray[1];
         }
       });
-      bill += (foodPrice) ? foodPrice : 0;
-      bill += (drinkPrice) ? drinkPrice : 0;
-    })
+    });
     return bill;
-  }
+  };
   return restaurant;
-}
+};
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
