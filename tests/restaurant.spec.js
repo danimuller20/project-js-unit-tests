@@ -148,7 +148,6 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
-    console.log(menu.consumption);
     assert.deepStrictEqual(menu.pay(), 25.19);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
