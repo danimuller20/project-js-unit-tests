@@ -18,7 +18,7 @@
 
 const vqv = (nome, idade) => {
 
-}
+};
 
 console.log(vqv());
 
