@@ -16,7 +16,7 @@
 */
 
 const createStudent = (name) => {
-
-  }
+  const name = 'nome';
+};
 
 module.exports = createStudent;
