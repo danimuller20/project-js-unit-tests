@@ -12,6 +12,35 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (arrayOfNumbers) => {
+  /*let sum = 0;
+  for (let index = 0; index <= arrayOfNumbers.length ; index += 1){
+   if (typeof(arrayOfNumbers[index]) === 'number'){
+      sum = sum + arrayOfNumbers[index];
+    }
+  }
+  const averageValue = sum / arrayOfNumbers.length;
+  console.log(averageValue);*/
+  if (arrayOfNumbers.length === 0) {
+    return undefined;
+  }
+  for (let index =  0; index <= arrayOfNumbers.length; index += 1) {
+    if (typeof arrayOfNumbers[index] === 'string') {
+      return undefined;
+    }
+  }
+  let sum = 0;
+  for (let index = 0; index <= arrayOfNumbers.length ; index += 1){
+   if (typeof(arrayOfNumbers[index]) === 'number'){
+      sum = sum + arrayOfNumbers[index];
+    }
+  }
+  const averageValue = sum / arrayOfNumbers.length;
+  const averageValueRounded = Math.round(averageValue);
+  console.log(averageValueRounded);
+};
+
+const colllection = [4,3 , 3];
+average(colllection);
 
 module.exports = average;
