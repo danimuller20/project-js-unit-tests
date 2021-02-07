@@ -73,7 +73,7 @@
 
 function order(stringParameter) {
   this.consumption.push(stringParameter);
-};
+}
 
 function calculating(consumption, food, drink) {
   let sumOfPricesOfOrder = 0;
@@ -85,32 +85,32 @@ function calculating(consumption, food, drink) {
       sumOfPricesOfOrder += drink[item];
     }
   });
-  let sumOfPricesOfOrderAddingTip = sumOfPricesOfOrder * 1.1;
+  const sumOfPricesOfOrderAddingTip = sumOfPricesOfOrder * 1.1;
   return parseFloat(sumOfPricesOfOrderAddingTip.toFixed(1));
-};
+}
 
-const createMenu = (objectPassedByParameter) => ({
+const createMenu = objectPassedByParameter => ({
   fetchMenu: objectPassedByParameter,
   consumption: [],
   order,
   pay() { return calculating(this.consumption, this.fetchMenu.food, this.fetchMenu.drink); },
 });
 
-const menu = {
-  food: {},
-  drink: {},
-};
+// const menu = {
+//   food: {},
+//   drink: {},
+// };
 
-const fullMenu = {
-  food: {
-    'coxinha': 3.9,
-    'sopa': 9.9,
-  },
-  drink: {
-    'agua': 3.9,
-    'cerveja': 6.9,
-  },
-};
+// const fullMenu = {
+//   food: {
+//     coxinha: 3.9,
+//     sopa: 9.9,
+//   },
+//   drink: {
+//     agua: 3.9,
+//     cerveja: 6.9,
+//   },
+// };
 
 // const objetoRetornado = createMenu(fullMenu);
 // console.log(objetoRetornado.pay());
