@@ -13,7 +13,7 @@
 */
 
 const average = (arrayOfNumbers) => {
- console.log(arrayOfNumbers);
+  console.log(arrayOfNumbers);
   /*  if (arrayOfNumbers.length === 0) {
     return undefined;
   }
