@@ -29,7 +29,7 @@ const average = (arrayOfNumbers) => {
   }
   const averageValue = sum / arrayOfNumbers.length;
   const averageValueRounded = Math.round(averageValue);
-  console.log(averageValueRounded);
-};*/
+  console.log(averageValueRounded);*/
+};
 
 module.exports = average;
