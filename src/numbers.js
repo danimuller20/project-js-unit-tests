@@ -8,13 +8,4 @@
     - numbers([2, 3, 4]); // Retorna: true
     - numbers([2, 'errado', 5]); // Retorna: false
 */
-
-// const numbers = (array) => {
-//   if (typeof array !== 'number'){
-//     return false;
-//   } else if 
-//     return true;
-  
-// }
-
 module.exports = numbers;
