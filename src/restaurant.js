@@ -75,11 +75,11 @@ const createMenu = function createMenu(menu) {
   const newMenu = {
     fetchMenu: menu,
     comsuption: [],
-    order(newOrder) {this.comsuption.push(newOrder);},
+    order(newOrder) {this.comsuption.push(newOrder); } ,
     pay() {
       let sum = 0;
       this.comsuption.forEach((currentValue) => {
-        if(currentValue in newMenu.fetchMenu.food) {
+        if (currentValue in newMenu.fetchMenu.food) {
           sum += newMenu.fetchMenu.food[currentValue];
         } else {
           sum += newMenu.fetchMenu.drink[currentValue];
