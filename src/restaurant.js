@@ -75,7 +75,7 @@ const createMenu = function createMenu(menu) {
   const newMenu = {
     fetchMenu: menu,
     comsuption: [],
-    order(newOrder) {this.comsuption.push(newOrder); } ,
+    order(newOrder) { this.comsuption.push(newOrder); },
     pay() {
       let sum = 0;
       this.comsuption.forEach((currentValue) => {
