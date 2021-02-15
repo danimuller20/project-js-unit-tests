@@ -16,7 +16,7 @@ const average = (arr) => {
   if (arr.some(element => typeof (element) !== 'number') || arr.length === 0) {
     return undefined;
   } return Math.round(
-    arr.reduce((accumulator, currentValue) => (accumulator + currentValue) / arr.length),
+    arr.reduce((accumulator, currentValue) => accumulator + currentValue) / arr.length,
   );
 };
 
