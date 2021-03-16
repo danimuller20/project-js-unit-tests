@@ -13,16 +13,14 @@
 */
 
 const average = (array) => {
-  cont = 0
-  soma = 0
-  media = 0
-  for(let i = 0; i < array.length; i++){
-    cont++
-    soma = soma + array[i]
-    media = soma / cont
-    
+  cont = 0;
+  soma = 0;
+  media = 0;
+  for ( let i = 0; i < array.length; i++; ){
+    cont++;
+    soma += array[i];
+    media /= cont;
   }
-  return media
-};
+  return media; };
 
 module.exports = average;
