@@ -21,7 +21,7 @@ const average = (array) => {
     soma += array[i];
     media /= cont;
   }
-  return media; 
+  return media;
 };
 
 module.exports = average;
