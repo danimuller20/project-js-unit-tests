@@ -13,15 +13,15 @@
 */
 
 const average = (numbersPack) => {
+  let sum = 0;
   for (let index = 0; index < numbersPack.length; index += 1) {
-    if (typeof[index] === Number) {
-      let sum = sum + numbersPack[index];
+    if (typeof[index] === 'number') {
+      sum = sum + numbersPack[index];
     } else {
       return undefined;
     }
-
   }
-  return Math.round(sum/numbersPack.length);
+  return Math.round(sum / numbersPack.length);
 };
 
 module.exports = average;
