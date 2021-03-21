@@ -13,16 +13,14 @@
 */
 
 const average = (numbersPack) => {
-  for (let index in numbersPack) {
-    switch (numbersPack[index]) {
-      case typeof(numbersPack) === Number:
-        let sum = sum + numbersPack[index];
-      case typeof(numbersPack) !== Number:
-        undefined;
-        break;
+  for (let index = 0; index < numbersPack.length; index += 1) {
+    if (typeof[index] === Number) {
+      let sum = sum + numbersPack[index];
+    } else {
+      return undefined
     }
+
   }
-  return sum;
 };
 
 module.exports = average;
