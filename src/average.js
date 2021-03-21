@@ -13,16 +13,28 @@
 */
 
 const average = (array) => {
-  let sum = 0;
-  let result = 0;
-  
-  for (let index = 0; index < array.length; index += 1) {
-    sum += array[index];
-  }
+  if (array.length !== 0) {
+// verifica se o array e vazio
+  // caso NAO seja vazio
+    let sum = 0;
+    let result = 0;
+  // inicializa variaveis
+    for (let index = 0; index < array.length; index += 1) {
+      if (typeof (array[index]) !== 'number') {
+      // verifica se existe algum elemento nao numerico
+        return undefined;
+      } else {
+        sum += array[index];
+    // percorre array e soma seus valores
+      }
+    }
 
-  result = (sum / array.length);
+    result = (sum / array.length);
   
-  return result;
+    return (result);
+  } else {
+    return undefined;
+  }
 };
 
 module.exports = average;
