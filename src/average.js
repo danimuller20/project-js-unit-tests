@@ -15,8 +15,8 @@
 const average = (numbersPack) => {
   let sum = 0;
   for (let index = 0; index < numbersPack.length; index += 1) {
-    if (typeof[index] === 'number') {
-      sum = sum + numbersPack[index];
+    if (typeof(numbersPack[index]) === 'number') {
+      sum += numbersPack[index];
     } else {
       return undefined;
     }
