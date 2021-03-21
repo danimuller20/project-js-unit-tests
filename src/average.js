@@ -17,10 +17,11 @@ const average = (numbersPack) => {
     if (typeof[index] === Number) {
       let sum = sum + numbersPack[index];
     } else {
-      return undefined
+      return undefined;
     }
 
   }
+  return Math.round(sum/numbersPack.length);
 };
 
 module.exports = average;
