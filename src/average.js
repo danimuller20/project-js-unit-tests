@@ -17,12 +17,12 @@ const average = (array) => {
   if (array.length === 0) {
     return undefined;
   }
-// inicializa variaveis 
+// inicializa variaveis
   let sum = 0;
   let result = 0;
-// percorre array 
+// percorre array
   for (let index = 0; index < array.length; index += 1) {
-// verifica se array possui algum valor nao numerico 
+// verifica se array possui algum valor nao numerico
     if (typeof (array[index]) !== 'number') {
       return undefined;
     }
@@ -31,7 +31,7 @@ const average = (array) => {
   }
 // calcula media
   result = (sum / array.length);
-//retorna resultado arredondado
+// retorna resultado arredondado
   return Math.round(result);
 };
 
