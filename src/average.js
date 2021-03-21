@@ -13,29 +13,26 @@
 */
 
 const average = (array) => {
-  if (array.length !== 0) {
-// verifica se o array e vazio
-  // caso NAO seja vazio
-    let sum = 0;
-    let result = 0;
-  // inicializa variaveis
-    for (let index = 0; index < array.length; index += 1) {
-      if (typeof (array[index]) !== 'number') {
-      // verifica se existe algum elemento nao numerico
-        return undefined;
-      } else {
-        sum += array[index];
-    // percorre array e soma seus valores
-      }
-    }
-
-    result = (sum / array.length);
-  // calculo da media
-    return Math.round(result);
-  } else {
-  // caso seja vazio
+// verifica se array esta vazia
+  if (array.length === 0) {
     return undefined;
   }
+// inicializa variaveis 
+  let sum = 0;
+  let result = 0;
+// percorre array 
+  for (let index = 0; index < array.length; index += 1) {
+// verifica se array possui algum valor nao numerico 
+    if (typeof (array[index]) !== 'number') {
+      return undefined;
+    }
+// soma elementos da array
+    sum += array[index];
+  }
+// calcula media
+  result = (sum / array.length);
+//retorna resultado arredondado
+  return Math.round(result);
 };
 
 module.exports = average;
