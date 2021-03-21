@@ -30,9 +30,10 @@ const average = (array) => {
     }
 
     result = (sum / array.length);
-  
-    return (result);
+  // calculo da media
+    return Math.round(result);
   } else {
+  // caso seja vazio
     return undefined;
   }
 };
