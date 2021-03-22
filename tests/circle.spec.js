@@ -30,11 +30,11 @@ describe('#circle', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
 
-    assert,strictEqual(typeof (circle(radius)), 'object', 'O retorno dessa função não é um objeto')
+    assert,strictEqual(typeof (circle(1)), 'object', 'O retorno dessa função não é um objeto')
 
     // Teste se o objeto retornado tem 3 entradas.
 
-    assert.strictEqual(Object.entries(circle(radius)).length, 3, 'O obejeto retornado tem menos de 3 entradas')
+    assert.strictEqual(Object.entries(circle(1)).length, 3, 'O objeto retornado tem menos de 3 entradas')
 
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
 
