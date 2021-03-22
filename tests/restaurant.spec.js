@@ -51,10 +51,30 @@ const createMenu = require('../src/restaurant');
 function order(pedido) {
   serviceWaiter.consumption.push(pedido);
 }
+
+function pay(myConsumption) {
+  let sum = 0;
+  for (let index = 0; index < myConsumption.length; index += 1) {
+    for (let index2 = 0; index <= Object.keys(serviceWaiter.fetchMenu.food).length; index += 1) {
+      if (myConsumption[index] === Object.keys(serviceWaiter.fetchMenu.food)[index2]) {
+        sum += Object.values(serviceWaiter.fetchMenu.food)[index2];
+      }
+    }
+  }
+  for (let index = 0; index < myConsumption.length; index += 1) {
+    for (let index2 = 0; index <= Object.keys(serviceWaiter.fetchMenu.drink).length; index += 1) {
+      if (myConsumption[index] === Object.keys(serviceWaiter.fetchMenu.drink)[index2]) {
+        sum += Object.values(serviceWaiter.fetchMenu.drink)[index2];
+      }
+    }
+  }
+  return sum;
+}
 const objetoQualquer = { food: {}, drink: {} };
-const serviceWaiter = createMenu(objetoQualquer);
+let serviceWaiter = createMenu(objetoQualquer);
 serviceWaiter.consumption = [];
 serviceWaiter.order = order;
+serviceWaiter.pay = pay;
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
@@ -122,6 +142,11 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
+    serviceWaiter.consumption = [];
+    serviceWaiter.order('coxinha');
+    serviceWaiter.order('agua');
+    serviceWaiter.order('coxinha');
+    assert.deepStrictEqual(serviceWaiter.consumption, ["coxinha", "agua", "coxinha"])
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -131,6 +156,18 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
+    const myMenu = {
+      food: {'coxinha': 3.90, 'sanduiche': 9.90},
+      drink: {'agua': 3.90, 'cerveja': 6.90}
+    }
+    serviceWaiter = createMenu(myMenu);
+    serviceWaiter.order = order;
+    serviceWaiter.pay = pay;
+    serviceWaiter.consumption = [];
+    serviceWaiter.order('coxinha');
+    serviceWaiter.order('agua');
+    serviceWaiter.order('coxinha');
+    assert.strictEqual(serviceWaiter.pay(serviceWaiter.consumption), 11.7)
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
