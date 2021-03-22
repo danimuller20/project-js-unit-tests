@@ -89,7 +89,7 @@ const createMenu = (obj) => {
     fetchMenu: obj, // menu carregado conforme parametro passado a funcao createMenu
     consumption: [], // array de consumo
     order: order => menu.consumption.push(order), // chave com funcao que adiciona itens ao array de consumption
-    pay () { // chave com funcao de calculo do valor
+    pay() { // chave com funcao de calculo do valor
       return sumTotal(this.fetchMenu, this.consumption);
     },
   };
