@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
+const { strictEqual } = require('assert');
 const assert = require('assert');
 const circle = require('../src/circle');
 
@@ -28,10 +29,30 @@ describe('#circle', () => {
     assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
+
+    assert,strictEqual(typeof (circle(radius)), 'object', 'O retorno dessa função não é um objeto')
+
     // Teste se o objeto retornado tem 3 entradas.
+
+    assert.strictEqual(Object.entries(circle(radius)).length, 3, 'O obejeto retornado tem menos de 3 entradas')
+
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+
+    assert.strictEqual(circle(), undefined, 'Parametros insufisientes para gerar retorno')
+
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+
+    assert.strictEqual(parseFloat((circle(2).circumference).toPrecision(2)), parseFloat((2 * 3,14 * 2).toPrecision(2)))
+
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+
+    assert.strictEqual(parseFloat((circle(3).area).toPrecision(3)), parseFloat((3,14 * Math.pow(3, 2)).toPrecision(2)))
+
+
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+
+    assert.strictEqual(parseFloat((circle(3)).toPrecision(2)), {radius: 3, parseFloat((3,14 * Math.pow(3, 2)).toPrecision(2)), parseFloat((2 * 3,14 * 3).toPrecision(2))}
+
+
   });
 });
