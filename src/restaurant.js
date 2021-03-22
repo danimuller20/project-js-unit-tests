@@ -76,22 +76,18 @@ const menu = {
   food: {'coxinha': 3.9, 'sopa': 9.9},
   drink: {'agua': 3.9, 'cerveja': 6.9}
 };
-const comsuption = ['agua', 'coxinha', 'coxinha'];
+
 const sumOrder = (menu, comsuption) => {
   let sum = 0;
   for (let index = 0; index < comsuption.length; index +=1) {
-    console.log(comsuption[index]);
     if (comsuption[index] in menu.food) {
       sum += menu.food[comsuption[index]];
     } else {
-      console.log(menu.drinks[comsuption[index]]);
       sum += menu.drinks[comsuption[index]];
-      console.log(sum);
     }
   }
   return sum;
 }
-
 
 const createMenu = obj => ({
   fetchMenu: obj,
