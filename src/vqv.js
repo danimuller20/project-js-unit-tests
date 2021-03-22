@@ -17,9 +17,11 @@
 */
 
 const vqv = (nome, idade) => {
+// verifica se o input e undefined
   if (nome === undefined || idade === undefined) {
     return undefined;
   }
+// concatena parametros dentro de uma string
   return (`Oi, meu nome é ${nome}!\nTenho ${idade} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`);
 };
 
